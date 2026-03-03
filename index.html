@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UK Trade Leads - Your Complete Marketing System</title>
+	<script src="https://fast.wistia.com/player.js" async></script>
+	<script src="https://fast.wistia.com/embed/0fwrc4v07b.js" async type="module"></script>
+	<style>
+		wistia-player[media-id='0fwrc4v07b']:not(:defined) {
+			background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0fwrc4v07b/swatch');
+			display: block;
+			filter: blur(5px);
+			padding-top: 56.25%;
+		}
+	</style>
+	<style>
+		:root {
+			--bg-color: #1a1a1a;
+			--card-bg: #242424;
+			--text-main: #ffffff;
+			--text-muted: #d1d5db;
+			--accent-gold: #fbc02d;
+			--accent-gold-hover: #e0a800;
+			--font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-main);
+			font-family: var(--font-family);
+			line-height: 1.5;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		a {
+			color: var(--accent-gold);
+			text-decoration: none;
+			font-weight: 600;
+			transition: color 0.2s;
+		}
+
+		a:hover {
+			color: var(--accent-gold-hover);
+			text-decoration: underline;
+		}
+
+		/* Shared Header/Banner */
+		.top-banner {
+			background-color: var(--accent-gold);
+			color: #000;
+			text-align: center;
+			padding: 10px;
+			font-size: 0.95rem;
+			font-weight: 800;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
+
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 40px 20px;
+		}
+
+		header {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.logo {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: white;
+			margin-bottom: 15px;
+		}
+
+		.logo-icon {
+			background-color: var(--accent-gold);
+			color: #000;
+			width: 36px;
+			height: 36px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 4px;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+			margin-bottom: 10px;
+			line-height: 1.2;
+		}
+
+		.subtitle {
+			color: var(--text-muted);
+			font-size: 1.1rem;
+			margin-bottom: 30px;
+		}
+
+		/* Tab Navigation */
+		.tab-container {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			margin-bottom: 40px;
+			border-bottom: 2px solid #333;
+			padding-bottom: 20px;
+			flex-wrap: wrap;
+		}
+
+		.tab-btn {
+			background-color: var(--card-bg);
+			color: var(--text-main);
+			border: 1px solid #444;
+			padding: 12px 25px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border-radius: 8px;
+		}
+
+		.tab-btn:hover {
+			border-color: var(--accent-gold);
+			color: var(--accent-gold);
+		}
+
+		.tab-btn.active {
+			background-color: var(--accent-gold);
+			color: #000;
+			border-color: var(--accent-gold);
+		}
+
+		/* Tab Content Area */
+		.tab-content {
+			display: none;
+			animation: fadeIn 0.4s ease-in-out;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		h2 {
+			color: var(--accent-gold);
+			font-size: 1.5rem;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid #333;
+			padding-bottom: 10px;
+		}
+
+		/* --- STYLES FOR OVERVIEW TAB --- */
+		.main-links-box {
+			background-color: var(--card-bg);
+			border: 1px solid #333;
+			border-radius: 12px;
+			padding: 25px;
+			margin: 0 0 40px 0;
+			text-align: center;
+		}
+
+		.main-links-title {
+			color: var(--accent-gold);
+			font-weight: 700;
+			font-size: 1.2rem;
+			margin-bottom: 15px;
+		}
+
+		.links-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 15px;
+		}
+
+		.link-pill {
+			background-color: #1a1a1a;
+			border: 1px solid #333;
+			padding: 10px 20px;
+			border-radius: 50px;
+			font-size: 0.95rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+		}
+
+		.link-pill--full {
+			grid-column: 1 / -1;
+		}
+
+		button.link-pill {
+			background-color: #1a1a1a;
+			color: var(--text-main);
+			cursor: pointer;
+			transition: border-color 0.2s, color 0.2s, transform 0.1s;
+		}
+
+		button.link-pill:hover {
+			border-color: var(--accent-gold);
+			color: var(--accent-gold);
+			transform: translateY(-1px);
+		}
+
+		.features-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin-bottom: 40px;
+		}
+
+		@media(min-width: 600px) {
+			.features-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.feature-card {
+			background-color: #1a1a1a;
+			border: 1px solid #333;
+			border-left: 4px solid var(--accent-gold);
+			padding: 20px;
+			border-radius: 8px;
+		}
+
+		.feature-title {
+			color: var(--text-main);
+			font-weight: 700;
+			font-size: 1.1rem;
+			display: block;
+			margin-bottom: 8px;
+		}
+
+		.feature-card p {
+			margin-bottom: 0;
+			font-size: 0.95rem;
+			color: var(--text-muted);
+		}
+
+		ul.standard-list {
+			list-style: none;
+			margin-bottom: 20px;
+		}
+
+		ul.standard-list li {
+			position: relative;
+			padding-left: 20px;
+			margin-bottom: 10px;
+			color: var(--text-muted);
+		}
+
+		ul.standard-list li::before {
+			content: '•';
+			color: var(--accent-gold);
+			position: absolute;
+			left: 0;
+			font-size: 1.2rem;
+			line-height: 1;
+		}
+
+		.btn-container {
+			display: flex;
+			gap: 15px;
+			justify-content: center;
+			margin: 20px 0;
+			flex-wrap: wrap;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 12px 25px;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 1rem;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.btn-outline {
+			background-color: transparent;
+			color: var(--text-main);
+			border: 1px solid #555;
+		}
+
+		.btn-outline:hover {
+			border-color: var(--accent-gold);
+			color: var(--accent-gold);
+			text-decoration: none;
+		}
+
+		.info-box {
+			background-color: var(--card-bg);
+			padding: 30px;
+			border-radius: 10px;
+			text-align: center;
+			margin: 40px 0;
+			border: 1px solid #333;
+		}
+
+		.info-box h3 {
+			color: white;
+			font-size: 1.3rem;
+			margin-bottom: 15px;
+		}
+
+		/* --- STYLES FOR PLAYBOOK TAB --- */
+		.system-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin-bottom: 20px;
+		}
+
+		@media(min-width: 768px) {
+			.system-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.card {
+			background-color: var(--card-bg);
+			border: 1px solid #333;
+			border-radius: 10px;
+			padding: 25px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		}
+
+		.card-header {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #444;
+			padding-bottom: 10px;
+		}
+
+		.icon {
+			font-size: 2rem;
+		}
+
+		.card h3 {
+			color: var(--accent-gold);
+			font-size: 1.3rem;
+			margin: 0;
+		}
+
+		.card p {
+			color: var(--text-muted);
+			font-size: 0.95rem;
+			margin-bottom: 10px;
+		}
+
+		ul.checklist {
+			list-style: none;
+			padding: 0;
+		}
+
+		ul.checklist li {
+			position: relative;
+			padding-left: 22px;
+			margin-bottom: 8px;
+			font-size: 0.95rem;
+			color: var(--text-main);
+		}
+
+		ul.checklist li::before {
+			content: '✓';
+			color: var(--accent-gold);
+			position: absolute;
+			left: 0;
+			font-weight: bold;
+		}
+
+		.golden-card {
+			background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+			border: 2px solid var(--accent-gold);
+			grid-column: 1 / -1;
+			text-align: center;
+		}
+
+		.golden-card h3 {
+			font-size: 1.6rem;
+			margin-bottom: 10px;
+		}
+
+		.big-link {
+			display: inline-block;
+			background-color: #000;
+			color: var(--accent-gold);
+			padding: 12px 25px;
+			border-radius: 6px;
+			font-size: 1.3rem;
+			font-family: monospace;
+			border: 1px dashed var(--accent-gold);
+			margin: 15px 0;
+			font-weight: bold;
+		}
+
+		.flow-container {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			margin-top: 20px;
+		}
+
+		@media(min-width: 768px) {
+			.flow-container {
+				flex-direction: row;
+				justify-content: center;
+			}
+		}
+
+		.flow-step {
+			flex: 1;
+			background-color: #111;
+			padding: 15px;
+			border-radius: 8px;
+			border: 1px solid #333;
+			position: relative;
+		}
+
+		.flow-step h4 {
+			color: white;
+			margin-bottom: 5px;
+			font-size: 1rem;
+		}
+
+		.flow-step p {
+			font-size: 0.85rem;
+			color: var(--text-muted);
+			margin: 0;
+		}
+
+		.warning-text {
+			color: #ff6b6b;
+			font-size: 0.9rem;
+			margin-top: 20px;
+			font-weight: 600;
+		}
+
+		.secondary-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin-top: 10px;
+		}
+
+		@media(min-width: 768px) {
+			.secondary-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.signoff {
+			margin-top: 50px;
+			padding-top: 20px;
+			border-top: 1px solid #333;
+			color: var(--text-muted);
+			text-align: center;
+		}
+
+		/* --- STYLES FOR LIVE SITES TAB --- */
+		.demo-intro {
+			text-align: center;
+			color: var(--text-muted);
+			margin-bottom: 25px;
+			font-size: 0.95rem;
+		}
+
+		.page-switcher {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+		}
+
+		.page-btn {
+			background-color: var(--card-bg);
+			border: 1px solid #444;
+			color: var(--text-main);
+			border-radius: 8px;
+			padding: 10px 18px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			font-weight: 600;
+			transition: all 0.2s ease;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 4px;
+			min-width: 120px;
+		}
+
+		.page-btn:hover {
+			border-color: var(--accent-gold);
+			color: var(--accent-gold);
+		}
+
+		.page-btn.active {
+			background-color: var(--accent-gold);
+			color: #000;
+			border-color: var(--accent-gold);
+		}
+
+		.page-btn .btn-label {
+			font-size: 1rem;
+		}
+
+		.page-btn .btn-sub {
+			font-size: 0.7rem;
+			font-weight: 400;
+			opacity: 0.75;
+			text-align: center;
+			line-height: 1.3;
+		}
+
+		.page-btn.active .btn-sub {
+			opacity: 0.65;
+		}
+
+		.sites-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin: 0 -60px;
+		}
+
+		@media(min-width: 900px) {
+			.sites-grid {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+
+		@media(max-width: 1100px) {
+			.sites-grid {
+				margin: 0;
+			}
+		}
+
+		@media(max-width: 600px) {
+			.container {
+				padding-top: 16px;
+			}
+
+			.top-banner {
+				padding: 6px 10px;
+				font-size: 0.75rem;
+			}
+
+			header {
+				margin-bottom: 15px;
+			}
+
+			.logo {
+				font-size: 1.1rem;
+				margin-bottom: 8px;
+				gap: 7px;
+			}
+
+			.logo-icon {
+				width: 28px;
+				height: 28px;
+				font-size: 0.85rem;
+			}
+
+			.tab-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 8px;
+				padding-bottom: 15px;
+				margin-bottom: 25px;
+			}
+
+			.tab-btn {
+				width: 100%;
+				padding: 7px 4px;
+				font-size: 0.68rem;
+				text-align: center;
+				line-height: 1.3;
+			}
+
+			.page-switcher {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 8px;
+			}
+
+			.page-btn {
+				min-width: unset;
+				width: 100%;
+				padding: 8px 6px;
+				font-size: 0.8rem;
+			}
+
+			.page-btn--full {
+				grid-column: 1 / -1;
+			}
+
+			.links-grid .link-pill {
+				padding: 8px 10px;
+				font-size: 0.82rem;
+			}
+
+			#Playbook .card {
+				padding: 16px;
+			}
+
+			#Playbook h2 {
+				font-size: 1.3rem;
+				margin-bottom: 8px;
+			}
+
+			#Playbook .system-grid {
+				gap: 12px;
+			}
+		}
+
+		.demo-site-name {
+			color: var(--accent-gold);
+			font-weight: 700;
+			font-size: 0.85rem;
+			margin-bottom: 8px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+		}
+
+		.browser-chrome {
+			background-color: #2e2e2e;
+			border-radius: 10px 10px 0 0;
+			padding: 8px 12px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			border: 1px solid #444;
+			border-bottom: none;
+		}
+
+		.browser-dots {
+			display: flex;
+			gap: 5px;
+			flex-shrink: 0;
+		}
+
+		.browser-dots span {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: block;
+		}
+
+		.dot-red    { background-color: #ff5f57; }
+		.dot-yellow { background-color: #febc2e; }
+		.dot-green  { background-color: #28c840; }
+
+		.browser-url {
+			background-color: #1a1a1a;
+			border-radius: 4px;
+			padding: 4px 10px;
+			font-size: 0.72rem;
+			color: #aaa;
+			font-family: monospace;
+			flex: 1;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.demo-iframe-wrapper {
+			border: 1px solid #444;
+			border-top: none;
+			border-radius: 0 0 8px 8px;
+			overflow: hidden;
+			height: 620px;
+			background: #fff;
+			position: relative;
+		}
+
+		.iframe-overlay {
+			position: absolute;
+			inset: 0;
+			z-index: 10;
+			cursor: default;
+		}
+
+		.demo-iframe-wrapper iframe {
+			width: 167%;
+			height: 167%;
+			transform: scale(0.6);
+			transform-origin: top left;
+			border: none;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="top-banner">HERE'S EXACTLY WHAT YOU GET</div>
+
+	<div class="container">
+
+		<header>
+			<div class="logo">
+				<div class="logo-icon">🛠️</div>
+				<span>UK Trade Leads</span>
+			</div>
+		</header>
+
+		<div class="tab-container">
+			<button class="tab-btn active" onclick="openTab(event, 'Demo')">▶️ Watch Demo</button>
+			<button class="tab-btn" onclick="openTab(event, 'Overview')">📦 What's Included</button>
+			<button class="tab-btn" onclick="openTab(event, 'Playbook')">🚀 How It Makes You Money</button>
+			<button class="tab-btn" onclick="openTab(event, 'LiveSites')">🌐 See It In Action</button>
+		</div>
+
+		<div id="Overview" class="tab-content">
+
+			<div class="main-links-box">
+				<div class="main-links-title">Your System At A Glance</div>
+				<p style="font-size: 0.9rem; margin-bottom: 20px;">We build and manage every piece of this for you. No tech skills needed. If you can send a text, you can run this system.</p>
+				<div class="links-grid">
+					<button class="link-pill link-pill--full" onclick="goToLiveSite('/')">🌐 Your Professional Website</button>
+					<button class="link-pill" style="border-color: var(--accent-gold);" onclick="goToLiveSite('/add-customer')">➕ One-Tap Job Form</button>
+					<button class="link-pill" onclick="goToLiveSite('/feedback')">⭐ Smart Review Funnel</button>
+					<button class="link-pill" onclick="goToLiveSite('/get-quote')">📞 Quote Capture Page</button>
+					<button class="link-pill" onclick="goToLiveSite('/discount')">🎁 Referral & Discount Engine</button>
+				</div>
+			</div>
+
+			<h2>What's Included In Your System</h2>
+			<div class="features-grid">
+				<div class="feature-card">
+					<span class="feature-title">20+ Page SEO Website (Built Free)</span>
+					<p>Most agencies charge £1,000+ upfront for a basic 5-page site. We build you a 20+ page website with dedicated pages for every service and local area — designed to rank on Google from day one. Included at no extra cost.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">Missed Call Text Back</span>
+					<p>You're under a sink or up a ladder and miss a call. By the time you ring back, they've already called a competitor. Our system instantly texts the caller a quote form, capturing their details before they move on. You call them back when you're free — they're already in your pipeline.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">5-Star Review Funnel</span>
+					<p>Great work means nothing if nobody sees it online. The system automatically chases customers up to 4 times for a review — then filters the results. 4 & 5 stars go straight to your Google profile. Lower ratings come to you privately so you can fix the issue before it goes public.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">One-Click Referral Engine</span>
+					<p>Word-of-mouth is powerful, but it's inconsistent. The system automatically texts past customers a branded discount page every few months, prompting repeat business and referrals. You do nothing — it runs on autopilot.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">SMS Chat Widget</span>
+					<p>Website visitors can message you directly, and it lands on your phone as a text. No checking emails, no buried enquiries. Leads get an instant response, and you never miss a conversation.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">The "Easy Button" (Job Completion Form)</span>
+					<p>Finish a job, tap one form, enter the customer's name and number. That's it. The system takes over — chasing the review, filtering the rating, and queuing up referral campaigns. Two taps and the whole engine runs.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">Auto Review Responder</span>
+					<p>Google's algorithm rewards active profiles. The system automatically replies to every new Google review on your behalf, keeping your listing active and engaged without you touching it.</p>
+				</div>
+				<div class="feature-card">
+					<span class="feature-title">Google Business Profile Overhaul</span>
+					<p>We don't just build your website — we fully optimise your Google Business Profile with targeted keywords, updated service lists, and professional branding. This is where most local customers find you first.</p>
+				</div>
+			</div>
+
+			<h2>Your Own Business Number & Command Centre</h2>
+			<p style="color: var(--text-muted);">You get a <strong style="color: var(--accent-gold);">dedicated business phone number</strong> — think of it as a digital secretary sitting in your van, handling everything while you work.</p>
+			<ul class="standard-list">
+				<li><strong>Centralised Inbox:</strong> Every text, call, and form submission in one place. No more checking three different apps.</li>
+				<li><strong>Keep Work Separate:</strong> Chat with leads through the app — your personal phone stays completely private.</li>
+				<li><strong>Social Media Hub:</strong> Post to all your social accounts at once from one dashboard. No logging into Facebook, Instagram, and Google separately.</li>
+			</ul>
+
+			<div class="btn-container">
+				<a href="https://apps.apple.com/gb/app/lead-connector/id1564302502" class="btn btn-outline"
+					target="_blank">🍏 Available on iPhone</a>
+				<a href="https://play.google.com/store/apps/details?id=com.LeadConnector&hl=en_GB"
+					class="btn btn-outline" target="_blank">🤖 Available on Android</a>
+			</div>
+
+			<div class="info-box">
+				<h3>The Bottom Line</h3>
+				<p style="margin-bottom: 10px; font-size: 1.05rem;">At <strong style="color: var(--accent-gold);">£297/month</strong> with <strong>no contracts</strong> and a <strong>30-day money-back guarantee</strong>, just <strong style="color: var(--accent-gold);">one extra job per month</strong> pays for the entire system.</p>
+				<p style="color: var(--text-muted);">Everything above that is pure profit. No upfront build cost. No lock-in. Cancel anytime.</p>
+			</div>
+		</div>
+
+
+		<div id="Playbook" class="tab-content">
+			<h2 style="margin-top: 0; text-align: center; border: none;">3 AI Automations That Run Your Business For You</h2>
+			<p style="text-align: center; color: var(--text-muted); margin-bottom: 10px;">You finish the job. The system does everything else.</p>
+			<p style="text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 0.9rem;">Every time you complete a job, you enter the customer's name and number into one form. That single action triggers all three automations below.</p>
+
+			<div class="system-grid">
+
+				<div class="card golden-card" style="text-align: left;">
+					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
+						<div class="icon">🏆</div>
+						<h3>The Chaser — Stacks Your Google Reviews</h3>
+					</div>
+					<p>Most tradespeople do great work but have 3 reviews on Google because they forget to ask. Or they ask once, the customer means to do it, and never gets round to it.</p>
+					<p><strong style="color: white;">The Chaser fixes that permanently.</strong></p>
+					<ul class="checklist">
+						<li>Automatically texts the customer asking for a review — up to <strong>4 times</strong> over a few weeks.</li>
+						<li>Smart timing. Each follow-up is spaced out so it doesn't feel pushy.</li>
+						<li>The moment they leave a review, it <strong>stops immediately</strong>. No annoying extra messages.</li>
+						<li>You never have to remember to ask, chase, or send a link. It just happens.</li>
+					</ul>
+					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Clients who use this consistently go from a handful of reviews to 30, 50, 100+ — and Google rewards that with higher rankings in local search.</p>
+				</div>
+
+				<div class="card golden-card" style="text-align: left;">
+					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
+						<div class="icon">🛡️</div>
+						<h3>The Filter — Protects You From Bad Public Reviews</h3>
+					</div>
+					<p>Here's the problem with just handing out a Google review link: if someone's unhappy, they leave a 1-star review and the whole world sees it. You can't delete it. It sits there killing your credibility.</p>
+					<p><strong style="color: white;">The Filter makes that almost impossible.</strong></p>
+					<ul class="checklist">
+						<li>When a customer taps the review link, they're first asked to rate you out of 5.</li>
+						<li><strong>4 or 5 stars?</strong> They're sent straight to your Google profile to leave the review publicly.</li>
+						<li><strong>3 stars or below?</strong> They're redirected to a private feedback form instead. The review <strong>never touches Google</strong>.</li>
+						<li>You get notified privately, so you can reach out and fix the issue before it becomes a public problem.</li>
+					</ul>
+					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Your Google profile only shows your best work. Unhappy customers feel heard. Problems get solved quietly instead of publicly.</p>
+				</div>
+
+				<div class="card golden-card" style="text-align: left;">
+					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
+						<div class="icon">🔄</div>
+						<h3>The Multiplier — Turns Past Customers Into New Ones</h3>
+					</div>
+					<p>You do a great job for someone, they're happy, and then... nothing. Six months later they need more work done and can't remember your name. Or their neighbour asks "know a good plumber?" and they can't find your number.</p>
+					<p><strong style="color: white;">The Multiplier keeps you top of mind forever.</strong></p>
+					<ul class="checklist">
+						<li>Automatically texts past customers a <strong>branded referral page</strong> with a discount offer — every few months, on a schedule you set.</li>
+						<li>Makes it effortless for them to share your details. One tap and their mate has your name, number, and a reason to call.</li>
+						<li>Drives <strong>repeat business</strong> from people who've already used you and trust you.</li>
+						<li>Generates <strong>new referrals</strong> from their network — the highest-converting leads you can get.</li>
+					</ul>
+					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Instead of relying on word-of-mouth and hoping people remember you, the system does the reminding for you. Repeat jobs and referrals on autopilot.</p>
+				</div>
+
+			</div>
+
+			<div class="secondary-grid">
+				<div class="card">
+					<div class="card-header">
+						<div class="icon">📵</div>
+						<h3>Missed Call Text Back</h3>
+					</div>
+					<p>On top of the three automations above, the system also catches leads you'd normally lose. Miss a call while you're on-site? It instantly texts the caller a quote form — capturing their details before they call a competitor. You ring them back when you're free.</p>
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<div class="icon">📱</div>
+						<h3>All Managed From Your Phone</h3>
+					</div>
+					<p>One app. Every lead, every conversation, every automation — visible in real time. Think of it as a digital secretary sitting in your van. No laptop, no dashboards, no software to learn.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="Demo" class="tab-content" style="display: block;">
+			<h2 style="margin-top: 0; text-align: center; border: none;">See The System In Action</h2>
+			<p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Watch how everything works together — from missed call to booked job, review, and referral.</p>
+			<wistia-player media-id="0fwrc4v07b" aspect="1.7777777777777777"></wistia-player>
+		</div>
+
+		<div id="LiveSites" class="tab-content">
+			<h2 style="margin-top: 0; text-align: center; border: none;">Real Client Sites, Live</h2>
+			<p class="demo-intro">These are real businesses using the system. Click any page below to see it live across all three sites at once.</p>
+
+			<div class="page-switcher">
+				<button class="page-btn page-btn--full active" onclick="setPage(event, '/')">
+					<span class="btn-label">🏠 Website</span>
+					<span class="btn-sub">Your homepage</span>
+				</button>
+				<button class="page-btn" onclick="setPage(event, '/add-customer')">
+					<span class="btn-label">➕ Add Customer</span>
+					<span class="btn-sub">You tap this after every job</span>
+				</button>
+				<button class="page-btn" onclick="setPage(event, '/get-quote')">
+					<span class="btn-label">📞 Get Quote</span>
+					<span class="btn-sub">Auto-sent when you miss a call</span>
+				</button>
+				<button class="page-btn" onclick="setPage(event, '/discount')">
+					<span class="btn-label">🎁 Discount</span>
+					<span class="btn-sub">Auto-sent every 3 months</span>
+				</button>
+				<button class="page-btn" onclick="setPage(event, '/feedback')">
+					<span class="btn-label">⭐ Feedback</span>
+					<span class="btn-sub">Auto-sent after every job</span>
+				</button>
+			</div>
+
+			<div class="sites-grid">
+
+				<div>
+					<div class="demo-site-name">Spray Innovations</div>
+					<div class="browser-chrome">
+						<div class="browser-dots">
+							<span class="dot-red"></span>
+							<span class="dot-yellow"></span>
+							<span class="dot-green"></span>
+						</div>
+						<div class="browser-url" id="url-dh">sprayinnovations.co.uk</div>
+					</div>
+					<div class="demo-iframe-wrapper">
+						<div class="iframe-overlay"></div>
+						<iframe id="iframe-dh" src="https://sprayinnovations.co.uk" title="Spray Innovations" loading="lazy"></iframe>
+					</div>
+				</div>
+
+				<div>
+					<div class="demo-site-name">All Aspects Roofing</div>
+					<div class="browser-chrome">
+						<div class="browser-dots">
+							<span class="dot-red"></span>
+							<span class="dot-yellow"></span>
+							<span class="dot-green"></span>
+						</div>
+						<div class="browser-url" id="url-roofing">allaspectsroofingspecialists.com</div>
+					</div>
+					<div class="demo-iframe-wrapper">
+						<div class="iframe-overlay"></div>
+						<iframe id="iframe-roofing" src="https://allaspectsroofingspecialists.com" title="All Aspects Roofing" loading="lazy"></iframe>
+					</div>
+				</div>
+
+				<div>
+					<div class="demo-site-name">Aphex Heating</div>
+					<div class="browser-chrome">
+						<div class="browser-dots">
+							<span class="dot-red"></span>
+							<span class="dot-yellow"></span>
+							<span class="dot-green"></span>
+						</div>
+						<div class="browser-url" id="url-aphex">aphex-heating.pages.dev</div>
+					</div>
+					<div class="demo-iframe-wrapper">
+						<div class="iframe-overlay"></div>
+						<iframe id="iframe-aphex" src="https://aphex-heating.pages.dev" title="Aphex Heating" loading="lazy"></iframe>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="signoff">
+			<div style="color: var(--accent-gold); margin-bottom: 10px; font-size: 1.2rem;">★★★★★</div>
+			<p style="font-size: 1.05rem; margin-bottom: 8px;"><strong>No contracts. No upfront build cost. 30-day money-back guarantee.</strong></p>
+			<p>Got questions? Just reply to this message or give us a call. We'll walk you through everything.</p>
+		</div>
+
+	</div>
+
+	<script>
+		const demoSites = {
+			dh:      'https://sprayinnovations.co.uk',
+			roofing: 'https://allaspectsroofingspecialists.com',
+			aphex:   'https://aphex-heating.pages.dev'
+		};
+
+		// Scroll passes through; clicks open the live site in a new tab
+		document.querySelectorAll('.iframe-overlay').forEach(overlay => {
+			let scrollTimer;
+			let isScrolling = false;
+
+			overlay.addEventListener('wheel', function() {
+				isScrolling = true;
+				this.style.pointerEvents = 'none';
+				clearTimeout(scrollTimer);
+				scrollTimer = setTimeout(() => {
+					this.style.pointerEvents = 'auto';
+					isScrolling = false;
+				}, 300);
+			}, { passive: true });
+
+			overlay.addEventListener('click', function() {
+				if (isScrolling) return;
+				const iframe = this.nextElementSibling;
+				if (iframe && iframe.src) {
+					window.open(iframe.src, '_blank');
+				}
+			});
+		});
+
+		function setPage(evt, path) {
+			const displayPath = path === '/' ? '' : path;
+			document.getElementById('iframe-dh').src      = demoSites.dh      + path;
+			document.getElementById('iframe-roofing').src = demoSites.roofing  + path;
+			document.getElementById('iframe-aphex').src   = demoSites.aphex    + path;
+			document.getElementById('url-dh').textContent      = 'sprayinnovations.co.uk'        + displayPath;
+			document.getElementById('url-roofing').textContent = 'allaspectsroofingspecialists.com' + displayPath;
+			document.getElementById('url-aphex').textContent   = 'aphex-heating.pages.dev'          + displayPath;
+			document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+			evt.currentTarget.classList.add('active');
+		}
+
+		function goToLiveSite(path) {
+			// Switch to LiveSites tab
+			document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+			document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+			document.getElementById('LiveSites').style.display = 'block';
+			document.querySelectorAll('.tab-btn').forEach(btn => {
+				if (btn.textContent.includes('See It In Action')) btn.classList.add('active');
+			});
+
+			// Set the correct page in the iframes
+			const displayPath = path === '/' ? '' : path;
+			document.getElementById('iframe-dh').src      = demoSites.dh      + path;
+			document.getElementById('iframe-roofing').src = demoSites.roofing  + path;
+			document.getElementById('iframe-aphex').src   = demoSites.aphex    + path;
+			document.getElementById('url-dh').textContent      = 'sprayinnovations.co.uk'           + displayPath;
+			document.getElementById('url-roofing').textContent = 'allaspectsroofingspecialists.com' + displayPath;
+			document.getElementById('url-aphex').textContent   = 'aphex-heating.pages.dev'          + displayPath;
+			document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+			document.querySelectorAll('.page-btn').forEach(btn => {
+				if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${path}'`)) {
+					btn.classList.add('active');
+				}
+			});
+
+			// Scroll to top
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+
+		function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Remove "active" class from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show current tab and add "active" class to the button
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+	</script>
+
+</body>
+
+</html>
