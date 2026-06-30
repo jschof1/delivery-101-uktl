@@ -242,18 +242,55 @@
 			border-radius: 8px;
 		}
 
+		details.feature-card {
+			padding: 0;
+			overflow: hidden;
+		}
+
+		details.feature-card[open] {
+			border-color: rgba(251, 192, 45, 0.55);
+		}
+
+		.feature-card summary {
+			list-style: none;
+			cursor: pointer;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.feature-card summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.feature-card summary::after {
+			content: '+';
+			color: var(--accent-gold);
+			font-size: 1.35rem;
+			font-weight: 800;
+			line-height: 1;
+			flex-shrink: 0;
+		}
+
+		details.feature-card[open] summary::after {
+			content: '-';
+		}
+
 		.feature-title {
 			color: var(--text-main);
-			font-weight: 700;
-			font-size: 1.1rem;
+			font-weight: 800;
+			font-size: 1.32rem;
+			line-height: 1.18;
 			display: block;
-			margin-bottom: 8px;
 		}
 
 		.feature-card p {
 			margin-bottom: 0;
 			font-size: 0.95rem;
 			color: var(--text-muted);
+			padding: 0 20px 20px;
 		}
 
 		ul.standard-list {
@@ -321,6 +358,104 @@
 			color: white;
 			font-size: 1.3rem;
 			margin-bottom: 15px;
+		}
+
+		.expectation-note {
+			background-color: #1a1a1a;
+			border: 1px solid #333;
+			border-left: 4px solid var(--accent-gold);
+			border-radius: 8px;
+			padding: 18px;
+			margin: 20px 0;
+		}
+
+		.expectation-note p {
+			color: var(--text-muted);
+			margin-bottom: 8px;
+		}
+
+		.expectation-note p:last-child {
+			margin-bottom: 0;
+		}
+
+		details.expectation-accordion {
+			background-color: var(--card-bg);
+			border: 1px solid #333;
+			border-radius: 8px;
+			margin-bottom: 12px;
+			overflow: hidden;
+		}
+
+		details.expectation-accordion[open] {
+			border-color: rgba(251, 192, 45, 0.55);
+		}
+
+		details.expectation-accordion summary {
+			cursor: pointer;
+			color: var(--text-main);
+			font-weight: 800;
+			padding: 16px 18px;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+		}
+
+		details.expectation-accordion summary::-webkit-details-marker {
+			display: none;
+		}
+
+		details.expectation-accordion summary::after {
+			content: '+';
+			color: var(--accent-gold);
+			font-size: 1.2rem;
+			line-height: 1;
+		}
+
+		details.expectation-accordion[open] summary::after {
+			content: '-';
+		}
+
+		.accordion-body {
+			padding: 0 18px 18px;
+			color: var(--text-muted);
+		}
+
+		.table-wrap {
+			overflow-x: auto;
+			margin-top: 14px;
+			border: 1px solid #333;
+			border-radius: 8px;
+		}
+
+		.data-table {
+			width: 100%;
+			min-width: 640px;
+			border-collapse: collapse;
+			background-color: #181818;
+		}
+
+		.data-table th,
+		.data-table td {
+			padding: 11px 12px;
+			border-bottom: 1px solid #333;
+			text-align: left;
+			vertical-align: top;
+			font-size: 0.9rem;
+		}
+
+		.data-table th {
+			color: var(--accent-gold);
+			font-weight: 800;
+			background-color: #222;
+		}
+
+		.data-table td {
+			color: var(--text-muted);
+		}
+
+		.data-table tr:last-child td {
+			border-bottom: none;
 		}
 
 		/* --- STYLES FOR PLAYBOOK TAB --- */
@@ -731,7 +866,7 @@
 		<div class="tab-container">
 			<button class="tab-btn active" onclick="openTab(event, 'Demo')">▶️ Watch Demo</button>
 			<button class="tab-btn" onclick="openTab(event, 'Overview')">📦 What's Included</button>
-			<button class="tab-btn" onclick="openTab(event, 'Playbook')">🚀 How It Makes You Money</button>
+			<button class="tab-btn" onclick="openTab(event, 'Playbook')">🚀 Expected Results</button>
 			<button class="tab-btn" onclick="openTab(event, 'LiveSites')">🌐 See It In Action</button>
 		</div>
 
@@ -751,38 +886,46 @@
 
 			<h2>What's Included In Your System</h2>
 			<div class="features-grid">
-				<div class="feature-card">
-					<span class="feature-title">20+ Page SEO Website (Built Free)</span>
-					<p>Most agencies charge £1,000+ upfront for a basic 5-page site. We build you a 20+ page website with dedicated pages for every service and local area — designed to rank on Google from day one. Included at no extra cost.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">Missed Call Text Back</span>
+				<details class="feature-card">
+					<summary><span class="feature-title">20+ Page SEO Website (Built Free)</span></summary>
+					<p>Most agencies charge £1,000+ upfront for a basic 5-page site. We build you a service-and-area website designed to make the business clearer, more credible, and easier to contact. Included at no extra upfront build cost.</p>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">Missed Call Text Back</span></summary>
 					<p>You're under a sink or up a ladder and miss a call. By the time you ring back, they've already called a competitor. Our system instantly texts the caller a quote form, capturing their details before they move on. You call them back when you're free — they're already in your pipeline.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">5-Star Review Funnel</span>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">5-Star Review Funnel</span></summary>
 					<p>Great work means nothing if nobody sees it online. The system automatically chases customers up to 4 times for a review — then filters the results. 4 & 5 stars go straight to your Google profile. Lower ratings come to you privately so you can fix the issue before it goes public.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">One-Click Referral Engine</span>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">One-Click Referral Engine</span></summary>
 					<p>Word-of-mouth is powerful, but it's inconsistent. The system automatically texts past customers a branded discount page every few months, prompting repeat business and referrals. You do nothing — it runs on autopilot.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">SMS Chat Widget</span>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">SMS Chat Widget</span></summary>
 					<p>Website visitors can message you directly, and it lands on your phone as a text. No checking emails, no buried enquiries. Leads get an instant response, and you never miss a conversation.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">The "Easy Button" (Job Completion Form)</span>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">The "Easy Button" (Job Completion Form)</span></summary>
 					<p>Finish a job, tap one form, enter the customer's name and number. That's it. The system takes over — chasing the review, filtering the rating, and queuing up referral campaigns. Two taps and the whole engine runs.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">Auto Review Responder</span>
-					<p>Google's algorithm rewards active profiles. The system automatically replies to every new Google review on your behalf, keeping your listing active and engaged without you touching it.</p>
-				</div>
-				<div class="feature-card">
-					<span class="feature-title">Google Business Profile Overhaul</span>
-					<p>We don't just build your website — we fully optimise your Google Business Profile with targeted keywords, updated service lists, and professional branding. This is where most local customers find you first.</p>
-				</div>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">Auto Review Responder</span></summary>
+					<p>The system automatically replies to new Google reviews on your behalf, keeping the profile active and making every good review look acknowledged.</p>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">Google Business Profile Overhaul</span></summary>
+					<p>We tidy up the profile customers usually see first: services, description, photos, links, contact details and review flow. A weak profile slows everything else down.</p>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">Social Posting Across Your Platforms</span></summary>
+					<p>Regular posts can go out across your connected social channels from one place, so the business looks alive without logging into every platform separately.</p>
+				</details>
+				<details class="feature-card">
+					<summary><span class="feature-title">Payments, Invoices & Job Pipeline</span></summary>
+					<p>We help set up payment links, invoice workflows, overdue-payment chasing, tags, job stages, reminders, business email and calendar connection.</p>
+				</details>
 			</div>
 
 			<h2>Your Own Business Number & Command Centre</h2>
@@ -791,6 +934,7 @@
 				<li><strong>Centralised Inbox:</strong> Every text, call, and form submission in one place. No more checking three different apps.</li>
 				<li><strong>Keep Work Separate:</strong> Chat with leads through the app — your personal phone stays completely private.</li>
 				<li><strong>Social Media Hub:</strong> Post to all your social accounts at once from one dashboard. No logging into Facebook, Instagram, and Google separately.</li>
+				<li><strong>Starter Print Assets:</strong> Basic business cards and leaflets can be included when you start, so the online system is backed by something you can hand out locally.</li>
 			</ul>
 
 			<div class="btn-container">
@@ -802,86 +946,211 @@
 
 			<div class="info-box">
 				<h3>The Bottom Line</h3>
-				<p style="margin-bottom: 10px; font-size: 1.05rem;">At <strong style="color: var(--accent-gold);">£297/month</strong> with <strong>no contracts</strong> and a <strong>30-day money-back guarantee</strong>, just <strong style="color: var(--accent-gold);">one extra job per month</strong> pays for the entire system.</p>
-				<p style="color: var(--text-muted);">Everything above that is pure profit. No upfront build cost. No lock-in. Cancel anytime.</p>
+				<p style="margin-bottom: 10px; font-size: 1.05rem;">At <strong style="color: var(--accent-gold);">£197/month</strong>, one decent extra job can cover the system for most trades.</p>
+				<p style="color: var(--text-muted);">This is not an instant lead switch. The point is to capture more of the opportunities you already miss and build the trust needed for more consistent enquiries.</p>
 			</div>
 		</div>
 
 
 		<div id="Playbook" class="tab-content">
-			<h2 style="margin-top: 0; text-align: center; border: none;">3 AI Automations That Run Your Business For You</h2>
-			<p style="text-align: center; color: var(--text-muted); margin-bottom: 10px;">You finish the job. The system does everything else.</p>
-			<p style="text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 0.9rem;">Every time you complete a job, you enter the customer's name and number into one form. That single action triggers all three automations below.</p>
+			<h2 style="margin-top: 0; text-align: center; border: none;">What Results Should You Expect?</h2>
+			<p style="text-align: center; color: var(--text-muted); margin-bottom: 10px;">This is not a magic lead switch. It is a system that makes your business visible, credible, easier to contact and easier to run.</p>
+			<p style="text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 0.9rem;">The most important thing is conversion: capturing the enquiry, responding fast, following up, booking the job, and collecting the review afterwards.</p>
 
 			<div class="system-grid">
 
 				<div class="card golden-card" style="text-align: left;">
 					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
-						<div class="icon">🏆</div>
-						<h3>The Chaser — Stacks Your Google Reviews</h3>
+						<div class="icon">📞</div>
+						<h3>Capture More Of What You Already Get</h3>
 					</div>
-					<p>Most tradespeople do great work but have 3 reviews on Google because they forget to ask. Or they ask once, the customer means to do it, and never gets round to it.</p>
-					<p><strong style="color: white;">The Chaser fixes that permanently.</strong></p>
+					<p>Most small trade businesses miss easy opportunities before they ever become jobs: missed calls, slow replies, weak quote forms, no clear follow-up, or enquiries buried in different apps.</p>
 					<ul class="checklist">
-						<li>Automatically texts the customer asking for a review — up to <strong>4 times</strong> over a few weeks.</li>
-						<li>Smart timing. Each follow-up is spaced out so it doesn't feel pushy.</li>
-						<li>The moment they leave a review, it <strong>stops immediately</strong>. No annoying extra messages.</li>
-						<li>You never have to remember to ask, chase, or send a link. It just happens.</li>
+						<li>Missed-call text-back catches people before they call a competitor.</li>
+						<li>Quote forms make the next step clear.</li>
+						<li>The inbox and pipeline keep every enquiry visible.</li>
 					</ul>
-					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Clients who use this consistently go from a handful of reviews to 30, 50, 100+ — and Google rewards that with higher rankings in local search.</p>
 				</div>
 
 				<div class="card golden-card" style="text-align: left;">
 					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
-						<div class="icon">🛡️</div>
-						<h3>The Filter — Protects You From Bad Public Reviews</h3>
+						<div class="icon">⭐</div>
+						<h3>Build Trust Before Pushing Leads</h3>
 					</div>
-					<p>Here's the problem with just handing out a Google review link: if someone's unhappy, they leave a 1-star review and the whole world sees it. You can't delete it. It sits there killing your credibility.</p>
-					<p><strong style="color: white;">The Filter makes that almost impossible.</strong></p>
+					<p>If your competitor has 80 reviews and you have 3, the website alone will not fix that overnight. Reviews, photos, response speed and profile quality all change how likely someone is to contact you.</p>
 					<ul class="checklist">
-						<li>When a customer taps the review link, they're first asked to rate you out of 5.</li>
-						<li><strong>4 or 5 stars?</strong> They're sent straight to your Google profile to leave the review publicly.</li>
-						<li><strong>3 stars or below?</strong> They're redirected to a private feedback form instead. The review <strong>never touches Google</strong>.</li>
-						<li>You get notified privately, so you can reach out and fix the issue before it becomes a public problem.</li>
+						<li>Review requests and follow-ups run after jobs.</li>
+						<li>Lower feedback can be handled privately.</li>
+						<li>New Google reviews can get automatic responses.</li>
 					</ul>
-					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Your Google profile only shows your best work. Unhappy customers feel heard. Problems get solved quietly instead of publicly.</p>
 				</div>
 
 				<div class="card golden-card" style="text-align: left;">
 					<div class="card-header" style="border-bottom: 1px solid var(--accent-gold);">
-						<div class="icon">🔄</div>
-						<h3>The Multiplier — Turns Past Customers Into New Ones</h3>
+						<div class="icon">📈</div>
+						<h3>Know When Growth Is Realistic</h3>
 					</div>
-					<p>You do a great job for someone, they're happy, and then... nothing. Six months later they need more work done and can't remember your name. Or their neighbour asks "know a good plumber?" and they can't find your number.</p>
-					<p><strong style="color: white;">The Multiplier keeps you top of mind forever.</strong></p>
+					<p>The system can be built in days. Google trust is built in weeks and months. Paid ads make more sense once the business can actually convert the attention.</p>
 					<ul class="checklist">
-						<li>Automatically texts past customers a <strong>branded referral page</strong> with a discount offer — every few months, on a schedule you set.</li>
-						<li>Makes it effortless for them to share your details. One tap and their mate has your name, number, and a reason to call.</li>
-						<li>Drives <strong>repeat business</strong> from people who've already used you and trust you.</li>
-						<li>Generates <strong>new referrals</strong> from their network — the highest-converting leads you can get.</li>
+						<li>Foundation businesses should not expect instant organic leads.</li>
+						<li>Good-fit businesses can see faster capture and conversion gains.</li>
+						<li>Growth-ready businesses can test ads with tracking.</li>
 					</ul>
-					<p style="margin-top: 10px;"><strong style="color: var(--accent-gold);">The result:</strong> Instead of relying on word-of-mouth and hoping people remember you, the system does the reminding for you. Repeat jobs and referrals on autopilot.</p>
 				</div>
 
 			</div>
 
-			<div class="secondary-grid">
-				<div class="card">
-					<div class="card-header">
-						<div class="icon">📵</div>
-						<h3>Missed Call Text Back</h3>
-					</div>
-					<p>On top of the three automations above, the system also catches leads you'd normally lose. Miss a call while you're on-site? It instantly texts the caller a quote form — capturing their details before they call a competitor. You ring them back when you're free.</p>
-				</div>
-
-				<div class="card">
-					<div class="card-header">
-						<div class="icon">📱</div>
-						<h3>All Managed From Your Phone</h3>
-					</div>
-					<p>One app. Every lead, every conversation, every automation — visible in real time. Think of it as a digital secretary sitting in your van. No laptop, no dashboards, no software to learn.</p>
-				</div>
+			<div class="expectation-note">
+				<p><strong style="color: white;">Simple version:</strong> the website, forms, CRM, missed-call text-back and review system are the fast part. Rankings, organic lead flow and ad efficiency depend on your reviews, location, competition, photos, response speed and job value.</p>
 			</div>
+
+			<details class="expectation-accordion" open>
+				<summary>Your starting point changes the timeline</summary>
+				<div class="accordion-body">
+					<p>If you have no Google profile and no reviews, we are building foundation first. If you already have reviews, photos, fast response and local demand, you are in a stronger position.</p>
+					<div class="table-wrap">
+						<table class="data-table">
+							<thead>
+								<tr>
+									<th>Starting point</th>
+									<th>What they have</th>
+									<th>Realistic expectation</th>
+									<th>Timeline</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Foundation</td>
+									<td>0-10 reviews, weak/no website, limited proof</td>
+									<td>Better presence, review growth and early enquiry capture.</td>
+									<td>30-90 days for early signs, months for organic trust</td>
+								</tr>
+								<tr>
+									<td>Good fit</td>
+									<td>10-40 reviews, some calls, poor conversion</td>
+									<td>Capture lost leads, improve conversion and build local visibility.</td>
+									<td>30-60 days for system impact, 3-6 months for SEO lift</td>
+								</tr>
+								<tr>
+									<td>Growth ready</td>
+									<td>40+ reviews, 4.6+ rating, good photos, fast response</td>
+									<td>Ready to test paid lead generation with tracking.</td>
+									<td>30-60 day ad test</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</details>
+
+			<details class="expectation-accordion">
+				<summary>What happens quickly, and what takes longer?</summary>
+				<div class="accordion-body">
+					<div class="table-wrap">
+						<table class="data-table">
+							<thead>
+								<tr>
+									<th>Metric</th>
+									<th>Weak start</th>
+									<th>Decent start</th>
+									<th>Strong start</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Website, forms, CRM and missed-call text-back live</td>
+									<td>3-10 days</td>
+									<td>3-10 days</td>
+									<td>3-10 days</td>
+								</tr>
+								<tr>
+									<td>First new reviews</td>
+									<td>2-8 weeks</td>
+									<td>2-6 weeks</td>
+									<td>1-4 weeks</td>
+								</tr>
+								<tr>
+									<td>Early organic enquiries</td>
+									<td>2-6 months</td>
+									<td>1-3 months</td>
+									<td>30-90 days</td>
+								</tr>
+								<tr>
+									<td>Ad readiness</td>
+									<td>3-6+ months</td>
+									<td>2-4 months</td>
+									<td>30-90 days</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</details>
+
+			<details class="expectation-accordion">
+				<summary>Why one job can pay for it</summary>
+				<div class="accordion-body">
+					<p>At £197/month, the break-even point is small for many trades. The point is not instant volume. The point is better capture, faster response and more trust.</p>
+					<div class="table-wrap">
+						<table class="data-table">
+							<thead>
+								<tr>
+									<th>Trade</th>
+									<th>Example job value</th>
+									<th>Jobs needed to cover £197</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Plumber</td>
+									<td>£150-£500</td>
+									<td>1-2 small jobs</td>
+								</tr>
+								<tr>
+									<td>Electrician</td>
+									<td>£150-£600</td>
+									<td>1-2 jobs</td>
+								</tr>
+								<tr>
+									<td>Roofer</td>
+									<td>£500-£5,000+</td>
+									<td>1 booked job can cover several months</td>
+								</tr>
+								<tr>
+									<td>Window cleaner</td>
+									<td>£20-£150 initial/recurring</td>
+									<td>Needs recurring customers or commercial work</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</details>
+
+			<details class="expectation-accordion">
+				<summary>When ads should be considered</summary>
+				<div class="accordion-body">
+					<p>We do not recommend ads until the business can handle and convert the attention. Otherwise you are paying to expose weak points.</p>
+					<div class="table-wrap">
+						<table class="data-table">
+							<tbody>
+								<tr>
+									<th>Minimum readiness</th>
+									<td>Verified Google profile, 10+ reviews, 4.5+ rating, clear website, quote form, call/form tracking and missed-call text-back.</td>
+								</tr>
+								<tr>
+									<th>Better readiness</th>
+									<td>25+ reviews, real job photos, fast response and disciplined follow-up.</td>
+								</tr>
+								<tr>
+									<th>Budget expectation</th>
+									<td>£300-£500 is a small slow test. £1,000-£2,000 gives better learning in 4-8 weeks.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</details>
 		</div>
 
 		<div id="Demo" class="tab-content" style="display: block;">
@@ -972,7 +1241,7 @@
 
 		<div class="signoff">
 			<div style="color: var(--accent-gold); margin-bottom: 10px; font-size: 1.2rem;">★★★★★</div>
-			<p style="font-size: 1.05rem; margin-bottom: 8px;"><strong>No contracts. No upfront build cost. 30-day money-back guarantee.</strong></p>
+			<p style="font-size: 1.05rem; margin-bottom: 8px;"><strong>No upfront website build cost. £197/month base system. Clear expectations before we start.</strong></p>
 			<p>Got questions? Just reply to this message or give us a call. We'll walk you through everything.</p>
 		</div>
 
