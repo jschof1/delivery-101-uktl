@@ -221,25 +221,125 @@
 			transform: translateY(-1px);
 		}
 
+		.included-panel {
+			position: relative;
+			overflow: hidden;
+			margin: 40px 0;
+			padding: 34px 0 0;
+		}
+
+		.included-panel::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 220px;
+			height: 220px;
+			opacity: 0.18;
+			background-image: radial-gradient(var(--accent-gold) 1px, transparent 1px);
+			background-size: 14px 14px;
+			pointer-events: none;
+		}
+
+		.included-header {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(300px, 0.95fr);
+			gap: 34px;
+			align-items: center;
+			margin-bottom: 28px;
+		}
+
+		.included-title {
+			color: var(--text-main);
+			font-size: clamp(2.35rem, 5vw, 4rem);
+			line-height: 1.02;
+			letter-spacing: -0.05em;
+			text-transform: uppercase;
+			margin: 0;
+			border: 0;
+			padding: 0 0 18px;
+			position: relative;
+		}
+
+		.included-title::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 70px;
+			height: 4px;
+			background: var(--accent-gold);
+		}
+
+		.included-title span {
+			color: var(--accent-gold);
+			display: block;
+		}
+
+		.included-promise {
+			border-left: 1px solid rgba(251, 192, 45, 0.65);
+			padding-left: 28px;
+			display: flex;
+			align-items: center;
+			gap: 18px;
+		}
+
+		.promise-icon {
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			background: var(--accent-gold);
+			color: #121212;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+		}
+
+		.promise-icon svg,
+		.feature-icon svg,
+		.working-icon svg {
+			width: 28px;
+			height: 28px;
+			stroke: currentColor;
+			stroke-width: 2.5;
+			fill: none;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+
+		.included-promise strong {
+			display: block;
+			color: var(--text-main);
+			font-size: 1.22rem;
+			line-height: 1.22;
+			margin-bottom: 5px;
+		}
+
+		.included-promise p {
+			margin: 0;
+			color: var(--text-muted);
+		}
+
 		.features-grid {
 			display: grid;
 			grid-template-columns: 1fr;
-			gap: 20px;
-			margin-bottom: 40px;
+			gap: 12px 16px;
+			margin-bottom: 22px;
 		}
 
-		@media(min-width: 600px) {
+		@media(min-width: 760px) {
 			.features-grid {
 				grid-template-columns: 1fr 1fr;
 			}
 		}
 
 		.feature-card {
-			background-color: #1a1a1a;
-			border: 1px solid #333;
-			border-left: 4px solid var(--accent-gold);
-			padding: 20px;
-			border-radius: 8px;
+			background: linear-gradient(180deg, #232323, #171717);
+			border: 1px solid #3a3a3a;
+			border-left: 5px solid var(--accent-gold);
+			border-radius: 7px;
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 28px rgba(0, 0, 0, 0.22);
 		}
 
 		details.feature-card {
@@ -254,11 +354,12 @@
 		.feature-card summary {
 			list-style: none;
 			cursor: pointer;
-			padding: 20px;
-			display: flex;
-			justify-content: space-between;
+			padding: 16px 20px 16px 18px;
+			display: grid;
+			grid-template-columns: 64px minmax(0, 1fr) 22px;
 			align-items: center;
 			gap: 16px;
+			min-height: 92px;
 		}
 
 		.feature-card summary::-webkit-details-marker {
@@ -266,31 +367,116 @@
 		}
 
 		.feature-card summary::after {
-			content: '+';
+			content: '›';
 			color: var(--accent-gold);
-			font-size: 1.35rem;
+			font-size: 2.15rem;
 			font-weight: 800;
 			line-height: 1;
-			flex-shrink: 0;
+			transform: translateY(-1px);
 		}
 
 		details.feature-card[open] summary::after {
-			content: '-';
+			transform: translateY(-1px) rotate(90deg);
+		}
+
+		.feature-icon {
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--accent-gold);
+			background: radial-gradient(circle at 50% 30%, #252525, #090909);
+			border: 1px solid #303030;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 		}
 
 		.feature-title {
 			color: var(--text-main);
 			font-weight: 800;
-			font-size: 1.32rem;
+			font-size: 1.26rem;
 			line-height: 1.18;
 			display: block;
+			margin-bottom: 5px;
+		}
+
+		.feature-teaser {
+			display: block;
+			color: var(--text-muted);
+			font-size: 0.94rem;
+			line-height: 1.3;
 		}
 
 		.feature-card p {
-			margin-bottom: 0;
+			margin: 0;
 			font-size: 0.95rem;
 			color: var(--text-muted);
-			padding: 0 20px 20px;
+			padding: 0 20px 18px 98px;
+		}
+
+		.working-together {
+			display: grid;
+			grid-template-columns: minmax(260px, 0.8fr) 1fr;
+			gap: 28px;
+			align-items: center;
+			background: linear-gradient(180deg, #1f1f1f, #141414);
+			border: 1px solid rgba(251, 192, 45, 0.7);
+			border-radius: 8px;
+			padding: 22px;
+			margin-bottom: 40px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.working-together::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 190px;
+			height: 100%;
+			opacity: 0.18;
+			background-image: radial-gradient(var(--accent-gold) 1px, transparent 1px);
+			background-size: 12px 12px;
+			pointer-events: none;
+		}
+
+		.working-heading {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			color: var(--text-main);
+			font-size: 1.16rem;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
+		}
+
+		.working-heading strong {
+			display: block;
+			color: var(--accent-gold);
+			font-size: 1.18rem;
+		}
+
+		.working-icon {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: var(--accent-gold);
+			color: #121212;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+		}
+
+		.working-copy {
+			border-left: 1px solid #555;
+			padding-left: 28px;
+			color: var(--text-muted);
+			position: relative;
+			z-index: 1;
 		}
 
 		ul.standard-list {
@@ -769,6 +955,55 @@
 			#Playbook .system-grid {
 				gap: 12px;
 			}
+
+			.included-panel {
+				padding-top: 18px;
+			}
+
+			.included-header,
+			.working-together {
+				grid-template-columns: 1fr;
+				gap: 18px;
+			}
+
+			.included-promise,
+			.working-copy {
+				border-left: none;
+				padding-left: 0;
+			}
+
+			.included-title {
+				font-size: 2.2rem;
+			}
+
+			.feature-card summary {
+				grid-template-columns: 52px minmax(0, 1fr) 18px;
+				gap: 12px;
+				padding: 14px;
+			}
+
+			.feature-icon {
+				width: 46px;
+				height: 46px;
+			}
+
+			.feature-icon svg {
+				width: 24px;
+				height: 24px;
+			}
+
+			.feature-title {
+				font-size: 1.02rem;
+			}
+
+			.feature-teaser {
+				font-size: 0.82rem;
+			}
+
+			.feature-card p {
+				padding: 0 14px 15px 78px;
+				font-size: 0.88rem;
+			}
 		}
 
 		.demo-site-name {
@@ -884,49 +1119,101 @@
 				</div>
 			</div>
 
-			<h2>What's Included In Your System</h2>
-			<div class="features-grid">
-				<details class="feature-card">
-					<summary><span class="feature-title">20+ Page SEO Website (Built Free)</span></summary>
-					<p>Most agencies charge £1,000+ upfront for a basic 5-page site. We build you a service-and-area website designed to make the business clearer, more credible, and easier to contact. Included at no extra upfront build cost.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">Missed Call Text Back</span></summary>
-					<p>You're under a sink or up a ladder and miss a call. By the time you ring back, they've already called a competitor. Our system instantly texts the caller a quote form, capturing their details before they move on. You call them back when you're free — they're already in your pipeline.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">5-Star Review Funnel</span></summary>
-					<p>Great work means nothing if nobody sees it online. The system automatically chases customers up to 4 times for a review — then filters the results. 4 & 5 stars go straight to your Google profile. Lower ratings come to you privately so you can fix the issue before it goes public.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">One-Click Referral Engine</span></summary>
-					<p>Word-of-mouth is powerful, but it's inconsistent. The system automatically texts past customers a branded discount page every few months, prompting repeat business and referrals. You do nothing — it runs on autopilot.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">SMS Chat Widget</span></summary>
-					<p>Website visitors can message you directly, and it lands on your phone as a text. No checking emails, no buried enquiries. Leads get an instant response, and you never miss a conversation.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">The "Easy Button" (Job Completion Form)</span></summary>
-					<p>Finish a job, tap one form, enter the customer's name and number. That's it. The system takes over — chasing the review, filtering the rating, and queuing up referral campaigns. Two taps and the whole engine runs.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">Auto Review Responder</span></summary>
-					<p>The system automatically replies to new Google reviews on your behalf, keeping the profile active and making every good review look acknowledged.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">Google Business Profile Overhaul</span></summary>
-					<p>We tidy up the profile customers usually see first: services, description, photos, links, contact details and review flow. A weak profile slows everything else down.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">Social Posting Across Your Platforms</span></summary>
-					<p>Regular posts can go out across your connected social channels from one place, so the business looks alive without logging into every platform separately.</p>
-				</details>
-				<details class="feature-card">
-					<summary><span class="feature-title">Payments, Invoices & Job Pipeline</span></summary>
-					<p>We help set up payment links, invoice workflows, overdue-payment chasing, tags, job stages, reminders, business email and calendar connection.</p>
-				</details>
-			</div>
+			<section class="included-panel" aria-labelledby="included-heading">
+				<div class="included-header">
+					<h2 class="included-title" id="included-heading"><span>What's Included</span>In Your System</h2>
+					<div class="included-promise">
+						<div class="promise-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+						</div>
+						<div>
+							<strong>Everything you need to attract, convert and keep more customers.</strong>
+							<p>All set up for you. All working together.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="features-grid">
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M7 20h10"></path><path d="M9 16v4"></path><path d="M15 16v4"></path></svg></span>
+							<span><span class="feature-title">20+ Page SEO Website (Built Free)</span><span class="feature-teaser">A conversion-focused website built to turn visitors into leads.</span></span>
+						</summary>
+						<p>Most agencies charge £1,000+ upfront for a basic 5-page site. We build you a service-and-area website designed to make the business clearer, more credible, and easier to contact. Included at no extra upfront build cost.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L9 10.5a16 16 0 0 0 4.5 4.5l1.17-1.12a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"></path><path d="M14 3h7v5"></path><path d="M21 3l-7 7"></path></svg></span>
+							<span><span class="feature-title">Missed Call Text Back</span><span class="feature-teaser">Never miss a lead again. We text back missed calls instantly.</span></span>
+						</summary>
+						<p>You're under a sink or up a ladder and miss a call. By the time you ring back, they've already called a competitor. Our system instantly texts the caller a quote form, capturing their details before they move on.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+							<span><span class="feature-title">5-Star Review Funnel</span><span class="feature-teaser">Get more reviews and catch private feedback before it hurts you.</span></span>
+						</summary>
+						<p>Great work means nothing if nobody sees it online. The system automatically chases customers up to 4 times for a review, sends happy customers to Google, and routes lower feedback privately so you can fix the issue.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+							<span><span class="feature-title">One-Click Referral Engine</span><span class="feature-teaser">Turn happy customers into a referral machine.</span></span>
+						</summary>
+						<p>Word-of-mouth is powerful, but it is inconsistent. The system automatically texts past customers a branded discount page every few months, prompting repeat business and referrals without you remembering to chase.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path></svg></span>
+							<span><span class="feature-title">SMS Chat Widget</span><span class="feature-teaser">Let website visitors message you instantly from your site.</span></span>
+						</summary>
+						<p>Website visitors can message you directly, and it lands on your phone as a text. No checking emails, no buried enquiries. Leads get an instant response, and you never miss a conversation.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M9 14l2 2 4-4"></path></svg></span>
+							<span><span class="feature-title">The "Easy Button" (Job Completion Form)</span><span class="feature-teaser">A simple form to close the job and trigger reviews and referrals.</span></span>
+						</summary>
+						<p>Finish a job, tap one form, enter the customer's name and number. The system takes over by chasing the review, filtering the rating, and queuing up referral campaigns.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"></path><path d="M4 9h11a5 5 0 0 1 0 10h-1"></path></svg></span>
+							<span><span class="feature-title">Auto Review Responder</span><span class="feature-teaser">Automatically respond to new reviews to build trust and save time.</span></span>
+						</summary>
+						<p>The system automatically replies to new Google reviews on your behalf, keeping the profile active and making every good review look acknowledged.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"></path><path d="M4 9h16v11H4z"></path><path d="M8 13h8"></path><path d="M8 20v-7"></path><path d="M16 20v-7"></path></svg></span>
+							<span><span class="feature-title">Google Business Profile Overhaul</span><span class="feature-teaser">Optimise your profile so customers understand and trust you faster.</span></span>
+						</summary>
+						<p>We tidy up the profile customers usually see first: services, description, photos, links, contact details and review flow. A weak profile slows everything else down.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg></span>
+							<span><span class="feature-title">Social Posting Across Your Platforms</span><span class="feature-teaser">Stay visible with regular posts across all your social channels.</span></span>
+						</summary>
+						<p>Regular posts can go out across your connected social channels from one place, so the business looks alive without logging into every platform separately.</p>
+					</details>
+					<details class="feature-card">
+						<summary>
+							<span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path></svg></span>
+							<span><span class="feature-title">Payments, Invoices & Job Pipeline</span><span class="feature-teaser">Get paid faster with payments, invoices and a simple job pipeline.</span></span>
+						</summary>
+						<p>We help set up payment links, invoice workflows, overdue-payment chasing, tags, job stages, reminders, business email and calendar connection.</p>
+					</details>
+				</div>
+
+				<div class="working-together">
+					<div class="working-heading">
+						<span class="working-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8z"></path></svg></span>
+						<span>All working together.<strong>So you can focus on the job.</strong></span>
+					</div>
+					<p class="working-copy">Your system runs in the background bringing in leads, booking jobs, chasing reviews and helping customers remember you.</p>
+				</div>
+			</section>
 
 			<h2>Your Own Business Number & Command Centre</h2>
 			<p style="color: var(--text-muted);">You get a <strong style="color: var(--accent-gold);">dedicated business phone number</strong> — think of it as a digital secretary sitting in your van, handling everything while you work.</p>
