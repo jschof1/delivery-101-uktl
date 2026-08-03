@@ -592,6 +592,7 @@
 
   <script>
     const revealItems = document.querySelectorAll('.reveal');
+    const revealAll = () => revealItems.forEach((item) => item.classList.add('is-visible'));
     document.documentElement.classList.add('js-ready');
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries, instance) => {
@@ -604,8 +605,9 @@
       }, { threshold: 0.12 });
       revealItems.forEach((item) => observer.observe(item));
     } else {
-      revealItems.forEach((item) => item.classList.add('is-visible'));
+      revealAll();
     }
+    setTimeout(revealAll, 1800);
   </script>
 </body>
 </html>
