@@ -188,6 +188,22 @@
     .system-card li { border-top: 1px solid var(--line); padding: 8px 0; }
     .system-card li::before { color: var(--gold-light); content: "+"; font-weight: 800; margin-right: 8px; }
 
+    .examples-section { background: var(--bg); }
+    .examples-grid { display: grid; gap: 17px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 51px; }
+    .example-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color 160ms ease, transform 160ms ease; }
+    .example-card:hover { border-color: rgba(230,172,77,0.52); transform: translateY(-4px); }
+    .example-card:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+    .example-image { aspect-ratio: 16 / 10; background: var(--bg-deep); overflow: hidden; }
+    .example-image img { display: block; height: 100%; object-fit: cover; transition: transform 250ms ease; width: 100%; }
+    .example-card:hover .example-image img { transform: scale(1.025); }
+    .example-body { padding: 21px 22px 23px; }
+    .example-tag { color: var(--gold-light); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; margin-bottom: 9px; text-transform: uppercase; }
+    .example-card h3 { font-size: 1.12rem; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .example-card p:not(.example-tag) { color: var(--muted); font-size: 0.84rem; margin-bottom: 14px; }
+    .example-link { color: var(--soft); font-size: 0.79rem; font-weight: 750; }
+    .example-link span { color: var(--gold-light); margin-left: 5px; }
+    .examples-footnote { color: var(--muted); font-size: 0.84rem; margin: 24px 0 0; }
+
     .ownership-section { background: var(--bg-deep); }
     .ownership-layout { display: grid; gap: 72px; grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr); }
     .ownership-copy .section-heading { max-width: 500px; }
@@ -258,6 +274,7 @@
       .hero-panel { max-width: 560px; }
       .system-card:nth-child(2), .system-card:nth-child(3) { transform: none; }
       .system-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .examples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .pipeline { grid-template-columns: repeat(4, 1fr); row-gap: 18px; }
       .pipeline-step:not(:last-child)::after { display: none; }
       .pipeline-step:nth-child(4)::after { display: block; }
@@ -286,6 +303,7 @@
       .section-header { margin-bottom: 38px; }
       .section-heading { font-size: clamp(2.35rem, 12vw, 4rem); }
       .review-grid, .system-grid { margin-top: 35px; }
+      .examples-grid { grid-template-columns: 1fr; margin-top: 35px; }
       .review-card { padding: 23px; }
       .review-card h3 { margin-top: 24px; }
       .video-layout { gap: 32px; }
@@ -312,6 +330,7 @@
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#plan">The plan</a>
+      <a href="#examples">Examples</a>
       <a href="#ownership">Ownership</a>
       <a class="nav-cta" href="#next-step">See the next step</a>
     </nav>
@@ -411,6 +430,79 @@
           <article class="system-card reveal"><div class="system-icon">02</div><h3>The response system</h3><p>Useful follow-up for calls, forms and messages so customers are not left wondering what happens next.</p><ul><li>Missed-call text-back</li><li>SMS and web chat options</li><li>Review request workflow</li></ul></article>
           <article class="system-card reveal"><div class="system-icon">03</div><h3>The job pipeline</h3><p>A practical view of the work in front of you, from the first enquiry through completion, reviews and repeat business.</p><ul><li>Quote and follow-up visibility</li><li>Job stages and ownership</li><li>Partner and referral opportunities</li></ul></article>
         </div>
+      </div>
+    </section>
+
+    <section class="examples-section" id="examples">
+      <div class="wrap">
+        <div class="section-header reveal">
+          <p class="section-kicker">Live client examples</p>
+          <h2 class="section-heading">The standard we can bring to Boxit.</h2>
+          <p class="section-intro">These are live websites we have built for UK Trade Leads clients. Each one is shaped around a clear local proposition, useful proof and a straightforward route to enquire. We have included the confirmed live work we could verify while preparing this proposal.</p>
+        </div>
+        <div class="examples-grid">
+          <a class="example-card reveal" href="https://sprayinnovations.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Spray Innovations live website">
+            <div class="example-image"><img src="/assets/examples/spray-innovations.webp" alt="Screenshot of the Spray Innovations website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Spray Innovations</p><h3>Spray painting services</h3><p>A focused service website for Epsom and Surrey with a clear quote journey.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://allaspectsroofingspecialists.com/" target="_blank" rel="noreferrer" aria-label="View the All Aspects Roofing live website">
+            <div class="example-image"><img src="/assets/examples/all-aspects-roofing.webp" alt="Screenshot of the All Aspects Roofing website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">All Aspects Roofing</p><h3>Roofing services</h3><p>A strong local roofing presence covering Kent, Surrey and London.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://aphexheating.com/" target="_blank" rel="noreferrer" aria-label="View the Aphex Heating live website">
+            <div class="example-image"><img src="/assets/examples/aphex-heating.webp" alt="Screenshot of the Aphex Heating website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Aphex Heating</p><h3>Heating and boiler specialists</h3><p>A local proposition for heating, boiler installation and fast quote requests.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://alulaaesthetics.com/" target="_blank" rel="noreferrer" aria-label="View the Alula Aesthetics live website">
+            <div class="example-image"><img src="/assets/examples/alula-aesthetics.webp" alt="Screenshot of the Alula Aesthetics website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Alula Aesthetics</p><h3>Medical aesthetics</h3><p>A polished treatment and training website with the next step made easy to find.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://anplumbingservices.com/" target="_blank" rel="noreferrer" aria-label="View the AN Plumbing Services live website">
+            <div class="example-image"><img src="/assets/examples/an-plumbing-services.webp" alt="Screenshot of the AN Plumbing Services website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">AN Plumbing Services</p><h3>Plumbing services</h3><p>A service-led plumbing website for customers across Leicestershire.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://mucinaexternalworks.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Mucina External Works live website">
+            <div class="example-image"><img src="/assets/examples/mucina-external-works.webp" alt="Screenshot of the Mucina External Works website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Mucina External Works</p><h3>External wall solutions</h3><p>A practical service presentation for insulation, rendering and external works.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://nacarpetcleaning.com/" target="_blank" rel="noreferrer" aria-label="View the N.A Carpet Cleaning live website">
+            <div class="example-image"><img src="/assets/examples/na-carpet-cleaning.webp" alt="Screenshot of the N.A Carpet Cleaning website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">N.A Carpet Cleaning</p><h3>Carpet and upholstery cleaning</h3><p>A clear cleaning service site built around trust, coverage and a callback.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://neatifycarpetandsofa.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Neatify Carpet and Sofa live website">
+            <div class="example-image"><img src="/assets/examples/neatify-carpet-sofa.webp" alt="Screenshot of the Neatify Carpet and Sofa website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Neatify Carpet &amp; Sofa</p><h3>Carpet cleaning</h3><p>A conversion-focused cleaning website serving Liverpool and customers across the UK.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://nprefurbservices.co.uk/" target="_blank" rel="noreferrer" aria-label="View the NP Refurb Services live website">
+            <div class="example-image"><img src="/assets/examples/np-refurb-services.webp" alt="Screenshot of the NP Refurb Services website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">NP Refurb Services</p><h3>Painting and decorating</h3><p>A local refurb service website for customers looking for a trusted decorator in Ipswich.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://pestdirectuk.com/" target="_blank" rel="noreferrer" aria-label="View the Pest Direct live website">
+            <div class="example-image"><img src="/assets/examples/pest-direct.webp" alt="Screenshot of the Pest Direct website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Pest Direct</p><h3>Pest control</h3><p>A distinctive pest control presence for Hertfordshire and London with a direct enquiry path.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://premierheatingmanchester.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Premier Heating live website">
+            <div class="example-image"><img src="/assets/examples/premier-heating.webp" alt="Screenshot of the Premier Heating website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Premier Heating</p><h3>Boiler and heating engineers</h3><p>A local heating and plumbing website designed to make a callback feel immediate.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://propertyhomephotos.com/" target="_blank" rel="noreferrer" aria-label="View the Property Home Photos live website">
+            <div class="example-image"><img src="/assets/examples/property-home-photos.webp" alt="Screenshot of the Property Home Photos website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Property Home Photos</p><h3>Property photography</h3><p>A visual service website that puts the quality of the work and enquiry route first.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://supremewindowshomecare.com/" target="_blank" rel="noreferrer" aria-label="View the Supreme Windows Homecare live website">
+            <div class="example-image"><img src="/assets/examples/supreme-windows-homecare.webp" alt="Screenshot of the Supreme Windows Homecare website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Supreme Windows Homecare</p><h3>Windows and home improvements</h3><p>A strong local site for windows, doors and conservatories in Birmingham.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://tagpropertymaintenance.com/" target="_blank" rel="noreferrer" aria-label="View the TAG Property Maintenance live website">
+            <div class="example-image"><img src="/assets/examples/tag-property-maintenance.webp" alt="Screenshot of the TAG Property Maintenance website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">TAG Property Maintenance</p><h3>All-trades maintenance</h3><p>A practical service website for property maintenance across Dundee.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://tomandjerrypestcontrol.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Tom and Jerry Pest Control live website">
+            <div class="example-image"><img src="/assets/examples/tom-jerry-pest-control.webp" alt="Screenshot of the Tom and Jerry Pest Control website" loading="lazy"></div>
+            <div class="example-body"><p class="example-tag">Tom &amp; Jerry Pest Control</p><h3>Pest control and heat treatments</h3><p>A clear local pest control website with an immediate route to get help.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </div>
+        <p class="examples-footnote reveal">We can use the same thinking for Boxit, then tailor the pages, services, areas and follow-up around your business.</p>
       </div>
     </section>
 
