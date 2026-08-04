@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "Boxit Logistics | A stronger foundation for growth",
+    "description": "A practical growth and systems proposal prepared for Boxit Logistics and Storage.",
+    "canonical": "https://norbertboxit.uktradeleads.com/"
+  },
+  "brand": {
+    "name": "UK Trade Leads",
+    "mark": "🛠️",
+    "subline": "Client growth system",
+    "url": "https://delivery101.uktradeleads.com/"
+  },
+  "client": {
+    "name": "Boxit",
+    "legalName": "Boxit Logistics & Storage",
+    "contactName": "Norbert"
+  },
+  "announcement": "HERE'S WHAT WE CAN BUILD FOR BOXIT",
+  "navCta": "See the next step",
+  "hero": {
+    "eyebrow": "Prepared for Norbert",
+    "titleBefore": "Turn more enquiries into",
+    "titleAccent": "completed jobs.",
+    "body": "Boxit already has the business, the experience and a working web presence. For removals, storage, dismantling and delivery work across Walsall, Wolverhampton and Birmingham, the opportunity now is to connect everything into one simple system that builds trust, responds quickly and keeps every job moving.",
+    "primaryLabel": "See the Boxit plan",
+    "primaryHref": "#plan",
+    "secondaryLabel": "Watch the walkthrough",
+    "secondaryHref": "#video",
+    "note": "A clearer foundation first. More opportunities to grow together over time.",
+    "panelLabel": "The operating picture",
+    "panelTitle": "Every enquiry gets a next step.",
+    "panelStatus": "Built around the way Boxit works",
+    "panelItems": [
+      { "title": "New enquiry", "detail": "Captured from call, form or message" },
+      { "title": "Quote sent", "detail": "Follow-up is visible, not forgotten" },
+      { "title": "Job completed", "detail": "Simple handover into reviews" },
+      { "title": "Repeat or referral", "detail": "Long-term value from good work" }
+    ],
+    "panelFootLabel": "First priority:",
+    "panelFoot": "Build the review foundation and look for quick wins in trust and response time."
+  },
+  "signals": [
+    { "icon": "01", "title": "Reviews first", "detail": "Build trust where people check you" },
+    { "icon": "02", "title": "Owned website", "detail": "A rebuild that stays yours" },
+    { "icon": "03", "title": "Job pipeline", "detail": "Know what needs attention next" }
+  ],
+  "review": {
+    "kicker": "Where we start",
+    "title": "The quickest improvement is usually the one customers can see.",
+    "intro": "We reviewed Boxit from the point of view of someone deciding whether to trust you with their move, storage or delivery. The first job is to strengthen that decision, then make sure the business can follow through consistently.",
+    "cards": [
+      { "index": "01 / TRUST", "title": "Build the Google review foundation", "body": "We will put a clear, honest request process around completed jobs so happy customers know exactly how to leave feedback. The aim is steady proof from real customers, not a one-off push." },
+      { "index": "02 / RESPONSE", "title": "Recover the enquiries that arrive at the wrong time", "body": "Missed-call text-back, website forms and messages can feed one follow-up system. That gives every potential customer a useful next step while you are driving, moving or already on a job." },
+      { "index": "03 / CONTROL", "title": "Make the next job obvious", "body": "A simple pipeline gives you one place to see new enquiries, quotes, booked jobs, completed work, review requests and future opportunities." }
+    ],
+    "callout": "Step one is not about making a big promise. It is about creating visible proof and removing the small gaps that cost good businesses enquiries."
+  },
+  "video": {
+    "wistiaId": "0fwrc4v07b",
+    "kicker": "The walkthrough",
+    "title": "See how the moving parts fit together.",
+    "body": "This is the Delivery 101 walkthrough, shown here as the starting point for the Boxit conversation. The proposal around it is personalised to where your business is now and what we can build next.",
+    "noteLabel": "WATCH FOR",
+    "note": "Missed calls, reviews, follow-up, referrals and the job pipeline working as one system."
+  },
+  "roadmapKicker": "The Boxit growth plan",
+  "roadmapTitle": "A sensible order of operations.",
+  "roadmapIntro": "We start with the foundations that can create early momentum. Then we use the same system to make the business easier to manage and easier to grow.",
+  "roadmap": [
+    { "number": "01", "phase": "First 30 days", "title": "Reviews and trust", "body": "Review the Google Business Profile, create the customer request flow and make the best parts of Boxit's existing service more visible to future customers.", "resultLabel": "Early signal", "result": "The first genuine reviews, a stronger trust layer and a clearer reason for someone to choose Boxit." },
+    { "number": "02", "phase": "Next layer", "title": "Capture and respond", "body": "Connect the rebuilt site, quote forms, missed-call text-back and message handling so an enquiry is acknowledged and routed even when you cannot answer immediately.", "resultLabel": "Early signal", "result": "Fewer cold enquiries and a clearer picture of where every opportunity came from." },
+    { "number": "03", "phase": "Everyday control", "title": "Manage the jobs", "body": "Set up the pipeline around the way Boxit actually works: new enquiry, quote sent, booked, in progress, completed, review requested and closed.", "resultLabel": "Business benefit", "result": "Less mental load, more visibility and a consistent follow-up habit that does not depend on memory." },
+    { "number": "04", "phase": "Long-term partnership", "title": "Grow what works", "body": "Once the foundation is producing useful signals, we can build out service-area content, repeat-customer campaigns, partner and referral tracking, social proof and paid acquisition when it makes sense.", "resultLabel": "Long-term opportunity", "result": "A business partner and operating system that can keep developing as Boxit develops." }
+  ],
+  "system": {
+    "kicker": "What we will build around you",
+    "title": "One foundation. Three connected layers.",
+    "intro": "The value is not any one feature on its own. It is the way the website, response system and day-to-day pipeline support each other.",
+    "layers": [
+      { "icon": "01", "title": "The website", "body": "A clean rebuild of the current site, keeping the parts that already represent Boxit and improving the journey to a quote or conversation.", "bullets": ["Removals, storage and delivery journeys", "Local paths for Walsall, Wolverhampton and Birmingham", "Clear quote and contact paths"] },
+      { "icon": "02", "title": "The response system", "body": "Useful follow-up for calls, forms and messages so customers are not left wondering what happens next.", "bullets": ["Missed-call text-back", "SMS and web chat options", "Review request workflow"] },
+      { "icon": "03", "title": "The job pipeline", "body": "A practical view of the work in front of you, from the first enquiry through completion, reviews and repeat business.", "bullets": ["Quote and follow-up visibility", "Job stages and ownership", "Partner and referral opportunities"] }
+    ]
+  },
+  "examplesKicker": "Live client examples",
+  "examplesTitle": "The standard we can bring to Boxit.",
+  "examplesIntro": "These are live websites we have built for UK Trade Leads clients. Each one is shaped around a clear local proposition, useful proof and a straightforward route to enquire. We have included the confirmed live work we could verify while preparing this proposal.",
+  "examplesFootnote": "We can use the same thinking for Boxit, then tailor the pages, services, areas and follow-up around your business.",
+  "examples": [
+    { "name": "Spray Innovations", "title": "Spray painting services", "description": "A focused service website for Epsom and Surrey with a clear quote journey.", "url": "https://sprayinnovations.co.uk/", "image": "/assets/examples/spray-innovations.webp" },
+    { "name": "All Aspects Roofing", "title": "Roofing services", "description": "A strong local roofing presence covering Kent, Surrey and London.", "url": "https://allaspectsroofingspecialists.com/", "image": "/assets/examples/all-aspects-roofing.webp" },
+    { "name": "Aphex Heating", "title": "Heating and boiler specialists", "description": "A local proposition for heating, boiler installation and fast quote requests.", "url": "https://aphexheating.com/", "image": "/assets/examples/aphex-heating.webp" },
+    { "name": "Alula Aesthetics", "title": "Medical aesthetics", "description": "A polished treatment and training website with the next step made easy to find.", "url": "https://alulaaesthetics.com/", "image": "/assets/examples/alula-aesthetics.webp" },
+    { "name": "AN Plumbing Services", "title": "Plumbing services", "description": "A service-led plumbing website for customers across Leicestershire.", "url": "https://anplumbingservices.com/", "image": "/assets/examples/an-plumbing-services.webp" },
+    { "name": "Mucina External Works", "title": "External wall solutions", "description": "A practical service presentation for insulation, rendering and external works.", "url": "https://mucinaexternalworks.co.uk/", "image": "/assets/examples/mucina-external-works.webp" },
+    { "name": "N.A Carpet Cleaning", "title": "Carpet and upholstery cleaning", "description": "A clear cleaning service site built around trust, coverage and a callback.", "url": "https://nacarpetcleaning.com/", "image": "/assets/examples/na-carpet-cleaning.webp" },
+    { "name": "Neatify Carpet & Sofa", "title": "Carpet cleaning", "description": "A conversion-focused cleaning website serving Liverpool and customers across the UK.", "url": "https://neatifycarpetandsofa.co.uk/", "image": "/assets/examples/neatify-carpet-sofa.webp" },
+    { "name": "NP Refurb Services", "title": "Painting and decorating", "description": "A local refurb service website for customers looking for a trusted decorator in Ipswich.", "url": "https://nprefurbservices.co.uk/", "image": "/assets/examples/np-refurb-services.webp" },
+    { "name": "Pest Direct", "title": "Pest control", "description": "A distinctive pest control presence for Hertfordshire and London with a direct enquiry path.", "url": "https://pestdirectuk.com/", "image": "/assets/examples/pest-direct.webp" },
+    { "name": "Premier Heating", "title": "Boiler and heating engineers", "description": "A local heating and plumbing website designed to make a callback feel immediate.", "url": "https://premierheatingmanchester.co.uk/", "image": "/assets/examples/premier-heating.webp" },
+    { "name": "Property Home Photos", "title": "Property photography", "description": "A visual service website that puts the quality of the work and enquiry route first.", "url": "https://propertyhomephotos.com/", "image": "/assets/examples/property-home-photos.webp" },
+    { "name": "Supreme Windows Homecare", "title": "Windows and home improvements", "description": "A strong local site for windows, doors and conservatories in Birmingham.", "url": "https://supremewindowshomecare.com/", "image": "/assets/examples/supreme-windows-homecare.webp" },
+    { "name": "TAG Property Maintenance", "title": "All-trades maintenance", "description": "A practical service website for property maintenance across Dundee.", "url": "https://tagpropertymaintenance.com/", "image": "/assets/examples/tag-property-maintenance.webp" },
+    { "name": "Tom & Jerry Pest Control", "title": "Pest control and heat treatments", "description": "A clear local pest control website with an immediate route to get help.", "url": "https://tomandjerrypestcontrol.co.uk/", "image": "/assets/examples/tom-jerry-pest-control.webp" }
+  ],
+  "ownership": {
+    "kicker": "Built to be yours",
+    "title": "The work stays with Boxit.",
+    "body": [
+      "We will rebuild the website and set up the system so you are investing in an asset you can keep. If you ever decide not to continue with us, the website and the work created for Boxit do not simply disappear.",
+      "We will be clear about what is owned by Boxit and what is a separate third-party subscription, so there are no surprises later."
+    ],
+    "boxTitle": "What remains yours",
+    "items": ["The rebuilt Boxit website and its client-specific content", "Your design, copy, pages and business information", "Your domain, Google Business Profile and review history", "Your customer, enquiry and job data", "A clear handover route if you ever leave us"],
+    "footnote": "Phone numbers, messaging tools, CRM access and other third-party services can have their own billing or transfer terms. We will identify those clearly before setup."
+  },
+  "pipeline": {
+    "kicker": "A pipeline for the work",
+    "title": "Know what is happening next.",
+    "intro": "The pipeline is designed to be useful on a busy day. It gives you a quick view without asking you to become a complicated software operator.",
+    "stages": [
+      { "label": "01 / Inbox", "title": "New enquiry", "detail": "Every lead has a home" },
+      { "label": "02 / Action", "title": "Contacted", "detail": "Next response is clear" },
+      { "label": "03 / Quote", "title": "Quote sent", "detail": "Follow-up stays visible" },
+      { "label": "04 / Booked", "title": "Job booked", "detail": "Work is scheduled" },
+      { "label": "05 / Delivery", "title": "In progress", "detail": "Everyone knows the stage" },
+      { "label": "06 / Proof", "title": "Completed", "detail": "Review request is ready" },
+      { "label": "07 / Growth", "title": "Repeat or referral", "detail": "Good work keeps working" }
+    ],
+    "caption": "This is a simple operating view, not another complicated admin burden."
+  },
+  "offer": {
+    "kicker": "The next step",
+    "title": "Start with the foundation. Keep building from there.",
+    "body": ["The first phase is about making Boxit easier to trust and easier to follow up. Then we can use the data from real enquiries and completed jobs to decide what deserves attention next.", "That is how we grow as a business partner: practical improvements, visible progress and a system that keeps getting more useful."],
+    "label": "Boxit system",
+    "price": "£197",
+    "period": "/ month",
+    "detail": "The base system to get the foundation live and working.",
+    "items": ["Rebuilt, owned Boxit website", "Missed-call and message follow-up", "Review and reputation foundation", "Job pipeline and ongoing improvements"],
+    "ctaLabel": "Talk through the setup",
+    "ctaHref": "#contact",
+    "guarantee": "No separate upfront website build fee. 30-day money-back guarantee."
+  },
+  "faqKicker": "Clear answers",
+  "faqTitle": "The important bits, plainly.",
+  "faq": [
+    { "question": "Are you replacing the current website?", "answer": "We will rebuild it in a cleaner, more connected form, keeping the useful parts of the current Boxit presence while improving the customer journey and ownership position." },
+    { "question": "What happens first?", "answer": "We start with the review foundation and the Google Business Profile. That gives future customers stronger proof while we prepare the wider response and pipeline system." },
+    { "question": "Do I really keep the website if I leave?", "answer": "Yes. The Boxit website, its client-specific content and the work created for the business remain yours. We will document any separate third-party subscriptions and their handover terms." },
+    { "question": "Can this grow beyond the initial setup?", "answer": "Yes. Once the foundations are working, we can add service-area visibility, partner and referral tracking, repeat-customer follow-up and other growth activity based on what the business actually needs." }
+  ],
+  "final": {
+    "kicker": "Built for the next stage of Boxit",
+    "title": "A better system for the work you already do well.",
+    "body": "First, create trust. Then capture more opportunities. Then make every job and partnership easier to manage.",
+    "primaryLabel": "Start the conversation",
+    "primaryHref": "#next-step"
+  },
+  "footer": "A personalised proposal for Boxit Logistics & Storage."
+}

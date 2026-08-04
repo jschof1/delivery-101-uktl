@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "[Client name] | Growth proposal",
+    "description": "A practical growth and systems proposal prepared for [Client name].",
+    "canonical": ""
+  },
+  "brand": {
+    "name": "UK Trade Leads",
+    "mark": "🛠️",
+    "subline": "Client growth system",
+    "url": "https://delivery101.uktradeleads.com/"
+  },
+  "client": {
+    "name": "[Client name]",
+    "legalName": "[Client legal or trading name]",
+    "contactName": "[Contact name]"
+  },
+  "announcement": "HERE'S WHAT WE CAN BUILD FOR [CLIENT NAME]",
+  "navCta": "See the next step",
+  "hero": {
+    "eyebrow": "Prepared for [Contact name]",
+    "titleBefore": "Turn more enquiries into",
+    "titleAccent": "completed jobs.",
+    "body": "[Write a concise, client-specific summary of the current business, the services, the service area and the opportunity in front of it.]",
+    "primaryLabel": "See the plan",
+    "primaryHref": "#plan",
+    "secondaryLabel": "Watch the walkthrough",
+    "secondaryHref": "#video",
+    "note": "[One honest sentence about the first practical improvement.]",
+    "panelLabel": "The operating picture",
+    "panelTitle": "Every enquiry gets a next step.",
+    "panelStatus": "Built around the way [Client name] works",
+    "panelItems": [
+      { "title": "New enquiry", "detail": "Captured from call, form or message" },
+      { "title": "Quote sent", "detail": "Follow-up is visible, not forgotten" },
+      { "title": "Job completed", "detail": "Simple handover into reviews" },
+      { "title": "Repeat or referral", "detail": "Long-term value from good work" }
+    ],
+    "panelFootLabel": "First priority:",
+    "panelFoot": "[Describe the first visible trust or response improvement.]"
+  },
+  "signals": [
+    { "icon": "01", "title": "Reviews first", "detail": "Build trust where people check you" },
+    { "icon": "02", "title": "Owned website", "detail": "A rebuild that stays yours" },
+    { "icon": "03", "title": "Job pipeline", "detail": "Know what needs attention next" }
+  ],
+  "review": {
+    "kicker": "Where we start",
+    "title": "The quickest improvement is usually the one customers can see.",
+    "intro": "[Describe the current-state review from a potential customer's point of view.]",
+    "cards": [
+      { "index": "01 / TRUST", "title": "[Priority one]", "body": "[What will change, why it matters and what evidence will show progress.]" },
+      { "index": "02 / RESPONSE", "title": "[Priority two]", "body": "[What will change, why it matters and what evidence will show progress.]" },
+      { "index": "03 / CONTROL", "title": "[Priority three]", "body": "[What will change, why it matters and what evidence will show progress.]" }
+    ],
+    "callout": "[A grounded statement about the first improvement. Avoid guarantees.]"
+  },
+  "video": {
+    "wistiaId": "0fwrc4v07b",
+    "kicker": "The walkthrough",
+    "title": "See how the moving parts fit together.",
+    "body": "[Explain why the walkthrough is relevant to this client and what they should look for.]",
+    "noteLabel": "WATCH FOR",
+    "note": "[Name the specific system parts shown in the video.]"
+  },
+  "roadmapKicker": "The client growth plan",
+  "roadmapTitle": "A sensible order of operations.",
+  "roadmapIntro": "[Explain why the work is sequenced in this order.]",
+  "roadmap": [
+    { "number": "01", "phase": "First 30 days", "title": "[Foundation]", "body": "[Work to complete first.]", "resultLabel": "Early signal", "result": "[What should become visible first.]" },
+    { "number": "02", "phase": "Next layer", "title": "[Response or capture]", "body": "[Work to complete next.]", "resultLabel": "Early signal", "result": "[What should improve next.]" },
+    { "number": "03", "phase": "Everyday control", "title": "[Pipeline or operating system]", "body": "[Work to make the business easier to manage.]", "resultLabel": "Business benefit", "result": "[Practical operating benefit.]" }
+  ],
+  "system": {
+    "kicker": "What we will build around you",
+    "title": "One foundation. Three connected layers.",
+    "intro": "[Explain how the website, response system and operating view work together for this client.]",
+    "layers": [
+      { "icon": "01", "title": "The website", "body": "[What the website will do for this client.]", "bullets": ["[Deliverable]", "[Deliverable]", "[Deliverable]"] },
+      { "icon": "02", "title": "The response system", "body": "[What the response system will do for this client.]", "bullets": ["[Deliverable]", "[Deliverable]", "[Deliverable]"] },
+      { "icon": "03", "title": "The job pipeline", "body": "[What the pipeline will do for this client.]", "bullets": ["[Deliverable]", "[Deliverable]", "[Deliverable]"] }
+    ]
+  },
+  "examplesKicker": "Live client examples",
+  "examplesTitle": "The standard we can bring to your business.",
+  "examplesIntro": "[Explain what the verified examples demonstrate. Only include sites that have been checked live.]",
+  "examplesFootnote": "[Explain how the examples will be adapted for this client.]",
+  "examples": [],
+  "ownership": {
+    "kicker": "Built to be yours",
+    "title": "The work stays with [Client name].",
+    "body": ["[Explain the ownership promise in plain language.]", "[Explain which third-party subscriptions have separate terms.]"],
+    "boxTitle": "What remains yours",
+    "items": ["The rebuilt website and client-specific content", "Your design, copy, pages and business information", "Your domain and customer data", "A clear handover route if you ever leave us"],
+    "footnote": "[State which phone numbers, messaging tools, CRM access or subscriptions have separate billing or transfer terms.]"
+  },
+  "pipeline": {
+    "kicker": "A pipeline for the work",
+    "title": "Know what is happening next.",
+    "intro": "[Explain how the pipeline maps to the client's real work.]",
+    "stages": [
+      { "label": "01 / Inbox", "title": "New enquiry", "detail": "Every lead has a home" },
+      { "label": "02 / Action", "title": "Contacted", "detail": "Next response is clear" },
+      { "label": "03 / Quote", "title": "Quote sent", "detail": "Follow-up stays visible" },
+      { "label": "04 / Delivery", "title": "Job completed", "detail": "Proof and next step ready" }
+    ],
+    "caption": "[A short sentence that keeps the system practical and non-technical.]"
+  },
+  "offer": {
+    "kicker": "The next step",
+    "title": "Start with the foundation. Keep building from there.",
+    "body": ["[Describe the first phase and the intended outcome.]", "[Describe how future improvements will be chosen.]"],
+    "label": "[Client name] system",
+    "price": "[Price]",
+    "period": "/ month",
+    "detail": "[What the base system includes.]",
+    "items": ["[Included deliverable]", "[Included deliverable]", "[Included deliverable]", "[Included deliverable]"],
+    "ctaLabel": "Talk through the setup",
+    "ctaHref": "#contact",
+    "guarantee": "[Only include a guarantee or commercial promise that has been approved.]"
+  },
+  "faqKicker": "Clear answers",
+  "faqTitle": "The important bits, plainly.",
+  "faq": [
+    { "question": "[Important client question]", "answer": "[Plain answer based on the actual proposal.]" },
+    { "question": "[Important client question]", "answer": "[Plain answer based on the actual proposal.]" },
+    { "question": "[Important client question]", "answer": "[Plain answer based on the actual proposal.]" },
+    { "question": "[Important client question]", "answer": "[Plain answer based on the actual proposal.]" }
+  ],
+  "final": {
+    "kicker": "Built for the next stage of [Client name]",
+    "title": "A better system for the work you already do well.",
+    "body": "[Close with the practical sequence and the next conversation.]",
+    "primaryLabel": "Start the conversation",
+    "primaryHref": "#next-step"
+  },
+  "footer": "A personalised proposal for [Client name]."
+}

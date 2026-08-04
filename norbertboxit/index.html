@@ -4,281 +4,190 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A practical growth and systems proposal prepared for Boxit Logistics and Storage.">
-  <meta name="theme-color" content="#111315">
+  <meta name="theme-color" content="#1a1a1a">
   <link rel="canonical" href="https://norbertboxit.uktradeleads.com/">
   <title>Boxit Logistics | A stronger foundation for growth</title>
   <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/0fwrc4v07b.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/0fwrc4v07b.js" async type="module"></script><style>wistia-player[media-id='0fwrc4v07b']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0fwrc4v07b/swatch'); display: block; filter: blur(5px); padding-top: 56.25%; }</style>
   <style>
-    wistia-player[media-id='0fwrc4v07b']:not(:defined) {
-      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0fwrc4v07b/swatch');
-      display: block;
-      filter: blur(5px);
-      padding-top: 56.25%;
-    }
-
     :root {
-      --ink: #f7f3ea;
-      --muted: #a9acae;
-      --soft: #d6d1c6;
-      --bg: #111315;
-      --bg-deep: #0b0d0e;
-      --surface: #181b1d;
-      --surface-raised: #202427;
-      --line: rgba(247, 243, 234, 0.12);
-      --gold: #e6ac4d;
-      --gold-light: #f4ca78;
-      --orange: #dd724b;
-      --green: #a8c9a0;
-      --max: 1180px;
-      --radius: 22px;
-      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #1a1a1a;
+      --bg-deep: #151515;
+      --card: #242424;
+      --card-raised: #2b2b2b;
+      --ink: #ffffff;
+      --muted: #d1d5db;
+      --soft: #f1f3f5;
+      --accent: #fbc02d;
+      --accent-hover: #e0a800;
+      --line: #3a3a3a;
+      --line-soft: rgba(255,255,255,0.13);
+      --green: #a8d5a2;
+      --max: 1000px;
+      --radius: 12px;
+      --font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::selection { background: var(--gold); color: var(--bg); }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--accent); color: #000; }
     a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
     img, svg { max-width: 100%; }
     .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
 
-    .announcement {
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.77rem;
-      letter-spacing: 0.13em;
-      padding: 12px 0;
-      text-align: center;
-      text-transform: uppercase;
-    }
-    .announcement span { color: var(--gold-light); }
+    .announcement { background: var(--accent); color: #000; font-size: 0.78rem; font-weight: 850; letter-spacing: 0.07em; padding: 10px 16px; text-align: center; text-transform: uppercase; }
+    .site-header { padding: 34px 0 0; text-align: center; }
+    .brand { align-items: center; display: inline-flex; gap: 11px; }
+    .brand-mark { align-items: center; background: var(--accent); border-radius: 5px; color: #000; display: inline-flex; font-size: 1.1rem; font-weight: 900; height: 36px; justify-content: center; width: 36px; }
+    .brand-copy { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.04em; }
+    .brand-copy small { color: var(--muted); display: block; font-size: 0.62rem; font-weight: 650; letter-spacing: 0.12em; margin-top: 2px; text-transform: uppercase; }
+    .brand-context { color: var(--muted); font-size: 0.8rem; margin: 13px 0 0; }
+    .nav { align-items: center; border-bottom: 2px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 27px; padding-bottom: 20px; }
+    .nav a { background: var(--card); border: 1px solid #444; border-radius: 8px; color: var(--ink); font-size: 0.87rem; font-weight: 750; padding: 10px 16px; transition: border-color 160ms ease, color 160ms ease, transform 160ms ease, background 160ms ease; }
+    .nav a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .nav a.nav-cta { background: var(--accent); border-color: var(--accent); color: #000; }
+    .nav a.nav-cta:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #000; }
 
-    .nav {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      padding: 23px 0;
-    }
-    .brand { align-items: center; display: flex; gap: 11px; }
-    .brand-mark {
-      align-items: center;
-      background: var(--gold);
-      border-radius: 9px;
-      color: var(--bg);
-      display: inline-flex;
-      font-size: 0.83rem;
-      font-weight: 900;
-      height: 34px;
-      justify-content: center;
-      letter-spacing: -0.04em;
-      width: 34px;
-    }
-    .brand-copy { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
-    .brand-copy small { color: var(--muted); display: block; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.18em; margin-top: 2px; }
-    .nav-links { align-items: center; display: flex; gap: 25px; }
-    .nav-links a { color: var(--muted); font-size: 0.86rem; }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-cta { border: 1px solid var(--line); border-radius: 999px; color: var(--ink) !important; padding: 9px 16px; }
-    .nav-cta:hover { border-color: var(--gold); }
-
-    .hero { overflow: hidden; padding: 76px 0 88px; position: relative; }
-    .hero::before {
-      background: radial-gradient(circle, rgba(230, 172, 77, 0.16) 0, rgba(230, 172, 77, 0) 68%);
-      content: "";
-      height: 650px;
-      position: absolute;
-      right: -210px;
-      top: -240px;
-      width: 650px;
-      z-index: -1;
-    }
-    .hero-grid { align-items: center; display: grid; gap: 70px; grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr); }
-    .eyebrow { color: var(--gold-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.19em; margin: 0 0 21px; text-transform: uppercase; }
+    section { border-top: 1px solid var(--line-soft); padding: 82px 0; }
+    .hero { border-top: 0; padding: 68px 0 76px; }
+    .hero-grid { align-items: center; display: grid; gap: 42px; grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr); }
+    .eyebrow, .section-kicker { color: var(--accent); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.14em; margin: 0 0 16px; text-transform: uppercase; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { font-size: clamp(3.2rem, 7vw, 6.8rem); font-weight: 650; letter-spacing: -0.075em; line-height: 0.96; margin-bottom: 27px; max-width: 800px; }
-    h1 em { color: var(--gold-light); font-style: normal; }
-    .hero-copy { color: var(--soft); font-size: clamp(1.04rem, 1.5vw, 1.25rem); max-width: 620px; }
-    .hero-copy strong { color: var(--ink); font-weight: 650; }
-    .button-row { align-items: center; display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
-    .button { align-items: center; border: 1px solid transparent; border-radius: 999px; display: inline-flex; font-size: 0.91rem; font-weight: 750; gap: 9px; justify-content: center; padding: 14px 20px; transition: transform 160ms ease, background 160ms ease, border-color 160ms ease; }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { background: var(--gold); color: var(--bg); }
-    .button-primary:hover { background: var(--gold-light); }
-    .button-quiet { border-color: var(--line); color: var(--ink); }
-    .button-quiet:hover { border-color: var(--gold); }
-    .hero-note { color: var(--muted); font-size: 0.82rem; margin: 20px 0 0; }
+    h1 { font-size: clamp(2.7rem, 5.6vw, 4.8rem); font-weight: 800; letter-spacing: -0.065em; line-height: 0.99; margin-bottom: 22px; max-width: 690px; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { color: var(--muted); font-size: 1.08rem; max-width: 610px; }
+    .button-row { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { align-items: center; border: 1px solid transparent; border-radius: 8px; display: inline-flex; font-size: 0.88rem; font-weight: 800; gap: 8px; justify-content: center; padding: 13px 18px; transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease; }
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--accent); color: #000; }
+    .button-primary:hover { background: var(--accent-hover); }
+    .button-quiet { background: var(--card); border-color: #444; color: var(--ink); }
+    .button-quiet:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-note { color: var(--muted); font-size: 0.8rem; margin: 17px 0 0; }
+    .hero-panel { background: var(--card); border: 1px solid #454545; border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 26px; }
+    .panel-label { color: var(--muted); font-size: 0.69rem; font-weight: 850; letter-spacing: 0.14em; text-transform: uppercase; }
+    .panel-title { font-size: 1.45rem; letter-spacing: -0.035em; line-height: 1.1; margin: 11px 0 19px; }
+    .status-line { align-items: center; color: var(--green); display: flex; font-size: 0.78rem; font-weight: 750; gap: 9px; margin-bottom: 16px; }
+    .status-dot { background: var(--green); border-radius: 50%; height: 8px; width: 8px; }
+    .mini-pipeline { display: grid; gap: 8px; }
+    .mini-stage { align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; display: flex; gap: 10px; padding: 11px 12px; }
+    .mini-stage:nth-child(2) { margin-left: 12px; }
+    .mini-stage:nth-child(3) { margin-left: 24px; }
+    .mini-stage:nth-child(4) { margin-left: 36px; }
+    .stage-number { align-items: center; background: var(--accent); border-radius: 5px; color: #000; display: flex; flex: 0 0 auto; font-size: 0.66rem; font-weight: 900; height: 25px; justify-content: center; width: 25px; }
+    .stage-copy strong { display: block; font-size: 0.81rem; }
+    .stage-copy small { color: var(--muted); display: block; font-size: 0.68rem; margin-top: 1px; }
+    .panel-foot { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.76rem; margin: 20px 0 0; padding-top: 15px; }
+    .panel-foot strong { color: var(--accent); }
 
-    .hero-panel { background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025)); border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 28px 70px rgba(0,0,0,0.28); padding: 26px; position: relative; }
-    .panel-label { color: var(--muted); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.17em; text-transform: uppercase; }
-    .panel-title { font-size: 1.55rem; letter-spacing: -0.04em; line-height: 1.08; margin: 12px 0 24px; max-width: 300px; }
-    .status-line { align-items: center; display: flex; gap: 10px; margin-bottom: 18px; }
-    .status-dot { background: var(--green); border-radius: 50%; box-shadow: 0 0 0 5px rgba(168,201,160,0.12); height: 8px; width: 8px; }
-    .status-line span:last-child { color: var(--green); font-size: 0.78rem; font-weight: 700; }
-    .mini-pipeline { display: grid; gap: 9px; }
-    .mini-stage { align-items: center; background: rgba(17,19,21,0.58); border: 1px solid var(--line); border-radius: 13px; display: flex; gap: 11px; padding: 13px 14px; }
-    .mini-stage:nth-child(2) { margin-left: 18px; }
-    .mini-stage:nth-child(3) { margin-left: 36px; }
-    .mini-stage:nth-child(4) { margin-left: 54px; }
-    .stage-number { align-items: center; background: rgba(230,172,77,0.16); border-radius: 7px; color: var(--gold-light); display: flex; font-size: 0.71rem; font-weight: 800; height: 27px; justify-content: center; width: 27px; }
-    .stage-copy strong { display: block; font-size: 0.85rem; }
-    .stage-copy small { color: var(--muted); display: block; font-size: 0.7rem; margin-top: 1px; }
-    .panel-foot { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.77rem; margin-top: 23px; padding-top: 17px; }
-    .panel-foot strong { color: var(--gold-light); }
+    .signal-strip { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); padding: 17px 0; }
+    .signal-grid { display: grid; gap: 17px; grid-template-columns: repeat(3, 1fr); }
+    .signal { align-items: center; display: flex; gap: 10px; }
+    .signal-icon { align-items: center; background: var(--accent); border-radius: 5px; color: #000; display: flex; flex: 0 0 auto; font-size: 0.65rem; font-weight: 900; height: 28px; justify-content: center; width: 28px; }
+    .signal strong { display: block; font-size: 0.82rem; }
+    .signal span span { color: var(--muted); display: block; font-size: 0.71rem; }
 
-    .signal-strip { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); padding: 19px 0; }
-    .signal-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
-    .signal { align-items: center; display: flex; gap: 12px; }
-    .signal-icon { align-items: center; border: 1px solid rgba(230,172,77,0.34); border-radius: 50%; color: var(--gold-light); display: flex; flex: 0 0 auto; font-size: 0.75rem; font-weight: 800; height: 30px; justify-content: center; width: 30px; }
-    .signal strong { display: block; font-size: 0.88rem; }
-    .signal span { color: var(--muted); display: block; font-size: 0.76rem; }
+    .section-heading { border-bottom: 1px solid var(--line); color: var(--accent); font-size: clamp(1.85rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.055em; line-height: 1.05; margin-bottom: 18px; padding-bottom: 11px; }
+    .section-intro { color: var(--muted); font-size: 1rem; max-width: 680px; }
+    .section-header { margin-bottom: 42px; }
+    .review-section, .ownership-section, .faq { background: var(--bg-deep); }
+    .review-grid { display: grid; gap: 15px; grid-template-columns: repeat(3, 1fr); margin-top: 38px; }
+    .review-card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 23px; }
+    .card-index { color: var(--accent); font-size: 0.67rem; font-weight: 850; letter-spacing: 0.12em; }
+    .review-card h3 { font-size: 1.08rem; letter-spacing: -0.025em; margin: 24px 0 9px; }
+    .review-card p { color: var(--muted); font-size: 0.84rem; margin-bottom: 0; }
+    .quote-callout { border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; margin-top: 30px; padding: 16px 18px; }
+    .quote-callout p { color: var(--soft); font-size: 0.92rem; margin-bottom: 0; }
 
-    section { padding: 116px 0; }
-    .section-kicker { color: var(--gold-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 17px; text-transform: uppercase; }
-    .section-heading { font-size: clamp(2.25rem, 4.5vw, 4.45rem); font-weight: 650; letter-spacing: -0.065em; line-height: 0.98; margin-bottom: 22px; max-width: 760px; }
-    .section-intro { color: var(--muted); font-size: 1.08rem; max-width: 650px; }
-    .section-header { margin-bottom: 54px; }
-
-    .review-section { background: var(--bg-deep); }
-    .review-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); margin-top: 50px; }
-    .review-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 27px; }
-    .review-card:first-child { background: linear-gradient(145deg, rgba(230,172,77,0.17), rgba(230,172,77,0.035)); border-color: rgba(230,172,77,0.35); }
-    .card-index { color: var(--gold-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; }
-    .review-card h3 { font-size: 1.26rem; letter-spacing: -0.03em; margin: 31px 0 11px; }
-    .review-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0; }
-    .quote-callout { border-left: 2px solid var(--gold); margin-top: 48px; max-width: 800px; padding: 3px 0 3px 22px; }
-    .quote-callout p { color: var(--soft); font-size: 1.17rem; margin-bottom: 0; }
-
-    .video-section { background: var(--surface); }
-    .video-layout { align-items: end; display: grid; gap: 55px; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); }
-    .video-copy .section-heading { max-width: 470px; }
-    .video-copy p { color: var(--muted); max-width: 470px; }
-    .video-note { align-items: flex-start; border-top: 1px solid var(--line); color: var(--soft); display: flex; font-size: 0.87rem; gap: 12px; margin-top: 26px; padding-top: 17px; }
-    .video-note b { color: var(--gold-light); font-size: 0.8rem; }
-    .video-frame { background: #0b0d0e; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 55px rgba(0,0,0,0.26); overflow: hidden; }
+    .video-layout { align-items: center; display: grid; gap: 38px; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+    .video-copy p { color: var(--muted); max-width: 480px; }
+    .video-note { border-top: 1px solid var(--line); color: var(--soft); display: flex; font-size: 0.8rem; gap: 10px; margin-top: 22px; padding-top: 14px; }
+    .video-note b { color: var(--accent); font-size: 0.72rem; }
+    .video-frame { background: #0b0b0b; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
     .video-frame wistia-player { display: block; width: 100%; }
 
-    .roadmap { background: var(--bg); }
-    .roadmap-list { border-top: 1px solid var(--line); margin-top: 51px; }
-    .roadmap-item { align-items: start; border-bottom: 1px solid var(--line); display: grid; gap: 27px; grid-template-columns: 100px minmax(220px, 0.75fr) minmax(0, 1.25fr); padding: 31px 0; }
-    .roadmap-number { color: var(--gold-light); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; padding-top: 5px; }
-    .roadmap-item h3 { font-size: 1.45rem; letter-spacing: -0.04em; margin-bottom: 8px; }
-    .roadmap-item h3 span { color: var(--gold-light); display: block; font-size: 0.73rem; letter-spacing: 0.12em; margin-bottom: 8px; text-transform: uppercase; }
-    .roadmap-item p { color: var(--muted); font-size: 0.92rem; margin: 0; max-width: 520px; }
-    .roadmap-result { border-left: 1px solid var(--line); color: var(--soft); font-size: 0.92rem; padding-left: 26px; }
-    .roadmap-result strong { color: var(--ink); display: block; font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 7px; text-transform: uppercase; }
+    .roadmap-list { border-top: 1px solid var(--line); margin-top: 40px; }
+    .roadmap-item { align-items: start; border-bottom: 1px solid var(--line); display: grid; gap: 24px; grid-template-columns: 75px minmax(200px, 0.8fr) minmax(0, 1.2fr); padding: 25px 0; }
+    .roadmap-number { color: var(--accent); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; padding-top: 4px; }
+    .roadmap-item h3 { font-size: 1.17rem; letter-spacing: -0.035em; margin-bottom: 7px; }
+    .roadmap-item h3 span { color: var(--accent); display: block; font-size: 0.66rem; letter-spacing: 0.11em; margin-bottom: 6px; text-transform: uppercase; }
+    .roadmap-item p, .roadmap-result { color: var(--muted); font-size: 0.83rem; margin: 0; }
+    .roadmap-result { border-left: 1px solid var(--line); padding-left: 20px; }
+    .roadmap-result strong { color: var(--ink); display: block; font-size: 0.68rem; letter-spacing: 0.09em; margin-bottom: 6px; text-transform: uppercase; }
 
-    .system-section { background: var(--surface); }
-    .system-grid { display: grid; gap: 17px; grid-template-columns: repeat(3, 1fr); margin-top: 51px; }
-    .system-card { background: rgba(17,19,21,0.48); border: 1px solid var(--line); border-radius: var(--radius); min-height: 285px; padding: 28px; }
-    .system-card:nth-child(2) { transform: translateY(25px); }
-    .system-card:nth-child(3) { transform: translateY(50px); }
-    .system-icon { align-items: center; background: rgba(230,172,77,0.13); border-radius: 11px; color: var(--gold-light); display: flex; font-size: 0.78rem; font-weight: 850; height: 38px; justify-content: center; margin-bottom: 43px; width: 38px; }
-    .system-card h3 { font-size: 1.38rem; letter-spacing: -0.035em; margin-bottom: 10px; }
-    .system-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
-    .system-card ul { color: var(--soft); font-size: 0.82rem; list-style: none; margin: 0; padding: 0; }
-    .system-card li { border-top: 1px solid var(--line); padding: 8px 0; }
-    .system-card li::before { color: var(--gold-light); content: "+"; font-weight: 800; margin-right: 8px; }
+    .system-grid { display: grid; gap: 15px; grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+    .feature-card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); min-height: 255px; padding: 23px; }
+    .feature-icon { align-items: center; background: var(--accent); border-radius: 5px; color: #000; display: flex; font-size: 0.67rem; font-weight: 900; height: 30px; justify-content: center; margin-bottom: 27px; width: 30px; }
+    .feature-card h3 { font-size: 1.08rem; letter-spacing: -0.025em; margin-bottom: 8px; }
+    .feature-card p { color: var(--muted); font-size: 0.82rem; margin-bottom: 16px; }
+    .feature-card ul { color: var(--soft); font-size: 0.76rem; list-style: none; margin: 0; padding: 0; }
+    .feature-card li { border-top: 1px solid var(--line); padding: 7px 0; }
+    .feature-card li::before { color: var(--accent); content: "+"; font-weight: 900; margin-right: 7px; }
 
-    .examples-section { background: var(--bg); }
-    .examples-grid { display: grid; gap: 17px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 51px; }
-    .example-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color 160ms ease, transform 160ms ease; }
-    .example-card:hover { border-color: rgba(230,172,77,0.52); transform: translateY(-4px); }
-    .example-card:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
-    .example-image { aspect-ratio: 16 / 10; background: var(--bg-deep); overflow: hidden; }
-    .example-image img { display: block; height: 100%; object-fit: cover; transition: transform 250ms ease; width: 100%; }
-    .example-card:hover .example-image img { transform: scale(1.025); }
-    .example-body { padding: 21px 22px 23px; }
-    .example-tag { color: var(--gold-light); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; margin-bottom: 9px; text-transform: uppercase; }
-    .example-card h3 { font-size: 1.12rem; letter-spacing: -0.03em; margin-bottom: 8px; }
-    .example-card p:not(.example-tag) { color: var(--muted); font-size: 0.84rem; margin-bottom: 14px; }
-    .example-link { color: var(--soft); font-size: 0.79rem; font-weight: 750; }
-    .example-link span { color: var(--gold-light); margin-left: 5px; }
-    .examples-footnote { color: var(--muted); font-size: 0.84rem; margin: 24px 0 0; }
+    .examples-grid { display: grid; gap: 15px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 40px; }
+    .example-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color 160ms ease, transform 160ms ease; }
+    .example-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .example-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .example-image { aspect-ratio: 16 / 10; background: #0e0e0e; overflow: hidden; }
+    .example-image img { display: block; height: 100%; object-fit: cover; width: 100%; }
+    .example-body { padding: 16px 17px 18px; }
+    .example-tag { color: var(--accent); font-size: 0.63rem; font-weight: 850; letter-spacing: 0.11em; margin-bottom: 7px; text-transform: uppercase; }
+    .example-card h3 { font-size: 0.95rem; letter-spacing: -0.025em; margin-bottom: 7px; }
+    .example-card p:not(.example-tag) { color: var(--muted); font-size: 0.75rem; margin-bottom: 10px; }
+    .example-link { color: var(--soft); font-size: 0.72rem; font-weight: 800; }
+    .example-link span { color: var(--accent); margin-left: 4px; }
+    .examples-footnote, .empty-proof { color: var(--muted); font-size: 0.78rem; margin: 21px 0 0; }
 
-    .ownership-section { background: var(--bg-deep); }
-    .ownership-layout { display: grid; gap: 72px; grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr); }
-    .ownership-copy .section-heading { max-width: 500px; }
-    .ownership-copy p { color: var(--muted); max-width: 500px; }
-    .ownership-box { background: linear-gradient(145deg, rgba(230,172,77,0.13), rgba(255,255,255,0.025)); border: 1px solid rgba(230,172,77,0.33); border-radius: var(--radius); padding: 29px; }
-    .ownership-box h3 { font-size: 1.3rem; letter-spacing: -0.03em; margin-bottom: 21px; }
-    .ownership-list { list-style: none; margin: 0; padding: 0; }
-    .ownership-list li { align-items: start; border-top: 1px solid rgba(230,172,77,0.2); display: flex; font-size: 0.91rem; gap: 13px; padding: 13px 0; }
-    .ownership-list li::before { color: var(--green); content: "✓"; font-weight: 800; }
-    .ownership-footnote { color: var(--muted); font-size: 0.76rem; margin: 21px 0 0; }
+    .ownership-layout, .commercial-layout { align-items: center; display: grid; gap: 42px; grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr); }
+    .ownership-copy p, .commercial-copy p { color: var(--muted); max-width: 520px; }
+    .ownership-box, .price-card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 25px; }
+    .ownership-box h3 { font-size: 1.15rem; margin-bottom: 17px; }
+    .ownership-list, .price-list { list-style: none; margin: 0; padding: 0; }
+    .ownership-list li, .price-list li { border-top: 1px solid var(--line); font-size: 0.82rem; padding: 10px 0; }
+    .ownership-list li::before { color: var(--green); content: "✓"; font-weight: 900; margin-right: 9px; }
+    .ownership-footnote, .guarantee { color: var(--muted); font-size: 0.7rem; margin: 17px 0 0; }
 
-    .pipeline-section { background: var(--bg); }
-    .pipeline-head { align-items: end; display: flex; gap: 30px; justify-content: space-between; }
-    .pipeline-head .section-intro { max-width: 410px; }
-    .pipeline { display: grid; gap: 9px; grid-template-columns: repeat(7, 1fr); margin-top: 51px; }
+    .pipeline-head { align-items: end; display: flex; gap: 25px; justify-content: space-between; }
+    .pipeline-head .section-intro { max-width: 390px; }
+    .pipeline { display: grid; gap: 8px; grid-template-columns: repeat(7, 1fr); margin-top: 40px; }
     .pipeline-step { min-width: 0; position: relative; }
-    .pipeline-step:not(:last-child)::after { color: var(--gold); content: "→"; font-size: 1.15rem; position: absolute; right: -8px; top: 18px; z-index: 2; }
-    .pipeline-card { background: var(--surface-raised); border: 1px solid var(--line); border-radius: 14px; min-height: 127px; padding: 15px 12px; }
-    .pipeline-card small { color: var(--gold-light); display: block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.09em; margin-bottom: 19px; text-transform: uppercase; }
-    .pipeline-card strong { display: block; font-size: 0.84rem; line-height: 1.16; }
-    .pipeline-card span { color: var(--muted); display: block; font-size: 0.68rem; line-height: 1.3; margin-top: 7px; }
-    .pipeline-caption { color: var(--muted); font-size: 0.84rem; margin-top: 21px; }
+    .pipeline-step:not(:last-child)::after { color: var(--accent); content: "→"; font-size: 1rem; position: absolute; right: -7px; top: 17px; z-index: 2; }
+    .pipeline-card { background: var(--card-raised); border: 1px solid var(--line); border-radius: 8px; min-height: 112px; padding: 13px 10px; }
+    .pipeline-card small { color: var(--accent); display: block; font-size: 0.58rem; font-weight: 850; letter-spacing: 0.06em; margin-bottom: 15px; text-transform: uppercase; }
+    .pipeline-card strong { display: block; font-size: 0.76rem; line-height: 1.16; }
+    .pipeline-card span { color: var(--muted); display: block; font-size: 0.62rem; line-height: 1.28; margin-top: 6px; }
+    .pipeline-caption { color: var(--muted); font-size: 0.76rem; margin: 17px 0 0; }
 
-    .commercial { background: var(--surface); }
-    .commercial-layout { align-items: center; display: grid; gap: 65px; grid-template-columns: minmax(0, 1fr) minmax(310px, 0.72fr); }
-    .commercial-copy .section-heading { max-width: 580px; }
-    .commercial-copy p { color: var(--muted); max-width: 570px; }
-    .price-card { background: var(--bg); border: 1px solid rgba(230,172,77,0.4); border-radius: 25px; padding: 32px; }
-    .price-card .panel-label { color: var(--gold-light); }
-    .price { font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.07em; line-height: 1; margin: 20px 0 3px; }
-    .price small { color: var(--muted); font-size: 0.91rem; font-weight: 500; letter-spacing: 0; }
-    .price-detail { color: var(--soft); font-size: 0.89rem; margin: 0 0 24px; }
-    .price-list { border-top: 1px solid var(--line); list-style: none; margin: 0 0 26px; padding: 0; }
-    .price-list li { border-bottom: 1px solid var(--line); color: var(--soft); font-size: 0.84rem; padding: 10px 0; }
-    .price-list li::before { color: var(--green); content: "✓"; font-weight: 800; margin-right: 8px; }
-    .price-card .button { width: 100%; }
-    .guarantee { color: var(--muted); font-size: 0.72rem; margin: 15px 0 0; text-align: center; }
-
-    .faq { background: var(--bg-deep); }
-    .faq-grid { display: grid; gap: 15px; grid-template-columns: repeat(2, 1fr); margin-top: 48px; }
-    .faq details { border-top: 1px solid var(--line); padding: 18px 0; }
-    .faq details:last-child { border-bottom: 1px solid var(--line); }
-    .faq summary { cursor: pointer; font-size: 1rem; font-weight: 700; list-style: none; padding-right: 25px; position: relative; }
+    .price { color: var(--accent); font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 850; letter-spacing: -0.07em; line-height: 1; margin: 14px 0 4px; }
+    .price small { color: var(--muted); font-size: 0.85rem; font-weight: 600; letter-spacing: 0; }
+    .price-detail { color: var(--muted); font-size: 0.84rem; }
+    .price-list { margin: 21px 0 23px; }
+    .faq-grid { display: grid; gap: 15px; grid-template-columns: 1fr 1fr; }
+    .faq details { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 10px; padding: 16px 18px; }
+    .faq summary { color: var(--ink); cursor: pointer; font-size: 0.85rem; font-weight: 750; list-style: none; padding-right: 24px; position: relative; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { color: var(--gold-light); content: "+"; font-size: 1.25rem; position: absolute; right: 0; top: -4px; }
+    .faq summary::after { color: var(--accent); content: "+"; font-size: 1.1rem; position: absolute; right: 0; top: -4px; }
     .faq details[open] summary::after { content: "−"; }
-    .faq details p { color: var(--muted); font-size: 0.9rem; margin: 12px 0 0; max-width: 540px; }
-
-    .final-cta { background: radial-gradient(circle at 70% 20%, rgba(230,172,77,0.18), rgba(230,172,77,0) 43%), var(--bg); padding: 122px 0 132px; text-align: center; }
-    .final-cta .section-heading { margin-left: auto; margin-right: auto; }
-    .final-cta p { color: var(--muted); margin-left: auto; margin-right: auto; max-width: 570px; }
+    .faq details p { color: var(--muted); font-size: 0.8rem; margin: 11px 0 0; }
+    .final-cta { background: var(--bg-deep); padding: 90px 0 105px; text-align: center; }
+    .final-cta .section-heading { margin-left: auto; margin-right: auto; max-width: 710px; }
+    .final-cta p { color: var(--muted); margin-left: auto; margin-right: auto; max-width: 580px; }
     .final-cta .button-row { justify-content: center; }
-    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.74rem; padding: 25px 0 30px; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.7rem; padding: 20px 0 25px; }
     .footer-row { align-items: center; display: flex; justify-content: space-between; }
-    .footer-row a { color: var(--soft); }
+    .footer-row a { color: var(--accent); }
 
-    .reveal { opacity: 1; transform: none; transition: opacity 650ms ease, transform 650ms ease; }
-    .js-ready .reveal { opacity: 0; transform: translateY(16px); }
+    .reveal { opacity: 1; transform: none; transition: opacity 500ms ease, transform 500ms ease; }
+    .js-ready .reveal { opacity: 1; transform: translateY(10px); }
     .js-ready .reveal.is-visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .button { transition: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } .button, .nav a, .example-card { transition: none; } }
     @media (max-width: 900px) {
-      .hero-grid, .video-layout, .ownership-layout, .commercial-layout { gap: 43px; grid-template-columns: 1fr; }
-      .hero { padding-top: 53px; }
-      .hero-panel { max-width: 560px; }
-      .system-card:nth-child(2), .system-card:nth-child(3) { transform: none; }
-      .system-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .examples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .pipeline { grid-template-columns: repeat(4, 1fr); row-gap: 18px; }
+      .hero-grid, .video-layout, .ownership-layout, .commercial-layout { gap: 30px; grid-template-columns: 1fr; }
+      .hero-panel { max-width: 600px; }
+      .system-grid, .examples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pipeline { grid-template-columns: repeat(4, 1fr); row-gap: 15px; }
       .pipeline-step:not(:last-child)::after { display: none; }
-      .pipeline-step:nth-child(4)::after { display: block; }
-      .pipeline-step:nth-child(4)::after { content: ""; }
       .pipeline-step:nth-child(4) { grid-column: 1; }
       .pipeline-step:nth-child(5) { grid-column: 2; }
       .pipeline-step:nth-child(6) { grid-column: 3; }
@@ -286,50 +195,40 @@
     }
     @media (max-width: 680px) {
       .wrap { width: min(calc(100% - 28px), var(--max)); }
-      .announcement { font-size: 0.62rem; letter-spacing: 0.1em; }
-      .nav { padding: 18px 0; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .nav-cta { font-size: 0.76rem; padding: 8px 12px; }
-      .hero { padding: 50px 0 65px; }
-      h1 { font-size: clamp(3rem, 16vw, 5rem); }
-      .hero-grid { gap: 43px; }
-      .hero-panel { padding: 21px; }
-      .mini-stage:nth-child(2) { margin-left: 9px; }
-      .mini-stage:nth-child(3) { margin-left: 18px; }
-      .mini-stage:nth-child(4) { margin-left: 27px; }
-      .signal-grid, .review-grid, .system-grid, .faq-grid { grid-template-columns: 1fr; }
-      .signal-grid { gap: 15px; }
-      section { padding: 78px 0; }
-      .section-header { margin-bottom: 38px; }
-      .section-heading { font-size: clamp(2.35rem, 12vw, 4rem); }
-      .review-grid, .system-grid { margin-top: 35px; }
-      .examples-grid { grid-template-columns: 1fr; margin-top: 35px; }
-      .review-card { padding: 23px; }
-      .review-card h3 { margin-top: 24px; }
-      .video-layout { gap: 32px; }
-      .roadmap-list { margin-top: 34px; }
-      .roadmap-item { gap: 13px; grid-template-columns: 45px 1fr; padding: 25px 0; }
-      .roadmap-result { border-left: 0; border-top: 1px solid var(--line); grid-column: 2; padding: 17px 0 0; }
-      .pipeline-head { align-items: start; flex-direction: column; gap: 17px; }
-      .pipeline { gap: 8px; grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
+      .announcement { font-size: 0.62rem; letter-spacing: 0.05em; }
+      .site-header { padding-top: 25px; }
+      .nav { gap: 8px; margin-top: 22px; padding-bottom: 16px; }
+      .nav a { font-size: 0.72rem; padding: 8px 10px; }
+      .nav a:not(.nav-cta) { display: none; }
+      section { padding: 66px 0; }
+      .hero { padding: 53px 0 62px; }
+      h1 { font-size: clamp(2.65rem, 14vw, 4.5rem); }
+      .signal-grid, .review-grid, .system-grid, .examples-grid, .faq-grid { grid-template-columns: 1fr; }
+      .signal-grid { gap: 13px; }
+      .section-header { margin-bottom: 32px; }
+      .section-heading { font-size: clamp(1.9rem, 10vw, 3rem); }
+      .roadmap-list { margin-top: 30px; }
+      .roadmap-item { gap: 11px; grid-template-columns: 42px 1fr; padding: 22px 0; }
+      .roadmap-result { border-left: 0; border-top: 1px solid var(--line); grid-column: 2; padding: 13px 0 0; }
+      .pipeline-head { align-items: start; flex-direction: column; gap: 14px; }
+      .pipeline { gap: 7px; grid-template-columns: repeat(2, 1fr); margin-top: 28px; }
       .pipeline-step:nth-child(4), .pipeline-step:nth-child(5), .pipeline-step:nth-child(6), .pipeline-step:nth-child(7) { grid-column: auto; }
-      .pipeline-card { min-height: 116px; }
-      .commercial-layout { gap: 37px; }
-      .price-card { padding: 24px; }
-      .final-cta { padding: 82px 0 90px; }
-      .footer-row { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .pipeline-card { min-height: 105px; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 7px; }
     }
-  </style>
+</style>
 </head>
 <body>
-  <div class="announcement">A practical proposal for <span>Boxit Logistics &amp; Storage</span></div>
-  <header class="wrap nav">
+  <div class="announcement">HERE&#39;S WHAT WE CAN BUILD FOR BOXIT</div>
+  <header class="wrap site-header">
     <a class="brand" href="#top" aria-label="Boxit proposal home">
-      <span class="brand-mark">B</span>
-      <span class="brand-copy">Boxit<small>Logistics &amp; Storage</small></span>
+      <span class="brand-mark">🛠️</span>
+      <span class="brand-copy">UK Trade Leads<small>Client growth system</small></span>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">
+    <p class="brand-context">Prepared for Norbert at Boxit Logistics &amp; Storage</p>
+    <nav class="nav" aria-label="Main navigation">
       <a href="#plan">The plan</a>
+      <a href="#system">The system</a>
       <a href="#examples">Examples</a>
       <a href="#ownership">Ownership</a>
       <a class="nav-cta" href="#next-step">See the next step</a>
@@ -354,12 +253,9 @@
           <h2 class="panel-title">Every enquiry gets a next step.</h2>
           <div class="status-line"><span class="status-dot"></span><span>Built around the way Boxit works</span></div>
           <div class="mini-pipeline" aria-label="Example job pipeline">
-            <div class="mini-stage"><span class="stage-number">01</span><span class="stage-copy"><strong>New enquiry</strong><small>Captured from call, form or message</small></span></div>
-            <div class="mini-stage"><span class="stage-number">02</span><span class="stage-copy"><strong>Quote sent</strong><small>Follow-up is visible, not forgotten</small></span></div>
-            <div class="mini-stage"><span class="stage-number">03</span><span class="stage-copy"><strong>Job completed</strong><small>Simple handover into reviews</small></span></div>
-            <div class="mini-stage"><span class="stage-number">04</span><span class="stage-copy"><strong>Repeat or referral</strong><small>Long-term value from good work</small></span></div>
+            <div class="mini-stage"><span class="stage-number">01</span><span class="stage-copy"><strong>New enquiry</strong><small>Captured from call, form or message</small></span></div><div class="mini-stage"><span class="stage-number">02</span><span class="stage-copy"><strong>Quote sent</strong><small>Follow-up is visible, not forgotten</small></span></div><div class="mini-stage"><span class="stage-number">03</span><span class="stage-copy"><strong>Job completed</strong><small>Simple handover into reviews</small></span></div><div class="mini-stage"><span class="stage-number">04</span><span class="stage-copy"><strong>Repeat or referral</strong><small>Long-term value from good work</small></span></div>
           </div>
-          <p class="panel-foot"><strong>First priority:</strong> build the review foundation and look for quick wins in trust and response time.</p>
+          <p class="panel-foot"><strong>First priority:</strong> Build the review foundation and look for quick wins in trust and response time.</p>
         </div>
       </div>
     </section>
@@ -368,8 +264,7 @@
       <div class="wrap signal-grid">
         <div class="signal"><span class="signal-icon">01</span><span><strong>Reviews first</strong><span>Build trust where people check you</span></span></div>
         <div class="signal"><span class="signal-icon">02</span><span><strong>Owned website</strong><span>A rebuild that stays yours</span></span></div>
-        <div class="signal"><span class="signal-icon">03</span><span><strong>Job pipeline</strong><span>Know what needs attention next</span></span></div>
-      </div>
+        <div class="signal"><span class="signal-icon">03</span><span><strong>Job pipeline</strong><span>Know what needs attention next</span></span></div></div>
     </div>
 
     <section class="review-section">
@@ -382,8 +277,7 @@
         <div class="review-grid">
           <article class="review-card reveal"><span class="card-index">01 / TRUST</span><h3>Build the Google review foundation</h3><p>We will put a clear, honest request process around completed jobs so happy customers know exactly how to leave feedback. The aim is steady proof from real customers, not a one-off push.</p></article>
           <article class="review-card reveal"><span class="card-index">02 / RESPONSE</span><h3>Recover the enquiries that arrive at the wrong time</h3><p>Missed-call text-back, website forms and messages can feed one follow-up system. That gives every potential customer a useful next step while you are driving, moving or already on a job.</p></article>
-          <article class="review-card reveal"><span class="card-index">03 / CONTROL</span><h3>Make the next job obvious</h3><p>A simple pipeline gives you one place to see new enquiries, quotes, booked jobs, completed work, review requests and future opportunities.</p></article>
-        </div>
+          <article class="review-card reveal"><span class="card-index">03 / CONTROL</span><h3>Make the next job obvious</h3><p>A simple pipeline gives you one place to see new enquiries, quotes, booked jobs, completed work, review requests and future opportunities.</p></article></div>
         <div class="quote-callout reveal"><p>Step one is not about making a big promise. It is about creating visible proof and removing the small gaps that cost good businesses enquiries.</p></div>
       </div>
     </section>
@@ -396,9 +290,7 @@
           <p>This is the Delivery 101 walkthrough, shown here as the starting point for the Boxit conversation. The proposal around it is personalised to where your business is now and what we can build next.</p>
           <div class="video-note"><b>WATCH FOR</b><span>Missed calls, reviews, follow-up, referrals and the job pipeline working as one system.</span></div>
         </div>
-        <div class="video-frame reveal">
-          <wistia-player media-id="0fwrc4v07b" aspect="1.7777777777777777"></wistia-player>
-        </div>
+        <div class="video-frame reveal"><wistia-player media-id="0fwrc4v07b" aspect="1.7777777777777777"></wistia-player></div>
       </div>
     </section>
 
@@ -410,15 +302,14 @@
           <p class="section-intro">We start with the foundations that can create early momentum. Then we use the same system to make the business easier to manage and easier to grow.</p>
         </div>
         <div class="roadmap-list">
-          <article class="roadmap-item reveal"><div class="roadmap-number">01</div><div><h3><span>First 30 days</span>Reviews and trust</h3><p>Review the Google Business Profile, create the customer request flow and make the best parts of Boxit's existing service more visible to future customers.</p></div><div class="roadmap-result"><strong>Early signal</strong> The first genuine reviews, a stronger trust layer and a clearer reason for someone to choose Boxit.</div></article>
-          <article class="roadmap-item reveal"><div class="roadmap-number">02</div><div><h3><span>Next layer</span>Capture and respond</h3><p>Connect the rebuilt site, quote forms, missed-call text-back and message handling so an enquiry is acknowledged and routed even when you cannot answer immediately.</p></div><div class="roadmap-result"><strong>Early signal</strong> Fewer cold enquiries and a clearer picture of where every opportunity came from.</div></article>
-          <article class="roadmap-item reveal"><div class="roadmap-number">03</div><div><h3><span>Everyday control</span>Manage the jobs</h3><p>Set up the pipeline around the way Boxit actually works: new enquiry, quote sent, booked, in progress, completed, review requested and closed.</p></div><div class="roadmap-result"><strong>Business benefit</strong> Less mental load, more visibility and a consistent follow-up habit that does not depend on memory.</div></article>
-          <article class="roadmap-item reveal"><div class="roadmap-number">04</div><div><h3><span>Long-term partnership</span>Grow what works</h3><p>Once the foundation is producing useful signals, we can build out service-area content, repeat-customer campaigns, partner and referral tracking, social proof and paid acquisition when it makes sense.</p></div><div class="roadmap-result"><strong>Long-term opportunity</strong> A business partner and operating system that can keep developing as Boxit develops.</div></article>
-        </div>
+          <article class="roadmap-item reveal"><div class="roadmap-number">01</div><div><h3><span>First 30 days</span>Reviews and trust</h3><p>Review the Google Business Profile, create the customer request flow and make the best parts of Boxit&#39;s existing service more visible to future customers.</p></div><div class="roadmap-result"><strong>Early signal</strong>The first genuine reviews, a stronger trust layer and a clearer reason for someone to choose Boxit.</div></article>
+          <article class="roadmap-item reveal"><div class="roadmap-number">02</div><div><h3><span>Next layer</span>Capture and respond</h3><p>Connect the rebuilt site, quote forms, missed-call text-back and message handling so an enquiry is acknowledged and routed even when you cannot answer immediately.</p></div><div class="roadmap-result"><strong>Early signal</strong>Fewer cold enquiries and a clearer picture of where every opportunity came from.</div></article>
+          <article class="roadmap-item reveal"><div class="roadmap-number">03</div><div><h3><span>Everyday control</span>Manage the jobs</h3><p>Set up the pipeline around the way Boxit actually works: new enquiry, quote sent, booked, in progress, completed, review requested and closed.</p></div><div class="roadmap-result"><strong>Business benefit</strong>Less mental load, more visibility and a consistent follow-up habit that does not depend on memory.</div></article>
+          <article class="roadmap-item reveal"><div class="roadmap-number">04</div><div><h3><span>Long-term partnership</span>Grow what works</h3><p>Once the foundation is producing useful signals, we can build out service-area content, repeat-customer campaigns, partner and referral tracking, social proof and paid acquisition when it makes sense.</p></div><div class="roadmap-result"><strong>Long-term opportunity</strong>A business partner and operating system that can keep developing as Boxit develops.</div></article></div>
       </div>
     </section>
 
-    <section class="system-section">
+    <section class="system-section" id="system">
       <div class="wrap">
         <div class="section-header reveal">
           <p class="section-kicker">What we will build around you</p>
@@ -426,10 +317,9 @@
           <p class="section-intro">The value is not any one feature on its own. It is the way the website, response system and day-to-day pipeline support each other.</p>
         </div>
         <div class="system-grid">
-          <article class="system-card reveal"><div class="system-icon">01</div><h3>The website</h3><p>A clean rebuild of the current site, keeping the parts that already represent Boxit and improving the journey to a quote or conversation.</p><ul><li>Removals, storage and delivery journeys</li><li>Local paths for Walsall, Wolverhampton and Birmingham</li><li>Clear quote and contact paths</li></ul></article>
-          <article class="system-card reveal"><div class="system-icon">02</div><h3>The response system</h3><p>Useful follow-up for calls, forms and messages so customers are not left wondering what happens next.</p><ul><li>Missed-call text-back</li><li>SMS and web chat options</li><li>Review request workflow</li></ul></article>
-          <article class="system-card reveal"><div class="system-icon">03</div><h3>The job pipeline</h3><p>A practical view of the work in front of you, from the first enquiry through completion, reviews and repeat business.</p><ul><li>Quote and follow-up visibility</li><li>Job stages and ownership</li><li>Partner and referral opportunities</li></ul></article>
-        </div>
+          <article class="feature-card reveal"><div class="feature-icon">01</div><h3>The website</h3><p>A clean rebuild of the current site, keeping the parts that already represent Boxit and improving the journey to a quote or conversation.</p><ul><li>Removals, storage and delivery journeys</li><li>Local paths for Walsall, Wolverhampton and Birmingham</li><li>Clear quote and contact paths</li></ul></article>
+          <article class="feature-card reveal"><div class="feature-icon">02</div><h3>The response system</h3><p>Useful follow-up for calls, forms and messages so customers are not left wondering what happens next.</p><ul><li>Missed-call text-back</li><li>SMS and web chat options</li><li>Review request workflow</li></ul></article>
+          <article class="feature-card reveal"><div class="feature-icon">03</div><h3>The job pipeline</h3><p>A practical view of the work in front of you, from the first enquiry through completion, reviews and repeat business.</p><ul><li>Quote and follow-up visibility</li><li>Job stages and ownership</li><li>Partner and referral opportunities</li></ul></article></div>
       </div>
     </section>
 
@@ -469,8 +359,8 @@
             <div class="example-image"><img src="/assets/examples/na-carpet-cleaning.webp" alt="Screenshot of the N.A Carpet Cleaning website" loading="lazy"></div>
             <div class="example-body"><p class="example-tag">N.A Carpet Cleaning</p><h3>Carpet and upholstery cleaning</h3><p>A clear cleaning service site built around trust, coverage and a callback.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
           </a>
-          <a class="example-card reveal" href="https://neatifycarpetandsofa.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Neatify Carpet and Sofa live website">
-            <div class="example-image"><img src="/assets/examples/neatify-carpet-sofa.webp" alt="Screenshot of the Neatify Carpet and Sofa website" loading="lazy"></div>
+          <a class="example-card reveal" href="https://neatifycarpetandsofa.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Neatify Carpet &amp; Sofa live website">
+            <div class="example-image"><img src="/assets/examples/neatify-carpet-sofa.webp" alt="Screenshot of the Neatify Carpet &amp; Sofa website" loading="lazy"></div>
             <div class="example-body"><p class="example-tag">Neatify Carpet &amp; Sofa</p><h3>Carpet cleaning</h3><p>A conversion-focused cleaning website serving Liverpool and customers across the UK.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
           </a>
           <a class="example-card reveal" href="https://nprefurbservices.co.uk/" target="_blank" rel="noreferrer" aria-label="View the NP Refurb Services live website">
@@ -497,11 +387,10 @@
             <div class="example-image"><img src="/assets/examples/tag-property-maintenance.webp" alt="Screenshot of the TAG Property Maintenance website" loading="lazy"></div>
             <div class="example-body"><p class="example-tag">TAG Property Maintenance</p><h3>All-trades maintenance</h3><p>A practical service website for property maintenance across Dundee.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
           </a>
-          <a class="example-card reveal" href="https://tomandjerrypestcontrol.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Tom and Jerry Pest Control live website">
-            <div class="example-image"><img src="/assets/examples/tom-jerry-pest-control.webp" alt="Screenshot of the Tom and Jerry Pest Control website" loading="lazy"></div>
+          <a class="example-card reveal" href="https://tomandjerrypestcontrol.co.uk/" target="_blank" rel="noreferrer" aria-label="View the Tom &amp; Jerry Pest Control live website">
+            <div class="example-image"><img src="/assets/examples/tom-jerry-pest-control.webp" alt="Screenshot of the Tom &amp; Jerry Pest Control website" loading="lazy"></div>
             <div class="example-body"><p class="example-tag">Tom &amp; Jerry Pest Control</p><h3>Pest control and heat treatments</h3><p>A clear local pest control website with an immediate route to get help.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
-          </a>
-        </div>
+          </a></div>
         <p class="examples-footnote reveal">We can use the same thinking for Boxit, then tailor the pages, services, areas and follow-up around your business.</p>
       </div>
     </section>
@@ -511,18 +400,11 @@
         <div class="ownership-copy reveal">
           <p class="section-kicker">Built to be yours</p>
           <h2 class="section-heading">The work stays with Boxit.</h2>
-          <p>We will rebuild the website and set up the system so you are investing in an asset you can keep. If you ever decide not to continue with us, the website and the work created for Boxit do not simply disappear.</p>
-          <p>We will be clear about what is owned by Boxit and what is a separate third-party subscription, so there are no surprises later.</p>
+          <p>We will rebuild the website and set up the system so you are investing in an asset you can keep. If you ever decide not to continue with us, the website and the work created for Boxit do not simply disappear.</p><p>We will be clear about what is owned by Boxit and what is a separate third-party subscription, so there are no surprises later.</p>
         </div>
         <div class="ownership-box reveal">
           <h3>What remains yours</h3>
-          <ul class="ownership-list">
-            <li>The rebuilt Boxit website and its client-specific content</li>
-            <li>Your design, copy, pages and business information</li>
-            <li>Your domain, Google Business Profile and review history</li>
-            <li>Your customer, enquiry and job data</li>
-            <li>A clear handover route if you ever leave us</li>
-          </ul>
+          <ul class="ownership-list"><li>The rebuilt Boxit website and its client-specific content</li><li>Your design, copy, pages and business information</li><li>Your domain, Google Business Profile and review history</li><li>Your customer, enquiry and job data</li><li>A clear handover route if you ever leave us</li></ul>
           <p class="ownership-footnote">Phone numbers, messaging tools, CRM access and other third-party services can have their own billing or transfer terms. We will identify those clearly before setup.</p>
         </div>
       </div>
@@ -541,8 +423,7 @@
           <div class="pipeline-step reveal"><div class="pipeline-card"><small>04 / Booked</small><strong>Job booked</strong><span>Work is scheduled</span></div></div>
           <div class="pipeline-step reveal"><div class="pipeline-card"><small>05 / Delivery</small><strong>In progress</strong><span>Everyone knows the stage</span></div></div>
           <div class="pipeline-step reveal"><div class="pipeline-card"><small>06 / Proof</small><strong>Completed</strong><span>Review request is ready</span></div></div>
-          <div class="pipeline-step reveal"><div class="pipeline-card"><small>07 / Growth</small><strong>Repeat or referral</strong><span>Good work keeps working</span></div></div>
-        </div>
+          <div class="pipeline-step reveal"><div class="pipeline-card"><small>07 / Growth</small><strong>Repeat or referral</strong><span>Good work keeps working</span></div></div></div>
         <p class="pipeline-caption reveal">This is a simple operating view, not another complicated admin burden.</p>
       </div>
     </section>
@@ -552,8 +433,7 @@
         <div class="commercial-copy reveal">
           <p class="section-kicker">The next step</p>
           <h2 class="section-heading">Start with the foundation. Keep building from there.</h2>
-          <p>The first phase is about making Boxit easier to trust and easier to follow up. Then we can use the data from real enquiries and completed jobs to decide what deserves attention next.</p>
-          <p>That is how we grow as a business partner: practical improvements, visible progress and a system that keeps getting more useful.</p>
+          <p>The first phase is about making Boxit easier to trust and easier to follow up. Then we can use the data from real enquiries and completed jobs to decide what deserves attention next.</p><p>That is how we grow as a business partner: practical improvements, visible progress and a system that keeps getting more useful.</p>
         </div>
         <aside class="price-card reveal">
           <p class="panel-label">Boxit system</p>
@@ -569,10 +449,7 @@
     <section class="faq" id="contact">
       <div class="wrap">
         <div class="section-header reveal"><p class="section-kicker">Clear answers</p><h2 class="section-heading">The important bits, plainly.</h2></div>
-        <div class="faq-grid">
-          <div><details class="reveal"><summary>Are you replacing the current website?</summary><p>We will rebuild it in a cleaner, more connected form, keeping the useful parts of the current Boxit presence while improving the customer journey and ownership position.</p></details><details class="reveal"><summary>What happens first?</summary><p>We start with the review foundation and the Google Business Profile. That gives future customers stronger proof while we prepare the wider response and pipeline system.</p></details></div>
-          <div><details class="reveal"><summary>Do I really keep the website if I leave?</summary><p>Yes. The Boxit website, its client-specific content and the work created for the business remain yours. We will document any separate third-party subscriptions and their handover terms.</p></details><details class="reveal"><summary>Can this grow beyond the initial setup?</summary><p>Yes. Once the foundations are working, we can add service-area visibility, partner and referral tracking, repeat-customer follow-up and other growth activity based on what the business actually needs.</p></details></div>
-        </div>
+        <div class="faq-grid"><div><details class="reveal"><summary>Are you replacing the current website?</summary><p>We will rebuild it in a cleaner, more connected form, keeping the useful parts of the current Boxit presence while improving the customer journey and ownership position.</p></details><details class="reveal"><summary>What happens first?</summary><p>We start with the review foundation and the Google Business Profile. That gives future customers stronger proof while we prepare the wider response and pipeline system.</p></details></div><div><details class="reveal"><summary>Do I really keep the website if I leave?</summary><p>Yes. The Boxit website, its client-specific content and the work created for the business remain yours. We will document any separate third-party subscriptions and their handover terms.</p></details><details class="reveal"><summary>Can this grow beyond the initial setup?</summary><p>Yes. Once the foundations are working, we can add service-area visibility, partner and referral tracking, repeat-customer follow-up and other growth activity based on what the business actually needs.</p></details></div></div>
       </div>
     </section>
 
