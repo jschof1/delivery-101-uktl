@@ -14,7 +14,9 @@
   "client": {
     "name": "Best Workforce Services",
     "legalName": "Best Workforce Solutions (UK) Limited",
-    "contactName": "Francois"
+    "contactName": "Francois",
+    "logo": "/assets/bws-logo.jpg",
+    "logoAlt": "Best Workforce Services BWS logo"
   },
   "announcement": "A PRACTICAL GROWTH SYSTEM FOR BEST WORKFORCE SERVICES",
   "navCta": "See the next step",

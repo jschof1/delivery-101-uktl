@@ -140,6 +140,11 @@ const style = String.raw`
     .hero { border-top: 0; padding: 68px 0 76px; }
     .hero-grid { align-items: center; display: grid; gap: 42px; grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr); }
     .eyebrow, .section-kicker { color: var(--accent); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.14em; margin: 0 0 16px; text-transform: uppercase; }
+    .client-intro { align-items: center; display: flex; gap: 15px; margin-bottom: 19px; }
+    .client-intro .eyebrow { margin: 0 0 5px; }
+    .client-logo { align-items: center; background: #050505; border: 1px solid #464646; border-radius: 10px; display: flex; flex: 0 0 auto; height: 78px; justify-content: center; overflow: hidden; padding: 5px; width: 82px; }
+    .client-logo img { display: block; height: 100%; object-fit: contain; width: 100%; }
+    .client-name { color: var(--ink); display: block; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.02em; }
     h1, h2, h3, p { margin-top: 0; }
     h1 { font-size: clamp(2.7rem, 5.6vw, 4.8rem); font-weight: 800; letter-spacing: -0.065em; line-height: 0.99; margin-bottom: 22px; max-width: 690px; }
     h1 em { color: var(--accent); font-style: normal; }
@@ -290,6 +295,8 @@ const style = String.raw`
       section { padding: 66px 0; }
       .hero { padding: 53px 0 62px; }
       h1 { font-size: clamp(2.65rem, 14vw, 4.5rem); }
+      .client-logo { height: 68px; width: 72px; }
+      .client-name { font-size: 0.76rem; }
       .signal-grid, .review-grid, .system-grid, .examples-grid, .faq-grid { grid-template-columns: 1fr; }
       .signal-grid { gap: 13px; }
       .section-header { margin-bottom: 32px; }
@@ -363,7 +370,10 @@ function renderProposal(config) {
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="reveal">
-          <p class="eyebrow">${escapeHtml(config.hero.eyebrow)}</p>
+          <div class="client-intro">
+            ${config.client.logo ? `<span class="client-logo"><img src="${escapeHtml(config.client.logo)}" alt="${escapeHtml(config.client.logoAlt || `${clientName} logo`)}"></span>` : ''}
+            <span><span class="eyebrow">${escapeHtml(config.hero.eyebrow)}</span><span class="client-name">${escapeHtml(clientName)}</span></span>
+          </div>
           <h1>${escapeHtml(config.hero.titleBefore)} <em>${escapeHtml(config.hero.titleAccent)}</em></h1>
           <p class="hero-copy">${escapeHtml(config.hero.body)}</p>
           <div class="button-row">
