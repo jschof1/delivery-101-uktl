@@ -1,102 +1,27 @@
-#!/usr/bin/env node
-
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const escapeHtml = (value = '') => String(value)
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;')
-  .replaceAll("'", '&#39;');
-
-const safeId = (value = '') => String(value).replace(/[^a-z0-9]/gi, '').slice(0, 32);
-const externalLinkAttrs = (href = '') => /^https?:\/\//i.test(String(href)) ? ' target="_blank" rel="noreferrer"' : '';
-
-const requiredPaths = [
-  'meta.title',
-  'meta.description',
-  'brand.name',
-  'client.name',
-  'client.contactName',
-  'announcement',
-  'hero',
-  'review',
-  'video',
-  'roadmap',
-  'system',
-  'ownership',
-  'pipeline',
-  'offer',
-  'faq',
-  'final'
-];
-
-function getPath(object, dottedPath) {
-  return dottedPath.split('.').reduce((value, key) => value?.[key], object);
-}
-
-function validateConfig(config) {
-  const missing = requiredPaths.filter((key) => {
-    const value = getPath(config, key);
-    return value === undefined || value === null || value === '';
-  });
-  if (missing.length) throw new Error(`Missing required proposal fields: ${missing.join(', ')}`);
-  if (!Array.isArray(config.roadmap) || !config.roadmap.length) throw new Error('proposal.roadmap must contain at least one stage');
-  if (!Array.isArray(config.system.layers) || !config.system.layers.length) throw new Error('proposal.system.layers must contain at least one layer');
-  if (!Array.isArray(config.pipeline.stages) || !config.pipeline.stages.length) throw new Error('proposal.pipeline.stages must contain at least one stage');
-  if (!Array.isArray(config.faq)) throw new Error('proposal.faq must be an array');
-  if (!Array.isArray(config.offer.items)) throw new Error('proposal.offer.items must be an array');
-  if (!Array.isArray(config.examples)) throw new Error('proposal.examples must be an array');
-  for (const [index, example] of config.examples.entries()) {
-    for (const field of ['name', 'title', 'description', 'url', 'image']) {
-      if (!example?.[field]) throw new Error(`proposal.examples[${index}].${field} is required`);
-    }
-  }
-}
-
-function renderSignals(signals = []) {
-  return signals.map((signal, index) => `
-        <div class="signal"><span class="signal-icon">${escapeHtml(signal.icon || String(index + 1).padStart(2, '0'))}</span><span><strong>${escapeHtml(signal.title)}</strong><span>${escapeHtml(signal.detail)}</span></span></div>`).join('');
-}
-
-function renderReviewCards(cards = []) {
-  return cards.map((card, index) => `
-          <article class="review-card reveal"><span class="card-index">${escapeHtml(card.index || `${String(index + 1).padStart(2, '0')} / PRIORITY`)}</span><h3>${escapeHtml(card.title)}</h3><p>${escapeHtml(card.body)}</p></article>`).join('');
-}
-
-function renderRoadmap(items = []) {
-  return items.map((item, index) => `
-          <article class="roadmap-item reveal"><div class="roadmap-number">${escapeHtml(item.number || String(index + 1).padStart(2, '0'))}</div><div><h3><span>${escapeHtml(item.phase)}</span>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></div><div class="roadmap-result"><strong>${escapeHtml(item.resultLabel || 'Business signal')}</strong>${escapeHtml(item.result)}</div></article>`).join('');
-}
-
-function renderSystemLayers(layers = []) {
-  return layers.map((layer, index) => `
-          <article class="feature-card reveal"><div class="feature-icon">${escapeHtml(layer.icon || String(index + 1).padStart(2, '0'))}</div><h3>${escapeHtml(layer.title)}</h3><p>${escapeHtml(layer.body)}</p><ul>${(layer.bullets || []).map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}</ul></article>`).join('');
-}
-
-function renderExamples(examples = [], clientName) {
-  if (!examples.length) return '<p class="empty-proof">Add verified live examples here when they are available. Do not publish unverified work as proof.</p>';
-  return examples.map((example) => `
-          <a class="example-card reveal" href="${escapeHtml(example.url)}" target="_blank" rel="noreferrer" aria-label="View the ${escapeHtml(example.name)} live website">
-            <div class="example-image"><img src="${escapeHtml(example.image)}" alt="${escapeHtml(example.alt || `Screenshot of the ${example.name} website`)}"></div>
-            <div class="example-body"><p class="example-tag">${escapeHtml(example.name)}</p><h3>${escapeHtml(example.title)}</h3><p>${escapeHtml(example.description)}</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
-          </a>`).join('');
-}
-
-function renderPipeline(stages = []) {
-  return stages.map((stage, index) => `
-          <div class="pipeline-step reveal"><div class="pipeline-card"><small>${escapeHtml(stage.label || `${String(index + 1).padStart(2, '0')} / Stage`)}</small><strong>${escapeHtml(stage.title)}</strong><span>${escapeHtml(stage.detail)}</span></div></div>`).join('');
-}
-
-function renderFaq(items = []) {
-  return items.map((item) => `<details class="reveal"><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('');
-}
-
-const style = String.raw`
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personalised website, enquiry response and contract pipeline proposal prepared for Francois and Best Workforce Services.">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Best Workforce Services | A clearer route to contract growth">
+  <meta property="og:description" content="A personalised website, enquiry response and contract pipeline proposal prepared for Francois and Best Workforce Services.">
+  <meta property="og:site_name" content="UK Trade Leads">
+  <meta property="og:url" content="https://best-workforce-services.pages.dev/">
+  <meta property="og:image" content="https://best-workforce-services.pages.dev/assets/share-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best Workforce Services | A clearer route to contract growth">
+  <meta name="twitter:description" content="A personalised website, enquiry response and contract pipeline proposal prepared for Francois and Best Workforce Services.">
+  <meta name="twitter:image" content="https://best-workforce-services.pages.dev/assets/share-preview.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fbc02d'/%3E%3Cpath d='M19 17v18c0 9 5 14 13 14s13-5 13-14V17h-8v18c0 4-2 6-5 6s-5-2-5-6V17z' fill='%231a1a1a'/%3E%3C/svg%3E">
+  <link rel="canonical" href="https://best-workforce-services.pages.dev/">
+  <title>Best Workforce Services | A clearer route to contract growth</title>
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/0fwrc4v07b.js" async type="module"></script><style>wistia-player[media-id='0fwrc4v07b']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0fwrc4v07b/swatch'); display: block; filter: blur(5px); padding-top: 56.25%; }</style>
+  <style>
     :root {
       --bg: #1a1a1a;
       --bg-deep: #151515;
@@ -303,59 +228,22 @@ const style = String.raw`
       .pipeline-card { min-height: 105px; }
       .footer-row { align-items: flex-start; flex-direction: column; gap: 7px; }
     }
-`;
-
-function renderProposal(config) {
-  validateConfig(config);
-  const videoId = safeId(config.video.wistiaId || '');
-  const canonical = config.meta.canonical || '';
-  const title = config.meta.title;
-  const description = config.meta.description;
-  const socialImage = config.meta.image || '';
-  const clientName = config.client.name;
-  const videoScripts = videoId ? `
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/${videoId}.js" async type="module"></script>` : '';
-  const videoFallbackStyle = videoId ? `<style>wistia-player[media-id='${videoId}']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${videoId}/swatch'); display: block; filter: blur(5px); padding-top: 56.25%; }</style>` : '';
-  const videoPlayer = videoId ? `<wistia-player media-id="${videoId}" aspect="1.7777777777777777"></wistia-player>` : '<div class="empty-proof">Add the walkthrough video when it is ready.</div>';
-
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="${escapeHtml(description)}">
-  <meta name="theme-color" content="#1a1a1a">
-  <meta name="robots" content="noindex, nofollow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="${escapeHtml(title)}">
-  <meta property="og:description" content="${escapeHtml(description)}">
-  <meta property="og:site_name" content="${escapeHtml(config.brand.name)}">
-  ${canonical ? `<meta property="og:url" content="${escapeHtml(canonical)}">` : ''}
-  ${socialImage ? `<meta property="og:image" content="${escapeHtml(socialImage)}">` : ''}
-  <meta name="twitter:card" content="${socialImage ? 'summary_large_image' : 'summary'}">
-  <meta name="twitter:title" content="${escapeHtml(title)}">
-  <meta name="twitter:description" content="${escapeHtml(description)}">
-  ${socialImage ? `<meta name="twitter:image" content="${escapeHtml(socialImage)}">` : ''}
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fbc02d'/%3E%3Cpath d='M19 17v18c0 9 5 14 13 14s13-5 13-14V17h-8v18c0 4-2 6-5 6s-5-2-5-6V17z' fill='%231a1a1a'/%3E%3C/svg%3E">
-  ${canonical ? `<link rel="canonical" href="${escapeHtml(canonical)}">` : ''}
-  <title>${escapeHtml(config.meta.title)}</title>${videoScripts}${videoFallbackStyle}
-  <style>${style}</style>
+</style>
 </head>
 <body>
-  <div class="announcement">${escapeHtml(config.announcement)}</div>
+  <div class="announcement">A PRACTICAL GROWTH SYSTEM FOR BEST WORKFORCE SERVICES</div>
   <header class="wrap site-header">
-    <a class="brand" href="#top" aria-label="${escapeHtml(clientName)} proposal home">
-      <span class="brand-mark">${escapeHtml(config.brand.mark || clientName.slice(0, 1))}</span>
-      <span class="brand-copy">${escapeHtml(config.brand.name)}<small>${escapeHtml(config.brand.subline || 'Client proposal system')}</small></span>
+    <a class="brand" href="#top" aria-label="Best Workforce Services proposal home">
+      <span class="brand-mark">🛠️</span>
+      <span class="brand-copy">UK Trade Leads<small>Client growth system</small></span>
     </a>
-    <p class="brand-context">Prepared for ${escapeHtml(config.client.contactName)} at ${escapeHtml(config.client.legalName || clientName)}</p>
+    <p class="brand-context">Prepared for Francois at Best Workforce Solutions (UK) Limited</p>
     <nav class="nav" aria-label="Main navigation">
       <a href="#plan">The plan</a>
       <a href="#system">The system</a>
       <a href="#examples">Examples</a>
       <a href="#ownership">Ownership</a>
-      <a class="nav-cta" href="#next-step">${escapeHtml(config.navCta || 'See the next step')}</a>
+      <a class="nav-cta" href="#next-step">See the next step</a>
     </nav>
   </header>
 
@@ -363,100 +251,124 @@ function renderProposal(config) {
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="reveal">
-          <p class="eyebrow">${escapeHtml(config.hero.eyebrow)}</p>
-          <h1>${escapeHtml(config.hero.titleBefore)} <em>${escapeHtml(config.hero.titleAccent)}</em></h1>
-          <p class="hero-copy">${escapeHtml(config.hero.body)}</p>
+          <p class="eyebrow">Prepared for Francois</p>
+          <h1>Turn more enquiries into <em>clear next steps.</em></h1>
+          <p class="hero-copy">From its Edinburgh base, Best Workforce Services already offers the people businesses need across security, cleaning, hospitality, reception, housekeeping, social care and delivery. The opportunity is to turn that breadth into a sharper contract journey: help each buyer find the right team, show credible proof and give every genuine enquiry a visible next step.</p>
           <div class="button-row">
-            <a class="button button-primary" href="${escapeHtml(config.hero.primaryHref || '#plan')}">${escapeHtml(config.hero.primaryLabel || 'See the plan')} <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="${escapeHtml(config.hero.secondaryHref || '#video')}">${escapeHtml(config.hero.secondaryLabel || 'Watch the walkthrough')} <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#plan">See the plan <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#video">Watch the walkthrough <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="hero-note">${escapeHtml(config.hero.note)}</p>
+          <p class="hero-note">Prepared around the current public website, service portfolio and direct-contract ambition.</p>
         </div>
         <div class="hero-panel reveal">
-          <p class="panel-label">${escapeHtml(config.hero.panelLabel)}</p>
-          <h2 class="panel-title">${escapeHtml(config.hero.panelTitle)}</h2>
-          <div class="status-line"><span class="status-dot"></span><span>${escapeHtml(config.hero.panelStatus)}</span></div>
+          <p class="panel-label">The contract journey</p>
+          <h2 class="panel-title">Every opportunity stays visible.</h2>
+          <div class="status-line"><span class="status-dot"></span><span>Designed for business and service enquiries</span></div>
           <div class="mini-pipeline" aria-label="Example job pipeline">
-            ${(config.hero.panelItems || []).map((item, index) => `<div class="mini-stage"><span class="stage-number">${String(index + 1).padStart(2, '0')}</span><span class="stage-copy"><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.detail)}</small></span></div>`).join('')}
+            <div class="mini-stage"><span class="stage-number">01</span><span class="stage-copy"><strong>New enquiry</strong><small>Captured from call, form or message</small></span></div><div class="mini-stage"><span class="stage-number">02</span><span class="stage-copy"><strong>Requirement confirmed</strong><small>Service, location, timing and staffing recorded</small></span></div><div class="mini-stage"><span class="stage-number">03</span><span class="stage-copy"><strong>Site visit or proposal</strong><small>Owner, deadline and follow-up stay clear</small></span></div><div class="mini-stage"><span class="stage-number">04</span><span class="stage-copy"><strong>Mobilise or nurture</strong><small>The next commercial action is visible</small></span></div>
           </div>
-          <p class="panel-foot"><strong>${escapeHtml(config.hero.panelFootLabel || 'First priority:')}</strong> ${escapeHtml(config.hero.panelFoot)}</p>
+          <p class="panel-foot"><strong>First priority:</strong> Align the public name, contact routes and priority services so every buyer sees one consistent business.</p>
         </div>
       </div>
     </section>
 
     <div class="signal-strip">
-      <div class="wrap signal-grid">${renderSignals(config.signals)}</div>
+      <div class="wrap signal-grid">
+        <div class="signal"><span class="signal-icon">01</span><span><strong>One clear identity</strong><span>Build confidence at every contact point</span></span></div>
+        <div class="signal"><span class="signal-icon">02</span><span><strong>Contract-ready proof</strong><span>Show why buyers should shortlist BWS</span></span></div>
+        <div class="signal"><span class="signal-icon">03</span><span><strong>Visible follow-up</strong><span>Know which opportunity needs action</span></span></div></div>
     </div>
 
     <section class="review-section">
       <div class="wrap">
         <div class="section-header reveal">
-          <p class="section-kicker">${escapeHtml(config.review.kicker)}</p>
-          <h2 class="section-heading">${escapeHtml(config.review.title)}</h2>
-          <p class="section-intro">${escapeHtml(config.review.intro)}</p>
+          <p class="section-kicker">Where we start</p>
+          <h2 class="section-heading">Make a broad workforce offer feel simple to buy.</h2>
+          <p class="section-intro">The current website proves that Best Workforce Services covers a wide range of operational needs. The next step is to organise that breadth around the buyers you most want, strengthen the evidence behind the offer and connect every serious enquiry to a practical contract process.</p>
         </div>
-        <div class="review-grid">${renderReviewCards(config.review.cards)}</div>
-        <div class="quote-callout reveal"><p>${escapeHtml(config.review.callout)}</p></div>
+        <div class="review-grid">
+          <article class="review-card reveal"><span class="card-index">01 / CLARITY</span><h3>Create focused routes for each buyer</h3><p>Separate security, cleaning, hospitality, social care and staffing needs into clear journeys, then lead with the services and contract types Best Workforce Services wants to grow first.</p></article>
+          <article class="review-card reveal"><span class="card-index">02 / PROOF</span><h3>Turn capability into buyer confidence</h3><p>Present approved credentials, supervision standards, service processes, team experience and client evidence where procurement teams expect to find them.</p></article>
+          <article class="review-card reveal"><span class="card-index">03 / RESPONSE</span><h3>Keep every serious enquiry moving</h3><p>Connect calls, forms and messages to one follow-up view so the right person can see the requirement, owner, deadline and next action.</p></article></div>
+        <div class="quote-callout reveal"><p>The aim is straightforward: make Best Workforce Services easier to understand, easier to shortlist and easier to engage for the next contract.</p></div>
       </div>
     </section>
 
     <section class="video-section" id="video">
       <div class="wrap video-layout">
         <div class="video-copy reveal">
-          <p class="section-kicker">${escapeHtml(config.video.kicker)}</p>
-          <h2 class="section-heading">${escapeHtml(config.video.title)}</h2>
-          <p>${escapeHtml(config.video.body)}</p>
-          <div class="video-note"><b>${escapeHtml(config.video.noteLabel || 'WATCH FOR')}</b><span>${escapeHtml(config.video.note)}</span></div>
+          <p class="section-kicker">The walkthrough</p>
+          <h2 class="section-heading">See how the moving parts fit together.</h2>
+          <p>The Delivery 101 walkthrough shows the website, response and follow-up principles behind the proposal. The final implementation would be adapted to Best Workforce Services and its confirmed contract-enquiry process.</p>
+          <div class="video-note"><b>WATCH FOR</b><span>Clear enquiry capture, missed-call response, follow-up ownership and a visible pipeline.</span></div>
         </div>
-        <div class="video-frame reveal">${videoPlayer}</div>
+        <div class="video-frame reveal"><wistia-player media-id="0fwrc4v07b" aspect="1.7777777777777777"></wistia-player></div>
       </div>
     </section>
 
     <section class="roadmap" id="plan">
       <div class="wrap">
         <div class="section-header reveal">
-          <p class="section-kicker">${escapeHtml(config.roadmapKicker || 'The client growth plan')}</p>
-          <h2 class="section-heading">${escapeHtml(config.roadmapTitle || 'A sensible order of operations.')}</h2>
-          <p class="section-intro">${escapeHtml(config.roadmapIntro || '')}</p>
+          <p class="section-kicker">The Best Workforce Services plan</p>
+          <h2 class="section-heading">A sensible order of operations.</h2>
+          <p class="section-intro">Start by sharpening the commercial story. Then connect the response process and use real enquiry evidence to decide where the next investment will have the most value.</p>
         </div>
-        <div class="roadmap-list">${renderRoadmap(config.roadmap)}</div>
+        <div class="roadmap-list">
+          <article class="roadmap-item reveal"><div class="roadmap-number">01</div><div><h3><span>First 30 days</span>Position the business for the right contracts</h3><p>Align the public identity, choose priority services and buyers, and organise approved proof around what procurement teams need to know.</p></div><div class="roadmap-result"><strong>Early signal</strong>A buyer can quickly understand the relevant service, coverage and next step.</div></article>
+          <article class="roadmap-item reveal"><div class="roadmap-number">02</div><div><h3><span>Next layer</span>Capture and qualify every requirement</h3><p>Connect the retained call, form and message routes to a consistent response process that records service, location, timing and decision path.</p></div><div class="roadmap-result"><strong>Early signal</strong>Each serious enquiry has a clear owner, requirement and next action.</div></article>
+          <article class="roadmap-item reveal"><div class="roadmap-number">03</div><div><h3><span>Everyday control</span>Manage the contract pipeline</h3><p>Use a simple view for qualification, site visit, proposal, decision, mobilisation and future follow-up.</p></div><div class="roadmap-result"><strong>Business benefit</strong>Open opportunities, deadlines and overdue follow-ups are easy to see.</div></article></div>
       </div>
     </section>
 
     <section class="system-section" id="system">
       <div class="wrap">
         <div class="section-header reveal">
-          <p class="section-kicker">${escapeHtml(config.system.kicker)}</p>
-          <h2 class="section-heading">${escapeHtml(config.system.title)}</h2>
-          <p class="section-intro">${escapeHtml(config.system.intro)}</p>
+          <p class="section-kicker">What we can build around you</p>
+          <h2 class="section-heading">One foundation. Three connected layers.</h2>
+          <p class="section-intro">The proposal combines a clearer website, a dependable response route and a practical operating view for contract opportunities.</p>
         </div>
-        <div class="system-grid">${renderSystemLayers(config.system.layers)}</div>
+        <div class="system-grid">
+          <article class="feature-card reveal"><div class="feature-icon">01</div><h3>The contract-ready website</h3><p>Reshape the customer journey around the services, buyers and locations Best Workforce Services wants to grow.</p><ul><li>Focused service and sector pathways</li><li>Approved credentials and buyer proof</li><li>Clear contract and service enquiry routes</li></ul></article>
+          <article class="feature-card reveal"><div class="feature-icon">02</div><h3>The response system</h3><p>Route retained calls, forms and messages into a consistent process so a serious requirement never depends on memory alone.</p><ul><li>Missed-call response option</li><li>Form and message acknowledgement</li><li>Visible ownership and deadlines</li></ul></article>
+          <article class="feature-card reveal"><div class="feature-icon">03</div><h3>The contract pipeline</h3><p>Give the team a practical view from first contact through qualification, proposal, decision and mobilisation.</p><ul><li>Requirement, site and service fit</li><li>Proposal and decision dates</li><li>Mobilisation and future follow-up</li></ul></article></div>
       </div>
     </section>
 
     <section class="examples-section" id="examples">
       <div class="wrap">
         <div class="section-header reveal">
-          <p class="section-kicker">${escapeHtml(config.examplesKicker || 'Live client examples')}</p>
-          <h2 class="section-heading">${escapeHtml(config.examplesTitle || 'The standard we can bring to your business.')}</h2>
-          <p class="section-intro">${escapeHtml(config.examplesIntro || 'Use verified live examples as proof. Keep the description factual and link to the source.')}</p>
+          <p class="section-kicker">Verified live examples</p>
+          <h2 class="section-heading">The website standard behind the proposal.</h2>
+          <p class="section-intro">These UK Trade Leads client sites were checked live when the reusable proposal kit was prepared. They demonstrate presentation and enquiry design, not guaranteed performance for Best Workforce Services.</p>
         </div>
-        <div class="examples-grid">${renderExamples(config.examples || [], clientName)}</div>
-        <p class="examples-footnote reveal">${escapeHtml(config.examplesFootnote || 'Only include work that has been verified as live or clearly label it as a private review build.')}</p>
+        <div class="examples-grid">
+          <a class="example-card reveal" href="https://allaspectsroofingspecialists.com/" target="_blank" rel="noreferrer" aria-label="View the All Aspects Roofing live website">
+            <div class="example-image"><img src="/assets/examples/all-aspects-roofing.webp" alt="Screenshot of the All Aspects Roofing website"></div>
+            <div class="example-body"><p class="example-tag">All Aspects Roofing</p><h3>Roofing services</h3><p>A focused local service presence with direct paths into the relevant work.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://aphexheating.com/" target="_blank" rel="noreferrer" aria-label="View the Aphex Heating live website">
+            <div class="example-image"><img src="/assets/examples/aphex-heating.webp" alt="Screenshot of the Aphex Heating website"></div>
+            <div class="example-body"><p class="example-tag">Aphex Heating</p><h3>Heating and boiler specialists</h3><p>A service-led website built around clarity, trust and quote requests.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="example-card reveal" href="https://propertyhomephotos.com/" target="_blank" rel="noreferrer" aria-label="View the Property Home Photos live website">
+            <div class="example-image"><img src="/assets/examples/property-home-photos.webp" alt="Screenshot of the Property Home Photos website"></div>
+            <div class="example-body"><p class="example-tag">Property Home Photos</p><h3>Property photography</h3><p>A visual business-service website with the work and enquiry route made easy to find.</p><span class="example-link">View live site <span aria-hidden="true">↗</span></span></div>
+          </a></div>
+        <p class="examples-footnote reveal">The final Best Workforce Services approach would use its own verified services, brand material, proof and contract journey.</p>
       </div>
     </section>
 
     <section class="ownership-section" id="ownership">
       <div class="wrap ownership-layout">
         <div class="ownership-copy reveal">
-          <p class="section-kicker">${escapeHtml(config.ownership.kicker)}</p>
-          <h2 class="section-heading">${escapeHtml(config.ownership.title)}</h2>
-          ${(config.ownership.body || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+          <p class="section-kicker">Terms to confirm</p>
+          <h2 class="section-heading">The work is built to stay with BWS.</h2>
+          <p>We will rebuild the website and set up the system so Best Workforce Services is investing in an asset it can keep.</p><p>We will clearly separate client-owned work from phone, messaging, CRM and other third-party services that may have their own billing or transfer terms.</p>
         </div>
         <div class="ownership-box reveal">
-          <h3>${escapeHtml(config.ownership.boxTitle || 'What remains yours')}</h3>
-          <ul class="ownership-list">${(config.ownership.items || []).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-          <p class="ownership-footnote">${escapeHtml(config.ownership.footnote || '')}</p>
+          <h3>What remains yours</h3>
+          <ul class="ownership-list"><li>The rebuilt BWS website and client-specific content</li><li>The approved design, copy, pages and business information</li><li>Your domain and approved brand assets</li><li>Your customer, enquiry and contract-opportunity data</li><li>A clear handover route if you ever leave us</li></ul>
+          <p class="ownership-footnote">Any separate third-party subscriptions and their transfer terms will be identified clearly before setup.</p>
         </div>
       </div>
     </section>
@@ -464,51 +376,55 @@ function renderProposal(config) {
     <section class="pipeline-section">
       <div class="wrap">
         <div class="pipeline-head reveal">
-          <div><p class="section-kicker">${escapeHtml(config.pipeline.kicker)}</p><h2 class="section-heading">${escapeHtml(config.pipeline.title)}</h2></div>
-          <p class="section-intro">${escapeHtml(config.pipeline.intro)}</p>
+          <div><p class="section-kicker">A pipeline for the opportunity</p><h2 class="section-heading">Know what is happening next.</h2></div>
+          <p class="section-intro">The stages can be matched to the way Francois and the team qualify, price and mobilise contract work.</p>
         </div>
-        <div class="pipeline" aria-label="${escapeHtml(clientName)} job pipeline stages">${renderPipeline(config.pipeline.stages)}</div>
-        <p class="pipeline-caption reveal">${escapeHtml(config.pipeline.caption)}</p>
+        <div class="pipeline" aria-label="Best Workforce Services job pipeline stages">
+          <div class="pipeline-step reveal"><div class="pipeline-card"><small>01 / Inbox</small><strong>New enquiry</strong><span>Every contact has a home</span></div></div>
+          <div class="pipeline-step reveal"><div class="pipeline-card"><small>02 / Fit</small><strong>Qualified</strong><span>Service, site and timing recorded</span></div></div>
+          <div class="pipeline-step reveal"><div class="pipeline-card"><small>03 / Scope</small><strong>Visit or proposal</strong><span>Decision and follow-up dated</span></div></div>
+          <div class="pipeline-step reveal"><div class="pipeline-card"><small>04 / Outcome</small><strong>Mobilise or nurture</strong><span>Next commercial action is clear</span></div></div></div>
+        <p class="pipeline-caption reveal">A practical view for the opportunities that matter, without turning the team into software operators.</p>
       </div>
     </section>
 
     <section class="commercial" id="next-step">
       <div class="wrap commercial-layout">
         <div class="commercial-copy reveal">
-          <p class="section-kicker">${escapeHtml(config.offer.kicker)}</p>
-          <h2 class="section-heading">${escapeHtml(config.offer.title)}</h2>
-          ${(config.offer.body || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+          <p class="section-kicker">The next step</p>
+          <h2 class="section-heading">Start with the foundation. Improve from evidence.</h2>
+          <p>The first phase makes Best Workforce Services easier to understand, trust and contact. Then we use real enquiries and contract activity to decide what deserves attention next.</p><p>That creates a foundation that can keep improving without relying on disconnected tools or lost follow-ups.</p>
         </div>
         <aside class="price-card reveal">
-          <p class="panel-label">${escapeHtml(config.offer.label || `${clientName} system`)}</p>
-          <div class="price">${escapeHtml(config.offer.price)} <small>${escapeHtml(config.offer.period || '/ month')}</small></div>
-          <p class="price-detail">${escapeHtml(config.offer.detail)}</p>
-          <ul class="price-list">${config.offer.items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-          <a class="button button-primary" href="${escapeHtml(config.offer.ctaHref || '#contact')}"${externalLinkAttrs(config.offer.ctaHref || '#contact')}>${escapeHtml(config.offer.ctaLabel || 'Talk through the setup')} <span aria-hidden="true">↗</span></a>
-          <p class="guarantee">${escapeHtml(config.offer.guarantee || '')}</p>
+          <p class="panel-label">Best Workforce Services system</p>
+          <div class="price">£197 <small>/ month</small></div>
+          <p class="price-detail">The connected foundation to get the system live and working.</p>
+          <ul class="price-list"><li>Rebuilt, owned BWS website</li><li>Enquiry capture and missed-call response</li><li>Contract pipeline and follow-up visibility</li><li>Ongoing improvements within the agreed scope</li></ul>
+          <a class="button button-primary" href="https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads" target="_blank" rel="noreferrer">Book a quick call <span aria-hidden="true">↗</span></a>
+          <p class="guarantee">No separate upfront website build fee. 30-day money-back guarantee.</p>
         </aside>
       </div>
     </section>
 
     <section class="faq" id="contact">
       <div class="wrap">
-        <div class="section-header reveal"><p class="section-kicker">${escapeHtml(config.faqKicker || 'Clear answers')}</p><h2 class="section-heading">${escapeHtml(config.faqTitle || 'The important bits, plainly.')}</h2></div>
-        <div class="faq-grid"><div>${renderFaq(config.faq.slice(0, Math.ceil(config.faq.length / 2)))}</div><div>${renderFaq(config.faq.slice(Math.ceil(config.faq.length / 2)))}</div></div>
+        <div class="section-header reveal"><p class="section-kicker">Clear answers</p><h2 class="section-heading">The important bits, plainly.</h2></div>
+        <div class="faq-grid"><div><details class="reveal"><summary>What would we improve first?</summary><p>We start by aligning the public identity, choosing the priority services and buyers, and giving each contract enquiry a clear route from interest to next action.</p></details><details class="reveal"><summary>Do I keep the website if I leave?</summary><p>Yes. The BWS website, its client-specific content and the work created for the business remain yours. Any separate third-party subscriptions and transfer terms will be documented clearly.</p></details></div><div><details class="reveal"><summary>Can the system cover every service immediately?</summary><p>The existing service portfolio can remain visible, but the strongest launch will prioritise the services and contract types Francois wants to grow first, then expand from evidence.</p></details><details class="reveal"><summary>What happens next?</summary><p>We confirm the priority services, target buyers, current enquiry process and access. Then we map the first implementation phase and begin building the connected foundation.</p></details></div></div>
       </div>
     </section>
 
     <section class="final-cta">
       <div class="wrap reveal">
-        <p class="section-kicker">${escapeHtml(config.final.kicker)}</p>
-        <h2 class="section-heading">${escapeHtml(config.final.title)}</h2>
-        <p>${escapeHtml(config.final.body)}</p>
-        <div class="button-row"><a class="button button-primary" href="${escapeHtml(config.final.primaryHref || '#next-step')}"${externalLinkAttrs(config.final.primaryHref || '#next-step')}>${escapeHtml(config.final.primaryLabel || 'Start the conversation')} <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#top">Back to the top</a></div>
+        <p class="section-kicker">Prepared for the next stage of Best Workforce Services</p>
+        <h2 class="section-heading">A clearer system for every genuine opportunity.</h2>
+        <p>Make the offer clearer. Make serious enquiries easier to act on. Give every contract opportunity a visible next step.</p>
+        <div class="button-row"><a class="button button-primary" href="https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads" target="_blank" rel="noreferrer">Book a quick call <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#top">Back to the top</a></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-row"><span>${escapeHtml(config.footer || `A personalised proposal for ${clientName}.`)}</span><a href="${escapeHtml(config.brand.url || 'https://delivery101.uktradeleads.com/') }" target="_blank" rel="noreferrer">${escapeHtml(config.brand.name)}</a></div>
+    <div class="wrap footer-row"><span>A personalised proposal for Francois and Best Workforce Services.</span><a href="https://delivery101.uktradeleads.com/" target="_blank" rel="noreferrer">UK Trade Leads</a></div>
   </footer>
 
   <script>
@@ -532,27 +448,3 @@ function renderProposal(config) {
   </script>
 </body>
 </html>
-`;
-}
-
-function parseArgs(argv) {
-  const args = {};
-  for (let index = 0; index < argv.length; index += 1) {
-    if (argv[index].startsWith('--')) args[argv[index].slice(2)] = argv[index + 1];
-  }
-  return args;
-}
-
-const args = parseArgs(process.argv.slice(2));
-if (!args.config || !args.out) {
-  console.error('Usage: node proposal-kit/build.mjs --config path/to/client.json --out output-directory');
-  process.exit(1);
-}
-
-const configPath = path.resolve(process.cwd(), args.config);
-const outputDir = path.resolve(process.cwd(), args.out);
-const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-const output = renderProposal(config);
-fs.mkdirSync(outputDir, { recursive: true });
-fs.writeFileSync(path.join(outputDir, 'index.html'), output);
-console.log(`Built ${path.join(outputDir, 'index.html')} from ${configPath}`);

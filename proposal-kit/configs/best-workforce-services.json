@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Best Workforce Services | A clearer route to contract growth",
+    "description": "A personalised website, enquiry response and contract pipeline proposal prepared for Francois and Best Workforce Services.",
+    "canonical": "https://best-workforce-services.pages.dev/",
+    "image": "https://best-workforce-services.pages.dev/assets/share-preview.png"
+  },
+  "brand": {
+    "name": "UK Trade Leads",
+    "mark": "🛠️",
+    "subline": "Client growth system",
+    "url": "https://delivery101.uktradeleads.com/"
+  },
+  "client": {
+    "name": "Best Workforce Services",
+    "legalName": "Best Workforce Solutions (UK) Limited",
+    "contactName": "Francois"
+  },
+  "announcement": "A PRACTICAL GROWTH SYSTEM FOR BEST WORKFORCE SERVICES",
+  "navCta": "See the next step",
+  "hero": {
+    "eyebrow": "Prepared for Francois",
+    "titleBefore": "Turn more enquiries into",
+    "titleAccent": "clear next steps.",
+    "body": "From its Edinburgh base, Best Workforce Services already offers the people businesses need across security, cleaning, hospitality, reception, housekeeping, social care and delivery. The opportunity is to turn that breadth into a sharper contract journey: help each buyer find the right team, show credible proof and give every genuine enquiry a visible next step.",
+    "primaryLabel": "See the plan",
+    "primaryHref": "#plan",
+    "secondaryLabel": "Watch the walkthrough",
+    "secondaryHref": "#video",
+    "note": "Prepared around the current public website, service portfolio and direct-contract ambition.",
+    "panelLabel": "The contract journey",
+    "panelTitle": "Every opportunity stays visible.",
+    "panelStatus": "Designed for business and service enquiries",
+    "panelItems": [
+      { "title": "New enquiry", "detail": "Captured from call, form or message" },
+      { "title": "Requirement confirmed", "detail": "Service, location, timing and staffing recorded" },
+      { "title": "Site visit or proposal", "detail": "Owner, deadline and follow-up stay clear" },
+      { "title": "Mobilise or nurture", "detail": "The next commercial action is visible" }
+    ],
+    "panelFootLabel": "First priority:",
+    "panelFoot": "Align the public name, contact routes and priority services so every buyer sees one consistent business."
+  },
+  "signals": [
+    { "icon": "01", "title": "One clear identity", "detail": "Build confidence at every contact point" },
+    { "icon": "02", "title": "Contract-ready proof", "detail": "Show why buyers should shortlist BWS" },
+    { "icon": "03", "title": "Visible follow-up", "detail": "Know which opportunity needs action" }
+  ],
+  "review": {
+    "kicker": "Where we start",
+    "title": "Make a broad workforce offer feel simple to buy.",
+    "intro": "The current website proves that Best Workforce Services covers a wide range of operational needs. The next step is to organise that breadth around the buyers you most want, strengthen the evidence behind the offer and connect every serious enquiry to a practical contract process.",
+    "cards": [
+      { "index": "01 / CLARITY", "title": "Create focused routes for each buyer", "body": "Separate security, cleaning, hospitality, social care and staffing needs into clear journeys, then lead with the services and contract types Best Workforce Services wants to grow first." },
+      { "index": "02 / PROOF", "title": "Turn capability into buyer confidence", "body": "Present approved credentials, supervision standards, service processes, team experience and client evidence where procurement teams expect to find them." },
+      { "index": "03 / RESPONSE", "title": "Keep every serious enquiry moving", "body": "Connect calls, forms and messages to one follow-up view so the right person can see the requirement, owner, deadline and next action." }
+    ],
+    "callout": "The aim is straightforward: make Best Workforce Services easier to understand, easier to shortlist and easier to engage for the next contract."
+  },
+  "video": {
+    "wistiaId": "0fwrc4v07b",
+    "kicker": "The walkthrough",
+    "title": "See how the moving parts fit together.",
+    "body": "The Delivery 101 walkthrough shows the website, response and follow-up principles behind the proposal. The final implementation would be adapted to Best Workforce Services and its confirmed contract-enquiry process.",
+    "noteLabel": "WATCH FOR",
+    "note": "Clear enquiry capture, missed-call response, follow-up ownership and a visible pipeline."
+  },
+  "roadmapKicker": "The Best Workforce Services plan",
+  "roadmapTitle": "A sensible order of operations.",
+    "roadmapIntro": "Start by sharpening the commercial story. Then connect the response process and use real enquiry evidence to decide where the next investment will have the most value.",
+  "roadmap": [
+    { "number": "01", "phase": "First 30 days", "title": "Position the business for the right contracts", "body": "Align the public identity, choose priority services and buyers, and organise approved proof around what procurement teams need to know.", "resultLabel": "Early signal", "result": "A buyer can quickly understand the relevant service, coverage and next step." },
+    { "number": "02", "phase": "Next layer", "title": "Capture and qualify every requirement", "body": "Connect the retained call, form and message routes to a consistent response process that records service, location, timing and decision path.", "resultLabel": "Early signal", "result": "Each serious enquiry has a clear owner, requirement and next action." },
+    { "number": "03", "phase": "Everyday control", "title": "Manage the contract pipeline", "body": "Use a simple view for qualification, site visit, proposal, decision, mobilisation and future follow-up.", "resultLabel": "Business benefit", "result": "Open opportunities, deadlines and overdue follow-ups are easy to see." }
+  ],
+  "system": {
+    "kicker": "What we can build around you",
+    "title": "One foundation. Three connected layers.",
+    "intro": "The proposal combines a clearer website, a dependable response route and a practical operating view for contract opportunities.",
+    "layers": [
+      { "icon": "01", "title": "The contract-ready website", "body": "Reshape the customer journey around the services, buyers and locations Best Workforce Services wants to grow.", "bullets": ["Focused service and sector pathways", "Approved credentials and buyer proof", "Clear contract and service enquiry routes"] },
+      { "icon": "02", "title": "The response system", "body": "Route retained calls, forms and messages into a consistent process so a serious requirement never depends on memory alone.", "bullets": ["Missed-call response option", "Form and message acknowledgement", "Visible ownership and deadlines"] },
+      { "icon": "03", "title": "The contract pipeline", "body": "Give the team a practical view from first contact through qualification, proposal, decision and mobilisation.", "bullets": ["Requirement, site and service fit", "Proposal and decision dates", "Mobilisation and future follow-up"] }
+    ]
+  },
+  "examplesKicker": "Verified live examples",
+  "examplesTitle": "The website standard behind the proposal.",
+  "examplesIntro": "These UK Trade Leads client sites were checked live when the reusable proposal kit was prepared. They demonstrate presentation and enquiry design, not guaranteed performance for Best Workforce Services.",
+  "examplesFootnote": "The final Best Workforce Services approach would use its own verified services, brand material, proof and contract journey.",
+  "examples": [
+    { "name": "All Aspects Roofing", "title": "Roofing services", "description": "A focused local service presence with direct paths into the relevant work.", "url": "https://allaspectsroofingspecialists.com/", "image": "/assets/examples/all-aspects-roofing.webp" },
+    { "name": "Aphex Heating", "title": "Heating and boiler specialists", "description": "A service-led website built around clarity, trust and quote requests.", "url": "https://aphexheating.com/", "image": "/assets/examples/aphex-heating.webp" },
+    { "name": "Property Home Photos", "title": "Property photography", "description": "A visual business-service website with the work and enquiry route made easy to find.", "url": "https://propertyhomephotos.com/", "image": "/assets/examples/property-home-photos.webp" }
+  ],
+  "ownership": {
+    "kicker": "Terms to confirm",
+    "title": "The work is built to stay with BWS.",
+    "body": ["We will rebuild the website and set up the system so Best Workforce Services is investing in an asset it can keep.", "We will clearly separate client-owned work from phone, messaging, CRM and other third-party services that may have their own billing or transfer terms."],
+    "boxTitle": "What remains yours",
+    "items": ["The rebuilt BWS website and client-specific content", "The approved design, copy, pages and business information", "Your domain and approved brand assets", "Your customer, enquiry and contract-opportunity data", "A clear handover route if you ever leave us"],
+    "footnote": "Any separate third-party subscriptions and their transfer terms will be identified clearly before setup."
+  },
+  "pipeline": {
+    "kicker": "A pipeline for the opportunity",
+    "title": "Know what is happening next.",
+    "intro": "The stages can be matched to the way Francois and the team qualify, price and mobilise contract work.",
+    "stages": [
+      { "label": "01 / Inbox", "title": "New enquiry", "detail": "Every contact has a home" },
+      { "label": "02 / Fit", "title": "Qualified", "detail": "Service, site and timing recorded" },
+      { "label": "03 / Scope", "title": "Visit or proposal", "detail": "Decision and follow-up dated" },
+      { "label": "04 / Outcome", "title": "Mobilise or nurture", "detail": "Next commercial action is clear" }
+    ],
+    "caption": "A practical view for the opportunities that matter, without turning the team into software operators."
+  },
+  "offer": {
+    "kicker": "The next step",
+    "title": "Start with the foundation. Improve from evidence.",
+    "body": ["The first phase makes Best Workforce Services easier to understand, trust and contact. Then we use real enquiries and contract activity to decide what deserves attention next.", "That creates a foundation that can keep improving without relying on disconnected tools or lost follow-ups."],
+    "label": "Best Workforce Services system",
+    "price": "£197",
+    "period": "/ month",
+    "detail": "The connected foundation to get the system live and working.",
+    "items": ["Rebuilt, owned BWS website", "Enquiry capture and missed-call response", "Contract pipeline and follow-up visibility", "Ongoing improvements within the agreed scope"],
+    "ctaLabel": "Book a quick call",
+    "ctaHref": "https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads",
+    "guarantee": "No separate upfront website build fee. 30-day money-back guarantee."
+  },
+  "faqKicker": "Clear answers",
+  "faqTitle": "The important bits, plainly.",
+  "faq": [
+    { "question": "What would we improve first?", "answer": "We start by aligning the public identity, choosing the priority services and buyers, and giving each contract enquiry a clear route from interest to next action." },
+    { "question": "Do I keep the website if I leave?", "answer": "Yes. The BWS website, its client-specific content and the work created for the business remain yours. Any separate third-party subscriptions and transfer terms will be documented clearly." },
+    { "question": "Can the system cover every service immediately?", "answer": "The existing service portfolio can remain visible, but the strongest launch will prioritise the services and contract types Francois wants to grow first, then expand from evidence." },
+    { "question": "What happens next?", "answer": "We confirm the priority services, target buyers, current enquiry process and access. Then we map the first implementation phase and begin building the connected foundation." }
+  ],
+  "final": {
+    "kicker": "Prepared for the next stage of Best Workforce Services",
+    "title": "A clearer system for every genuine opportunity.",
+    "body": "Make the offer clearer. Make serious enquiries easier to act on. Give every contract opportunity a visible next step.",
+    "primaryLabel": "Book a quick call",
+    "primaryHref": "https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads"
+  },
+  "footer": "A personalised proposal for Francois and Best Workforce Services."
+}
