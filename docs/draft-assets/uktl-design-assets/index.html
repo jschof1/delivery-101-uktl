@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UK Trade Leads Design Assets</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --panel: rgba(20, 20, 20, 0.78);
+      --panel-strong: rgba(32, 32, 32, 0.92);
+      --line: rgba(255, 255, 255, 0.11);
+      --line-strong: rgba(255, 255, 255, 0.18);
+      --text: #f7f7f2;
+      --muted: #a9aaa5;
+      --quiet: #74766f;
+      --yellow: #ffc107;
+      --yellow-soft: rgba(255, 193, 7, 0.18);
+      --green: #3ddc97;
+      --amber: #ffb020;
+      --red: #ff5f57;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+      --radius: 24px;
+      --radius-sm: 16px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(255, 193, 7, 0.10), transparent 260px),
+        linear-gradient(135deg, #050505 0%, #0d0d0d 52%, #15120b 100%);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 75%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 80px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 64px;
+      padding: 14px 16px 14px 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(8, 8, 8, 0.72);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      color: #111;
+      background: var(--yellow);
+      font-weight: 900;
+      box-shadow: 0 0 0 5px rgba(255,193,7,0.12);
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 13px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      border-color: rgba(255,193,7,0.32);
+      color: var(--text);
+      outline: none;
+      background: rgba(255,193,7,0.08);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 28px;
+      align-items: end;
+      padding: 74px 0 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin: 0 0 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,193,7,0.24);
+      border-radius: 999px;
+      color: #ffe08a;
+      background: rgba(255,193,7,0.08);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 0 0 18px rgba(255,193,7,0.8);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 980px;
+      margin-bottom: 18px;
+      font-size: 64px;
+      line-height: 1.02;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .intro-copy {
+      max-width: 780px;
+      margin: 0;
+      color: #c6c7c2;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .style-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .style-card-inner {
+      padding: 22px;
+    }
+
+    .style-card h2 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .style-card p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .swatch {
+      min-height: 54px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+
+    .swatch:nth-child(1) { background: #050505; }
+    .swatch:nth-child(2) { background: #171717; }
+    .swatch:nth-child(3) { background: #2a2a2a; }
+    .swatch:nth-child(4) { background: var(--yellow); }
+
+    .asset {
+      min-height: 820px;
+      margin: 34px 0;
+      padding: 34px;
+      scroll-margin-top: 108px;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.018)),
+        rgba(8, 8, 8, 0.86);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 10px;
+      font-size: 38px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid rgba(255,193,7,0.22);
+      border-radius: 999px;
+      color: #ffe08a;
+      background: rgba(255,193,7,0.08);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .glass {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 18px 54px rgba(0,0,0,0.34);
+      backdrop-filter: blur(18px);
+    }
+
+    /* Health check */
+    .health-grid {
+      display: grid;
+      grid-template-columns: 420px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .score-panel {
+      position: sticky;
+      top: 96px;
+      padding: 26px;
+    }
+
+    .score-ring {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 250px;
+      height: 250px;
+      margin: 8px auto 24px;
+      border-radius: 50%;
+      background: conic-gradient(var(--yellow) calc(var(--score) * 1%), rgba(255,255,255,0.09) 0);
+      box-shadow: inset 0 0 26px rgba(255,255,255,0.05), 0 22px 68px rgba(255,193,7,0.12);
+      transition: background 400ms ease;
+    }
+
+    .score-ring::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 18%, #252525, #090909 65%);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .score-number {
+      position: relative;
+      text-align: center;
+    }
+
+    .score-number strong {
+      display: block;
+      color: var(--text);
+      font-size: 72px;
+      line-height: 0.94;
+    }
+
+    .score-number span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .score-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .mini-stat {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .mini-stat b {
+      display: block;
+      font-size: 20px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .recommendations {
+      display: grid;
+      gap: 10px;
+    }
+
+    .recommendation {
+      display: flex;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      color: #d8d9d3;
+      background: rgba(255,255,255,0.035);
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    .dot {
+      flex: 0 0 auto;
+      width: 10px;
+      height: 10px;
+      margin-top: 4px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+
+    .dot.green { background: var(--green); }
+    .dot.red { background: var(--red); }
+
+    .questions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .question {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .question-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+      color: #f4f4ef;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .question-title span {
+      color: var(--quiet);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .option {
+      min-height: 42px;
+      padding: 8px 10px;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 13px;
+      color: #c9cac4;
+      background: rgba(255,255,255,0.035);
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .option:hover {
+      transform: translateY(-1px);
+      color: var(--text);
+      border-color: rgba(255,193,7,0.35);
+    }
+
+    .option[aria-pressed="true"] {
+      color: #111;
+      border-color: rgba(255,193,7,0.85);
+      background: var(--yellow);
+      box-shadow: 0 12px 30px rgba(255,193,7,0.18);
+    }
+
+    /* Missed call */
+    .missed-grid {
+      display: grid;
+      grid-template-columns: minmax(330px, 410px) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      min-height: 650px;
+      padding: 16px 0 4px;
+    }
+
+    .phone {
+      position: relative;
+      width: min(100%, 390px);
+      margin: 0 auto;
+      padding: 16px;
+      border-radius: 56px;
+      background: linear-gradient(145deg, #1d1d1d, #050505 70%);
+      border: 1px solid rgba(255,255,255,0.20);
+      box-shadow: 0 48px 120px rgba(0,0,0,0.72), 0 0 0 9px rgba(255,255,255,0.035);
+    }
+
+    .phone-screen {
+      position: relative;
+      min-height: 690px;
+      border-radius: 44px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), transparent 22%),
+        #090909;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .island {
+      position: absolute;
+      top: 13px;
+      left: 50%;
+      width: 112px;
+      height: 34px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: #010101;
+      z-index: 3;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 26px 0;
+      color: #f6f6f0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .message-header {
+      padding: 62px 26px 14px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      color: #111;
+      background: linear-gradient(135deg, var(--yellow), #ffe7a3);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .message-header strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .message-header span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .conversation {
+      padding: 18px 18px 26px;
+    }
+
+    .call-alert {
+      display: grid;
+      gap: 5px;
+      margin: 10px auto 22px;
+      padding: 12px;
+      width: 88%;
+      border-radius: 18px;
+      color: #d8d8d2;
+      background: rgba(255,255,255,0.07);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .call-alert b {
+      color: var(--red);
+      font-size: 13px;
+    }
+
+    .bubble {
+      max-width: 86%;
+      margin: 0 0 12px;
+      padding: 13px 15px;
+      border-radius: 20px;
+      line-height: 1.36;
+      font-size: 15px;
+    }
+
+    .bubble.in {
+      color: #f6f6f0;
+      background: #252525;
+      border-bottom-left-radius: 7px;
+    }
+
+    .bubble.out {
+      margin-left: auto;
+      color: #080808;
+      background: linear-gradient(180deg, #ffd75f, var(--yellow));
+      border-bottom-right-radius: 7px;
+      box-shadow: 0 16px 44px rgba(255,193,7,0.18);
+    }
+
+    .typing {
+      display: inline-flex;
+      gap: 4px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: #252525;
+    }
+
+    .typing span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #b9bab4;
+      animation: pulse 1.4s infinite ease-in-out;
+    }
+
+    .typing span:nth-child(2) { animation-delay: 160ms; }
+    .typing span:nth-child(3) { animation-delay: 320ms; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-2px); }
+    }
+
+    .lead-card {
+      padding: 28px;
+    }
+
+    .lead-card h3 {
+      margin-bottom: 8px;
+      font-size: 30px;
+      line-height: 1.12;
+    }
+
+    .lead-card p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .lead-saved {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .saved-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .saved-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      color: #111;
+      background: var(--yellow);
+      font-weight: 900;
+    }
+
+    .saved-row strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .saved-row span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status-pill {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: #04170f;
+      background: var(--green);
+      font-size: 12px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    /* Dashboard */
+    .dashboard-shell {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      min-height: 650px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(10,10,10,0.85);
+      overflow: hidden;
+      box-shadow: 0 32px 100px rgba(0,0,0,0.45);
+    }
+
+    .side {
+      padding: 22px;
+      border-right: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .side-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      font-weight: 850;
+    }
+
+    .side-brand span {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      color: #111;
+      background: var(--yellow);
+    }
+
+    .side-nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .side-nav div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 38px;
+      padding: 0 10px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .side-nav div.active {
+      color: var(--text);
+      background: rgba(255,193,7,0.12);
+      border: 1px solid rgba(255,193,7,0.24);
+    }
+
+    .dash-main {
+      padding: 22px;
+    }
+
+    .dash-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .dash-top h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .dash-top span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .date-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #f5f5ef;
+      background: rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .kpi {
+      min-height: 132px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+    }
+
+    .kpi span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .kpi strong {
+      display: block;
+      margin: 12px 0 10px;
+      font-size: 31px;
+      line-height: 1;
+    }
+
+    .kpi b {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .dash-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+      gap: 14px;
+    }
+
+    .chart-card,
+    .activity-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .chart-card h4,
+    .activity-card h4 {
+      margin: 0 0 16px;
+      font-size: 15px;
+    }
+
+    .bars {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 9px;
+      align-items: end;
+      height: 230px;
+      padding-top: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .bar {
+      min-height: 24px;
+      border-radius: 999px 999px 6px 6px;
+      background: linear-gradient(180deg, var(--yellow), rgba(255,193,7,0.28));
+      box-shadow: 0 14px 34px rgba(255,193,7,0.10);
+    }
+
+    .activity {
+      display: grid;
+      gap: 10px;
+    }
+
+    .activity-row {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .activity-row div:first-child {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      color: #111;
+      background: #f6f6ef;
+      font-weight: 900;
+    }
+
+    .activity-row strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .activity-row span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .activity-row em {
+      color: #ffe08a;
+      font-style: normal;
+      font-size: 12px;
+    }
+
+    /* Pipeline */
+    .pipeline-stage {
+      min-height: 650px;
+      display: grid;
+      align-content: center;
+      padding: 24px 0 6px;
+    }
+
+    .pipeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(9, minmax(110px, 1fr));
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .pipeline::before {
+      content: "";
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      top: 62px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,193,7,0.2), rgba(255,193,7,0.92), rgba(61,220,151,0.78));
+      box-shadow: 0 0 38px rgba(255,193,7,0.18);
+    }
+
+    .step {
+      position: relative;
+      min-height: 244px;
+      padding: 18px 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .step:nth-child(even) {
+      margin-top: 64px;
+    }
+
+    .step-icon {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 18px;
+      border-radius: 20px;
+      color: #111;
+      background: linear-gradient(180deg, #ffdc66, var(--yellow));
+      box-shadow: 0 18px 42px rgba(255,193,7,0.20);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .automation-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .automation {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .automation b {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .automation span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 1120px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      .intro,
+      .health-grid,
+      .missed-grid,
+      .dashboard-shell,
+      .dash-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .score-panel {
+        position: static;
+      }
+
+      .kpis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pipeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .pipeline::before {
+        display: none;
+      }
+
+      .step:nth-child(even) {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 540px);
+        padding-top: 10px;
+      }
+
+      .topbar {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .intro {
+        padding: 42px 0 24px;
+      }
+
+      h1 {
+        font-size: 38px;
+        line-height: 1.08;
+      }
+
+      .intro-copy {
+        font-size: 16px;
+      }
+
+      .asset {
+        min-height: auto;
+        padding: 18px;
+        border-radius: 24px;
+      }
+
+      .section-head {
+        flex-direction: column;
+      }
+
+      .section-head h2 {
+        font-size: 30px;
+      }
+
+      .score-ring {
+        width: 214px;
+        height: 214px;
+      }
+
+      .score-number strong {
+        font-size: 58px;
+      }
+
+      .options,
+      .score-meta,
+      .kpis,
+      .automation-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .phone {
+        width: min(100%, 350px);
+        border-radius: 48px;
+      }
+
+      .phone-screen {
+        min-height: 630px;
+        border-radius: 38px;
+      }
+
+      .dashboard-shell {
+        display: block;
+      }
+
+      .side {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .side-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dash-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .pipeline {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        min-height: auto;
+        text-align: left;
+      }
+
+      .step-icon {
+        margin-left: 0;
+      }
+
+      .saved-row {
+        grid-template-columns: 44px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .saved-row .status-pill {
+        grid-column: 2;
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="UK Trade Leads assets home">
+        <span class="brand-mark">UK</span>
+        <span>
+          <strong>UK Trade Leads</strong>
+          <span>Automation visuals</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Asset sections">
+        <a href="#health-check">Health Check</a>
+        <a href="#missed-call">Missed Call</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#pipeline">Pipeline</a>
+      </nav>
+    </header>
+
+    <section class="intro" id="top">
+      <div>
+        <p class="eyebrow">Premium trade automation assets</p>
+        <h1>Dark, clean, trustworthy tools that make a trade business feel organised.</h1>
+        <p class="intro-copy">A set of screenshot-ready UKTL product visuals built around realistic British trade scenarios, soft charcoal surfaces, precise yellow accents, and expectation-safe business automation copy.</p>
+      </div>
+      <aside class="style-card">
+        <div class="style-card-inner">
+          <h2>Style lock</h2>
+          <p>Charcoal and black base, #FFC107 accent, realistic SaaS and phone interfaces, minimal clutter, soft glass, and practical trade-business proof.</p>
+          <div class="swatches" aria-label="Colour palette">
+            <div class="swatch" title="#050505"></div>
+            <div class="swatch" title="#171717"></div>
+            <div class="swatch" title="#2A2A2A"></div>
+            <div class="swatch" title="#FFC107"></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="asset" id="health-check" data-shot="health-check">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Interactive diagnostic</span>
+          <h2>Trade Business Health Check</h2>
+          <p>Answer each question to see a live Business Health Score, strengths, missed opportunities and practical recommendations for lead capture, reviews and follow-up.</p>
+        </div>
+      </div>
+      <div class="health-grid">
+        <aside class="glass score-panel">
+          <div class="score-ring" id="scoreRing" style="--score: 0">
+            <div class="score-number">
+              <strong id="scoreValue">0</strong>
+              <span>Business Health Score</span>
+            </div>
+          </div>
+          <div class="score-meta">
+            <div class="mini-stat">
+              <b id="answeredCount">0/12</b>
+              <span>Questions answered</span>
+            </div>
+            <div class="mini-stat">
+              <b id="opportunityValue">&pound;0</b>
+              <span>Estimated monthly opportunity</span>
+            </div>
+          </div>
+          <div class="recommendations" id="recommendations"></div>
+        </aside>
+        <div class="questions" id="questions"></div>
+      </div>
+    </section>
+
+    <section class="asset" id="missed-call" data-shot="missed-call">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Missed call recovery</span>
+          <h2>Never let a good enquiry disappear.</h2>
+          <p>A realistic Messages flow showing how a busy tradesperson can save the lead while still on the job.</p>
+        </div>
+      </div>
+      <div class="missed-grid">
+        <div class="phone" aria-label="iPhone missed call recovery mockup">
+          <div class="phone-screen">
+            <div class="island" aria-hidden="true"></div>
+            <div class="status-row">
+              <span>09:42</span>
+              <span>5G 82%</span>
+            </div>
+            <div class="message-header">
+              <div class="avatar">ME</div>
+              <strong>Mark Evans</strong>
+              <span>07700 900 418</span>
+            </div>
+            <div class="conversation">
+              <div class="call-alert">
+                <b>Missed Call</b>
+                <span>Today at 09:41</span>
+              </div>
+              <div class="bubble out">Hi Mark &#128075;&nbsp; Sorry I missed your call, I&rsquo;m on a job at the moment. Fill out this quick quote form and I&rsquo;ll get back to you shortly.</div>
+              <div class="bubble in">Thanks, just sent it over. Need the ridge tiles checking at my mum&rsquo;s in Stockport.</div>
+              <div class="typing" aria-label="Typing indicator"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        <aside class="glass lead-card">
+          <h3>Lead saved while the team keeps working.</h3>
+          <p>Mark Evans is captured as a new opportunity, tagged from the missed call, and sent into the quote request flow. The business owner gets a clear task instead of a forgotten voicemail.</p>
+          <div class="lead-saved">
+            <div class="saved-row">
+              <div class="saved-icon">1</div>
+              <div>
+                <strong>Mark Evans</strong>
+                <span>Ridge tile repair, Stockport</span>
+              </div>
+              <span class="status-pill">Lead saved</span>
+            </div>
+            <div class="saved-row">
+              <div class="saved-icon">2</div>
+              <div>
+                <strong>Quote form sent</strong>
+                <span>Automatic SMS reply after missed call</span>
+              </div>
+              <span class="status-pill">Active</span>
+            </div>
+            <div class="saved-row">
+              <div class="saved-icon">3</div>
+              <div>
+                <strong>CRM task created</strong>
+                <span>Follow up before 12:30 today</span>
+              </div>
+              <span class="status-pill">Queued</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="asset" id="dashboard" data-shot="dashboard">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Revenue dashboard</span>
+          <h2>All lead activity in one calm operating view.</h2>
+          <p>A polished CRM-style dashboard for a trade business that wants to see leads, bookings, revenue, reviews and recovered calls without digging through messages.</p>
+        </div>
+      </div>
+      <div class="dashboard-shell">
+        <aside class="side">
+          <div class="side-brand"><span>TL</span> Trade Leads CRM</div>
+          <div class="side-nav">
+            <div class="active">Overview</div>
+            <div>Pipeline</div>
+            <div>Messages</div>
+            <div>Reviews</div>
+            <div>Invoices</div>
+            <div>Automations</div>
+          </div>
+        </aside>
+        <div class="dash-main">
+          <div class="dash-top">
+            <div>
+              <h3>Evans Roofing &amp; Guttering</h3>
+              <span>Manchester &middot; last 30 days</span>
+            </div>
+            <div class="date-chip">1 Jun - 30 Jun 2026</div>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><span>New Leads</span><strong>28</strong><b>+22% vs last month</b></div>
+            <div class="kpi"><span>Jobs Booked</span><strong>12</strong><b>8 from web enquiries</b></div>
+            <div class="kpi"><span>Revenue</span><strong>&pound;18,420</strong><b>tracked from booked jobs</b></div>
+            <div class="kpi"><span>New Reviews</span><strong>43</strong><b>4.9 average rating</b></div>
+            <div class="kpi"><span>Missed Calls Recovered</span><strong>17</strong><b>automatic SMS follow-up</b></div>
+          </div>
+          <div class="dash-grid">
+            <div class="chart-card">
+              <h4>Lead and revenue momentum</h4>
+              <div class="bars" aria-label="Lead and revenue bar chart">
+                <div class="bar" style="height: 38%"></div>
+                <div class="bar" style="height: 44%"></div>
+                <div class="bar" style="height: 52%"></div>
+                <div class="bar" style="height: 48%"></div>
+                <div class="bar" style="height: 64%"></div>
+                <div class="bar" style="height: 71%"></div>
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 78%"></div>
+                <div class="bar" style="height: 86%"></div>
+                <div class="bar" style="height: 74%"></div>
+                <div class="bar" style="height: 91%"></div>
+                <div class="bar" style="height: 96%"></div>
+              </div>
+            </div>
+            <div class="activity-card">
+              <h4>Recent activity</h4>
+              <div class="activity">
+                <div class="activity-row"><div>M</div><section><strong>Mark Evans</strong><span>Quote form completed</span></section><em>09:48</em></div>
+                <div class="activity-row"><div>S</div><section><strong>Sarah Collins</strong><span>Review request sent</span></section><em>10:12</em></div>
+                <div class="activity-row"><div>J</div><section><strong>James Patel</strong><span>Job booked for Friday</span></section><em>10:44</em></div>
+                <div class="activity-row"><div>A</div><section><strong>Amelia Hughes</strong><span>Invoice marked paid</span></section><em>11:07</em></div>
+                <div class="activity-row"><div>T</div><section><strong>Tom Bennett</strong><span>Referral follow-up queued</span></section><em>11:29</em></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset" id="pipeline" data-shot="pipeline">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Lead journey pipeline</span>
+          <h2>One connected customer journey from search to repeat work.</h2>
+          <p>Every step has a job: capture the enquiry, organise the follow-up, complete the job, collect proof, and keep the relationship warm.</p>
+        </div>
+      </div>
+      <div class="pipeline-stage">
+        <div class="pipeline" aria-label="Customer journey workflow">
+          <div class="step"><div class="step-icon">SEO</div><strong>Google Search</strong><span>Customer finds a local trade business with clear reviews and services.</span></div>
+          <div class="step"><div class="step-icon">WEB</div><strong>Website</strong><span>Mobile-first service page builds trust and makes contact simple.</span></div>
+          <div class="step"><div class="step-icon">FORM</div><strong>Quote Request</strong><span>Form captures the job details, location and best contact time.</span></div>
+          <div class="step"><div class="step-icon">CRM</div><strong>CRM</strong><span>The enquiry lands in one pipeline instead of scattered messages.</span></div>
+          <div class="step"><div class="step-icon">BOOK</div><strong>Job Booked</strong><span>Reminder and follow-up tasks keep the work moving.</span></div>
+          <div class="step"><div class="step-icon">PAY</div><strong>Invoice Paid</strong><span>Payment status is visible alongside the job record.</span></div>
+          <div class="step"><div class="step-icon">5&#9733;</div><strong>5 Star Review</strong><span>Happy customers get a review request at the right moment.</span></div>
+          <div class="step"><div class="step-icon">REF</div><strong>Referral</strong><span>Useful follow-ups turn good jobs into warm introductions.</span></div>
+          <div class="step"><div class="step-icon">LOOP</div><strong>Repeat Customer</strong><span>Past customers are easy to re-engage when the next job appears.</span></div>
+        </div>
+        <div class="automation-strip">
+          <div class="automation"><b>Capture</b><span>Website forms, missed calls and messages feed the same contact record.</span></div>
+          <div class="automation"><b>Follow up</b><span>Tasks and messages reduce the chance of leads going cold.</span></div>
+          <div class="automation"><b>Prove quality</b><span>Reviews and job history turn finished work into future trust.</span></div>
+          <div class="automation"><b>Grow calmly</b><span>Owners see what is happening without chasing every thread manually.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const questions = [
+      {
+        text: "Do you have a website that clearly explains your trade services?",
+        weight: 8,
+        options: [["No site", 0], ["Basic page", 3], ["Good website", 6], ["Fast lead-focused site", 8]]
+      },
+      {
+        text: "Is your website easy to use on mobile?",
+        weight: 8,
+        options: [["Not sure", 1], ["Slow or cramped", 2], ["Mostly usable", 5], ["Fast and clean", 8]]
+      },
+      {
+        text: "How many Google reviews do you have?",
+        weight: 9,
+        options: [["0-10", 1], ["11-30", 4], ["31-75", 7], ["76+", 9]]
+      },
+      {
+        text: "What happens when you miss a call?",
+        weight: 10,
+        options: [["Usually lost", 0], ["Manual callback", 4], ["Voicemail", 5], ["Auto text + CRM", 10]]
+      },
+      {
+        text: "Do you automatically follow up with new enquiries?",
+        weight: 9,
+        options: [["No", 0], ["Sometimes", 3], ["Manual reminders", 6], ["Automated sequence", 9]]
+      },
+      {
+        text: "Do you have a dedicated business number?",
+        weight: 6,
+        options: [["Personal mobile", 1], ["Shared mobile", 3], ["Business mobile", 5], ["Tracked number", 6]]
+      },
+      {
+        text: "Do all enquiries land in one CRM or contact list?",
+        weight: 9,
+        options: [["No", 0], ["Spreadsheet", 3], ["Mostly central", 6], ["One clear pipeline", 9]]
+      },
+      {
+        text: "Do you send review requests after finished jobs?",
+        weight: 8,
+        options: [["Never", 0], ["When remembered", 3], ["Manual message", 5], ["Automatic request", 8]]
+      },
+      {
+        text: "Can you see which lead source creates booked jobs?",
+        weight: 8,
+        options: [["No", 0], ["Rough idea", 3], ["Some tracking", 6], ["Clear reporting", 8]]
+      },
+      {
+        text: "Do you keep before-and-after proof organised?",
+        weight: 7,
+        options: [["Scattered", 1], ["Phone gallery", 3], ["Website gallery", 5], ["Job-linked proof", 7]]
+      },
+      {
+        text: "Do you have a referral or repeat-customer follow-up?",
+        weight: 8,
+        options: [["No", 0], ["Occasional", 3], ["Manual list", 5], ["Automated prompts", 8]]
+      },
+      {
+        text: "How quickly do you reply to quote requests?",
+        weight: 10,
+        options: [["Next day+", 1], ["Same day", 4], ["Within 2 hours", 7], ["Within 5 minutes", 10]]
+      }
+    ];
+
+    const defaults = [2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 0, 1];
+    const answers = new Map();
+
+    const questionRoot = document.getElementById("questions");
+    const scoreValue = document.getElementById("scoreValue");
+    const scoreRing = document.getElementById("scoreRing");
+    const answeredCount = document.getElementById("answeredCount");
+    const opportunityValue = document.getElementById("opportunityValue");
+    const recommendations = document.getElementById("recommendations");
+
+    function renderQuestions() {
+      questionRoot.innerHTML = "";
+      questions.forEach((question, questionIndex) => {
+        const card = document.createElement("article");
+        card.className = "question";
+        card.innerHTML = `
+          <div class="question-title">
+            <strong>${question.text}</strong>
+            <span>${questionIndex + 1} / ${questions.length}</span>
+          </div>
+          <div class="options" role="group" aria-label="${question.text}"></div>
+        `;
+        const optionRoot = card.querySelector(".options");
+        question.options.forEach(([label, value], optionIndex) => {
+          const button = document.createElement("button");
+          button.className = "option";
+          button.type = "button";
+          button.textContent = label;
+          button.setAttribute("aria-pressed", "false");
+          button.addEventListener("click", () => {
+            answers.set(questionIndex, optionIndex);
+            updateScore();
+          });
+          optionRoot.appendChild(button);
+        });
+        questionRoot.appendChild(card);
+      });
+
+      defaults.forEach((optionIndex, questionIndex) => answers.set(questionIndex, optionIndex));
+      updateScore();
+    }
+
+    function formatMoney(value) {
+      return new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency: "GBP",
+        maximumFractionDigits: 0
+      }).format(value);
+    }
+
+    function updateScore() {
+      const max = questions.reduce((sum, q) => sum + q.weight, 0);
+      const achieved = questions.reduce((sum, q, index) => {
+        const selectedIndex = answers.get(index);
+        if (selectedIndex === undefined) return sum;
+        return sum + q.options[selectedIndex][1];
+      }, 0);
+      const score = Math.round((achieved / max) * 100);
+      scoreValue.textContent = score;
+      scoreRing.style.setProperty("--score", score);
+      answeredCount.textContent = `${answers.size}/${questions.length}`;
+
+      const missedCallScore = questions[3].options[answers.get(3)][1];
+      const followUpScore = questions[4].options[answers.get(4)][1];
+      const reviewScore = questions[7].options[answers.get(7)][1];
+      const speedScore = questions[11].options[answers.get(11)][1];
+      const gap = Math.max(0, 37 - missedCallScore - followUpScore - reviewScore - speedScore);
+      const estimatedOpportunity = Math.round((gap * 115) / 10) * 10;
+      opportunityValue.textContent = formatMoney(estimatedOpportunity);
+
+      document.querySelectorAll(".question").forEach((card, questionIndex) => {
+        const selectedIndex = answers.get(questionIndex);
+        card.querySelectorAll(".option").forEach((button, optionIndex) => {
+          button.setAttribute("aria-pressed", optionIndex === selectedIndex ? "true" : "false");
+        });
+      });
+
+      const items = [];
+      if (score >= 75) {
+        items.push(["green", "Strong base: the business already has most lead-capture basics in place."]);
+      } else if (score >= 52) {
+        items.push(["amber", "Good foundation: the biggest gains are likely in faster response and cleaner follow-up."]);
+      } else {
+        items.push(["red", "High leakage risk: enquiries are probably being lost between calls, messages and manual admin."]);
+      }
+
+      if (missedCallScore < 7) items.push(["amber", "Add missed-call text recovery so callers get a useful next step immediately."]);
+      if (followUpScore < 6) items.push(["red", "Create automatic follow-up for new quote requests before leads go cold."]);
+      if (reviewScore < 6) items.push(["amber", "Send review requests after completed jobs while the customer experience is fresh."]);
+      if (speedScore < 7) items.push(["amber", "Aim for a faster first response; speed is often the difference between booked and lost."]);
+      if (items.length < 4) items.push(["green", "Use reporting to double down on the lead sources that turn into paid work."]);
+
+      recommendations.innerHTML = items.slice(0, 5).map(([colour, text]) => `
+        <div class="recommendation">
+          <span class="dot ${colour}"></span>
+          <span>${text}</span>
+        </div>
+      `).join("");
+    }
+
+    renderQuestions();
+  </script>
+</body>
+</html>
