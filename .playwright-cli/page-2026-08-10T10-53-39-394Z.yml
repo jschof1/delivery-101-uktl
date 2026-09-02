@@ -1,0 +1,344 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: A PRACTICAL GROWTH SYSTEM FOR BEST WORKFORCE SERVICES
+  - banner [ref=e3]:
+    - link "Best Workforce Services proposal home" [ref=e4] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e5]: 🛠️
+      - generic [ref=e6]:
+        - text: UK Trade Leads
+        - generic [ref=e7]: Client growth system
+    - paragraph [ref=e8]: Prepared for Francois at Best Workforce Solutions (UK) Limited
+    - navigation "Main navigation" [ref=e9]:
+      - link "The plan" [ref=e10] [cursor=pointer]:
+        - /url: "#plan"
+      - link "The system" [ref=e11] [cursor=pointer]:
+        - /url: "#system"
+      - link "Examples" [ref=e12] [cursor=pointer]:
+        - /url: "#examples"
+      - link "Ownership" [ref=e13] [cursor=pointer]:
+        - /url: "#ownership"
+      - link "See the next step" [ref=e14] [cursor=pointer]:
+        - /url: "#next-step"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Prepared for Francois
+        - heading [level=1] [ref=e20]:
+          - text: Turn more enquiries into
+          - emphasis [ref=e21]: clear next steps.
+        - paragraph [ref=e22]: "From its Edinburgh base, Best Workforce Services already offers the people businesses need across security, cleaning, hospitality, reception, housekeeping, social care and delivery. The opportunity is to turn that breadth into a sharper contract journey: help each buyer find the right team, show credible proof and give every genuine enquiry a visible next step."
+        - generic [ref=e23]:
+          - link "See the plan" [ref=e24] [cursor=pointer]:
+            - /url: "#plan"
+            - text: See the plan
+            - generic [ref=e25]: ↓
+          - link "Watch the walkthrough" [ref=e26] [cursor=pointer]:
+            - /url: "#video"
+            - text: Watch the walkthrough
+            - generic [ref=e27]: ↗
+        - paragraph [ref=e28]: Prepared around the current public website, service portfolio and direct-contract ambition.
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: The contract journey
+        - heading "Every opportunity stays visible." [level=2] [ref=e31]
+        - generic [ref=e32]: Designed for business and service enquiries
+        - generic "Example job pipeline" [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: "01"
+            - generic [ref=e38]:
+              - strong [ref=e39]: New enquiry
+              - generic [ref=e40]: Captured from call, form or message
+          - generic [ref=e41]:
+            - generic [ref=e42]: "02"
+            - generic [ref=e43]:
+              - strong [ref=e44]: Requirement confirmed
+              - generic [ref=e45]: Service, location, timing and staffing recorded
+          - generic [ref=e46]:
+            - generic [ref=e47]: "03"
+            - generic [ref=e48]:
+              - strong [ref=e49]: Site visit or proposal
+              - generic [ref=e50]: Owner, deadline and follow-up stay clear
+          - generic [ref=e51]:
+            - generic [ref=e52]: "04"
+            - generic [ref=e53]:
+              - strong [ref=e54]: Mobilise or nurture
+              - generic [ref=e55]: The next commercial action is visible
+        - paragraph [ref=e56]:
+          - strong [ref=e57]: "First priority:"
+          - text: Align the public name, contact routes and priority services so every buyer sees one consistent business.
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: "01"
+        - generic [ref=e62]:
+          - strong [ref=e63]: One clear identity
+          - generic [ref=e64]: Build confidence at every contact point
+      - generic [ref=e65]:
+        - generic [ref=e66]: "02"
+        - generic [ref=e67]:
+          - strong [ref=e68]: Contract-ready proof
+          - generic [ref=e69]: Show why buyers should shortlist BWS
+      - generic [ref=e70]:
+        - generic [ref=e71]: "03"
+        - generic [ref=e72]:
+          - strong [ref=e73]: Visible follow-up
+          - generic [ref=e74]: Know which opportunity needs action
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - paragraph [ref=e78]: Where we start
+        - heading "Make a broad workforce offer feel simple to buy." [level=2] [ref=e79]
+        - paragraph [ref=e80]: The current website proves that Best Workforce Services covers a wide range of operational needs. The next step is to organise that breadth around the buyers you most want, strengthen the evidence behind the offer and connect every serious enquiry to a practical contract process.
+      - generic [ref=e81]:
+        - article [ref=e82]:
+          - text: 01 / CLARITY
+          - heading "Create focused routes for each buyer" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Separate security, cleaning, hospitality, social care and staffing needs into clear journeys, then lead with the services and contract types Best Workforce Services wants to grow first.
+        - article [ref=e85]:
+          - text: 02 / PROOF
+          - heading "Turn capability into buyer confidence" [level=3] [ref=e86]
+          - paragraph [ref=e87]: Present approved credentials, supervision standards, service processes, team experience and client evidence where procurement teams expect to find them.
+        - article [ref=e88]:
+          - text: 03 / RESPONSE
+          - heading "Keep every serious enquiry moving" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Connect calls, forms and messages to one follow-up view so the right person can see the requirement, owner, deadline and next action.
+      - paragraph [ref=e92]: "The aim is straightforward: make Best Workforce Services easier to understand, easier to shortlist and easier to engage for the next contract."
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: The walkthrough
+        - heading "See how the moving parts fit together." [level=2] [ref=e97]
+        - paragraph [ref=e98]: The Delivery 101 walkthrough shows the website, response and follow-up principles behind the proposal. The final implementation would be adapted to Best Workforce Services and its confirmed contract-enquiry process.
+        - generic [ref=e99]:
+          - generic [ref=e100]: WATCH FOR
+          - generic [ref=e101]: Clear enquiry capture, missed-call response, follow-up ownership and a visible pipeline.
+      - generic [ref=e103]:
+        - generic [ref=e110]:
+          - img "more leads no effort" [ref=e113] [cursor=pointer]
+          - 'button "Play Video: UK Trade Leads Explainer" [ref=e115] [cursor=pointer]'
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - 'button "Play Video: UK Trade Leads Explainer"'
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img "more leads no effort"
+                    - 'button "Play Video: UK Trade Leads Explainer" [ref=e121] [cursor=pointer]'
+                    - generic:
+                      - generic:
+                        - generic [ref=e128]:
+                          - generic: 4:27
+                          - slider "Playbar" [ref=e130] [cursor=pointer]
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - button "Show captions menu"
+                              - generic:
+                                - generic:
+                                  - button "Mute"
+                              - generic:
+                                - generic:
+                                  - button "Show settings menu"
+                              - generic:
+                                - generic:
+                                  - button "Fullscreen"
+                          - link "Wistia Logo -- Learn More" [ref=e136] [cursor=pointer]:
+                            - /url: https://wistia.com/?utm_type=player&utm_campaign=wistia-branding&utm_medium=referral&utm_source=wistia&about=2282860
+                          - button "Show more buttons" [ref=e143] [cursor=pointer]
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - paragraph [ref=e152]: The Best Workforce Services plan
+        - heading "A sensible order of operations." [level=2] [ref=e153]
+        - paragraph [ref=e154]: Start by sharpening the commercial story. Then connect the response process and use real enquiry evidence to decide where the next investment will have the most value.
+      - generic [ref=e155]:
+        - article [ref=e156]:
+          - generic [ref=e157]: "01"
+          - generic [ref=e158]:
+            - heading "First 30 days Position the business for the right contracts" [level=3] [ref=e159]:
+              - generic [ref=e160]: First 30 days
+              - text: Position the business for the right contracts
+            - paragraph [ref=e161]: Align the public identity, choose priority services and buyers, and organise approved proof around what procurement teams need to know.
+          - generic [ref=e162]:
+            - strong [ref=e163]: Early signal
+            - text: A buyer can quickly understand the relevant service, coverage and next step.
+        - article [ref=e164]:
+          - generic [ref=e165]: "02"
+          - generic [ref=e166]:
+            - heading "Next layer Capture and qualify every requirement" [level=3] [ref=e167]:
+              - generic [ref=e168]: Next layer
+              - text: Capture and qualify every requirement
+            - paragraph [ref=e169]: Connect the retained call, form and message routes to a consistent response process that records service, location, timing and decision path.
+          - generic [ref=e170]:
+            - strong [ref=e171]: Early signal
+            - text: Each serious enquiry has a clear owner, requirement and next action.
+        - article [ref=e172]:
+          - generic [ref=e173]: "03"
+          - generic [ref=e174]:
+            - heading "Everyday control Manage the contract pipeline" [level=3] [ref=e175]:
+              - generic [ref=e176]: Everyday control
+              - text: Manage the contract pipeline
+            - paragraph [ref=e177]: Use a simple view for qualification, site visit, proposal, decision, mobilisation and future follow-up.
+          - generic [ref=e178]:
+            - strong [ref=e179]: Business benefit
+            - text: Open opportunities, deadlines and overdue follow-ups are easy to see.
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - paragraph [ref=e183]: What we can build around you
+        - heading "One foundation. Three connected layers." [level=2] [ref=e184]
+        - paragraph [ref=e185]: The proposal combines a clearer website, a dependable response route and a practical operating view for contract opportunities.
+      - generic [ref=e186]:
+        - article [ref=e187]:
+          - generic [ref=e188]: "01"
+          - heading "The contract-ready website" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Reshape the customer journey around the services, buyers and locations Best Workforce Services wants to grow.
+          - list [ref=e191]:
+            - listitem [ref=e192]: +Focused service and sector pathways
+            - listitem [ref=e193]: +Approved credentials and buyer proof
+            - listitem [ref=e194]: +Clear contract and service enquiry routes
+        - article [ref=e195]:
+          - generic [ref=e196]: "02"
+          - heading "The response system" [level=3] [ref=e197]
+          - paragraph [ref=e198]: Route retained calls, forms and messages into a consistent process so a serious requirement never depends on memory alone.
+          - list [ref=e199]:
+            - listitem [ref=e200]: +Missed-call response option
+            - listitem [ref=e201]: +Form and message acknowledgement
+            - listitem [ref=e202]: +Visible ownership and deadlines
+        - article [ref=e203]:
+          - generic [ref=e204]: "03"
+          - heading "The contract pipeline" [level=3] [ref=e205]
+          - paragraph [ref=e206]: Give the team a practical view from first contact through qualification, proposal, decision and mobilisation.
+          - list [ref=e207]:
+            - listitem [ref=e208]: +Requirement, site and service fit
+            - listitem [ref=e209]: +Proposal and decision dates
+            - listitem [ref=e210]: +Mobilisation and future follow-up
+    - generic [ref=e212]:
+      - generic [ref=e213]:
+        - paragraph [ref=e214]: Verified live examples
+        - heading "The website standard behind the proposal." [level=2] [ref=e215]
+        - paragraph [ref=e216]: These UK Trade Leads client sites were checked live when the reusable proposal kit was prepared. They demonstrate presentation and enquiry design, not guaranteed performance for Best Workforce Services.
+      - generic [ref=e217]:
+        - link "View the All Aspects Roofing live website" [ref=e218] [cursor=pointer]:
+          - /url: https://allaspectsroofingspecialists.com/
+          - img "Screenshot of the All Aspects Roofing website" [ref=e220]
+          - generic [ref=e221]:
+            - paragraph [ref=e222]: All Aspects Roofing
+            - heading "Roofing services" [level=3] [ref=e223]
+            - paragraph [ref=e224]: A focused local service presence with direct paths into the relevant work.
+            - generic [ref=e225]: View live site ↗
+        - link "View the Aphex Heating live website" [ref=e226] [cursor=pointer]:
+          - /url: https://aphexheating.com/
+          - img "Screenshot of the Aphex Heating website" [ref=e228]
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: Aphex Heating
+            - heading "Heating and boiler specialists" [level=3] [ref=e231]
+            - paragraph [ref=e232]: A service-led website built around clarity, trust and quote requests.
+            - generic [ref=e233]: View live site ↗
+        - link "View the Property Home Photos live website" [ref=e234] [cursor=pointer]:
+          - /url: https://propertyhomephotos.com/
+          - img "Screenshot of the Property Home Photos website" [ref=e236]
+          - generic [ref=e237]:
+            - paragraph [ref=e238]: Property Home Photos
+            - heading "Property photography" [level=3] [ref=e239]
+            - paragraph [ref=e240]: A visual business-service website with the work and enquiry route made easy to find.
+            - generic [ref=e241]: View live site ↗
+      - paragraph [ref=e242]: The final Best Workforce Services approach would use its own verified services, brand material, proof and contract journey.
+    - generic [ref=e244]:
+      - generic [ref=e245]:
+        - paragraph [ref=e246]: Terms to confirm
+        - heading "The work is built to stay with BWS." [level=2] [ref=e247]
+        - paragraph [ref=e248]: We will rebuild the website and set up the system so Best Workforce Services is investing in an asset it can keep.
+        - paragraph [ref=e249]: We will clearly separate client-owned work from phone, messaging, CRM and other third-party services that may have their own billing or transfer terms.
+      - generic [ref=e250]:
+        - heading "What remains yours" [level=3] [ref=e251]
+        - list [ref=e252]:
+          - listitem [ref=e253]: ✓The rebuilt BWS website and client-specific content
+          - listitem [ref=e254]: ✓The approved design, copy, pages and business information
+          - listitem [ref=e255]: ✓Your domain and approved brand assets
+          - listitem [ref=e256]: ✓Your customer, enquiry and contract-opportunity data
+          - listitem [ref=e257]: ✓A clear handover route if you ever leave us
+        - paragraph [ref=e258]: Any separate third-party subscriptions and their transfer terms will be identified clearly before setup.
+    - generic [ref=e260]:
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - paragraph [ref=e263]: A pipeline for the opportunity
+          - heading "Know what is happening next." [level=2] [ref=e264]
+        - paragraph [ref=e265]: The stages can be matched to the way Francois and the team qualify, price and mobilise contract work.
+      - generic "Best Workforce Services job pipeline stages" [ref=e266]:
+        - generic [ref=e267]:
+          - generic [ref=e268]:
+            - generic [ref=e269]: 01 / Inbox
+            - strong [ref=e270]: New enquiry
+            - generic [ref=e271]: Every contact has a home
+          - text: →
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e274]: 02 / Fit
+            - strong [ref=e275]: Qualified
+            - generic [ref=e276]: Service, site and timing recorded
+          - text: →
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279]: 03 / Scope
+            - strong [ref=e280]: Visit or proposal
+            - generic [ref=e281]: Decision and follow-up dated
+          - text: →
+        - generic [ref=e283]:
+          - generic [ref=e284]: 04 / Outcome
+          - strong [ref=e285]: Mobilise or nurture
+          - generic [ref=e286]: Next commercial action is clear
+      - paragraph [ref=e287]: A practical view for the opportunities that matter, without turning the team into software operators.
+    - generic [ref=e289]:
+      - generic [ref=e290]:
+        - paragraph [ref=e291]: The next step
+        - heading "Start with the foundation. Improve from evidence." [level=2] [ref=e292]
+        - paragraph [ref=e293]: The first phase makes Best Workforce Services easier to understand, trust and contact. Then we use real enquiries and contract activity to decide what deserves attention next.
+        - paragraph [ref=e294]: That creates a foundation that can keep improving without relying on disconnected tools or lost follow-ups.
+      - complementary [ref=e295]:
+        - paragraph [ref=e296]: Best Workforce Services system
+        - generic [ref=e297]: £197 / month
+        - paragraph [ref=e298]: The connected foundation to get the system live and working.
+        - list [ref=e299]:
+          - listitem [ref=e300]: Rebuilt, owned BWS website
+          - listitem [ref=e301]: Enquiry capture and missed-call response
+          - listitem [ref=e302]: Contract pipeline and follow-up visibility
+          - listitem [ref=e303]: Ongoing improvements within the agreed scope
+        - link "Book a quick call" [ref=e304] [cursor=pointer]:
+          - /url: https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads
+          - text: Book a quick call
+          - generic [ref=e305]: ↗
+        - paragraph [ref=e306]: No separate upfront website build fee. 30-day money-back guarantee.
+    - generic [ref=e308]:
+      - generic [ref=e309]:
+        - paragraph [ref=e310]: Clear answers
+        - heading "The important bits, plainly." [level=2] [ref=e311]
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - group [ref=e314]:
+            - generic "What would we improve first? +" [ref=e315] [cursor=pointer]
+          - group [ref=e316]:
+            - generic "Do I keep the website if I leave? +" [ref=e317] [cursor=pointer]
+        - generic [ref=e318]:
+          - group [ref=e319]:
+            - generic "Can the system cover every service immediately? +" [ref=e320] [cursor=pointer]
+          - group [ref=e321]:
+            - generic "What happens next? +" [ref=e322] [cursor=pointer]
+    - generic [ref=e324]:
+      - paragraph [ref=e325]: Prepared for the next stage of Best Workforce Services
+      - heading "A clearer system for every genuine opportunity." [level=2] [ref=e326]
+      - paragraph [ref=e327]: Make the offer clearer. Make serious enquiries easier to act on. Give every contract opportunity a visible next step.
+      - generic [ref=e328]:
+        - link "Book a quick call" [ref=e329] [cursor=pointer]:
+          - /url: https://api.leadconnectorhq.com/widget/bookings/uk-trade-leads
+          - text: Book a quick call
+          - generic [ref=e330]: ↗
+        - link "Back to the top" [ref=e331] [cursor=pointer]:
+          - /url: "#top"
+  - contentinfo [ref=e332]:
+    - generic [ref=e333]:
+      - generic [ref=e334]: A personalised proposal for Francois and Best Workforce Services.
+      - link "UK Trade Leads" [ref=e335] [cursor=pointer]:
+        - /url: https://delivery101.uktradeleads.com/
